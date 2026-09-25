@@ -168,6 +168,15 @@
                   ],
                   "correctIndex": 1,
                   "explanation": "Une autorisation reste limitée par son périmètre. Un domaine exclu ne doit pas être testé."
+                },
+                {
+                  "statement": "Une connaissance t’envoie l’adresse d’un serveur public qu’elle ne possède pas et te demande de le tester.",
+                  "options": [
+                    "Autorisé",
+                    "Non autorisé"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Une connaissance ne peut pas autoriser un test sur le système d’un tiers. Il faut l’accord explicite du propriétaire."
                 }
               ]
             },
@@ -719,26 +728,480 @@
         {
           "id": "passwords_mfa",
           "title": "Mots de passe et authentification",
-          "summary": "Crée des mots de passe solides et découvre la MFA.",
-          "minutes": 8,
+          "summary": "Protège chaque compte avec un secret unique et une seconde vérification.",
+          "minutes": 10,
           "icon": "password_rounded",
           "objectives": [
-            "Créer une phrase de passe robuste.",
+            "Distinguer l’identification de l’authentification.",
+            "Créer une phrase de passe longue et unique.",
             "Comprendre le rôle d’un gestionnaire de mots de passe.",
-            "Expliquer le principe de l’authentification multifacteur."
-          ]
+            "Utiliser correctement l’authentification multifacteur."
+          ],
+          "content": {
+            "introduction": "Un mot de passe protège souvent l’entrée de tes comptes, mais sa force ne dépend pas seulement de caractères compliqués. Dans cette leçon, tu vas comprendre comment l’authentification fonctionne, pourquoi chaque compte doit avoir un secret différent et comment la MFA ajoute une barrière utile.",
+            "steps": [
+              {
+                "eyebrow": "Point de départ",
+                "title": "S’identifier n’est pas encore prouver son identité",
+                "body": "Quand tu saisis une adresse e-mail ou un nom d’utilisateur, tu indiques quel compte tu veux utiliser : c’est l’identification. Le mot de passe sert ensuite à prouver que tu es autorisé à entrer : c’est l’authentification. Un service doit vérifier ton identité avant de donner accès à tes données.",
+                "example": "L’adresse e-mail désigne le compte. Le mot de passe, puis éventuellement un code ou une clé de sécurité, servent à vérifier la personne qui demande l’accès.",
+                "icon": "badge_outlined",
+                "checkQuestion": "Quel élément sert principalement à identifier un compte ?",
+                "checkOptions": [
+                  "L’adresse e-mail associée au compte",
+                  "La couleur de l’application",
+                  "Le niveau de batterie"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. L’adresse e-mail indique quel compte est concerné ; le secret permet ensuite de s’authentifier."
+              },
+              {
+                "eyebrow": "Comprendre le risque",
+                "title": "Un mot de passe réutilisé relie plusieurs comptes",
+                "body": "Lorsqu’un service subit une fuite, des identifiants peuvent être essayés automatiquement sur d’autres sites. Si le même mot de passe est réutilisé, la compromission d’un seul service peut ouvrir plusieurs comptes. Cette attaque est souvent appelée credential stuffing.",
+                "example": "Le mot de passe d’un ancien forum fuit. S’il est aussi utilisé pour la messagerie, un attaquant peut tenter la même combinaison sur ce compte beaucoup plus important.",
+                "icon": "warning_amber_rounded",
+                "checkQuestion": "Pourquoi faut-il un mot de passe différent pour chaque compte ?",
+                "checkOptions": [
+                  "Pour empêcher qu’une fuite compromette plusieurs comptes",
+                  "Pour accélérer la connexion Internet",
+                  "Pour éviter toutes les mises à jour"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Un secret unique limite les conséquences d’une fuite à un seul compte."
+              },
+              {
+                "eyebrow": "Créer un meilleur secret",
+                "title": "La longueur compte plus qu’un mot prévisible",
+                "body": "Un bon mot de passe doit être long, unique et difficile à deviner. Une phrase de passe composée de plusieurs mots sans lien est plus facile à mémoriser et plus résistante qu’un mot court auquel on ajoute simplement une majuscule et un chiffre. Évite les prénoms, dates, équipes ou expressions connues.",
+                "example": "Construis ta propre phrase à partir de mots sans relation et ne réutilise jamais un exemple publié dans une leçon, une vidéo ou un site.",
+                "icon": "password_rounded",
+                "checkQuestion": "Quelle propriété améliore réellement un mot de passe ?",
+                "checkOptions": [
+                  "Une longueur importante avec des éléments imprévisibles",
+                  "Le prénom suivi de l’année de naissance",
+                  "Le même mot de passe avec un chiffre différent"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. La longueur et l’imprévisibilité rendent les tentatives de devinette beaucoup plus difficiles."
+              },
+              {
+                "eyebrow": "Éviter la mémoire impossible",
+                "title": "Le gestionnaire crée et conserve les mots de passe uniques",
+                "body": "Mémoriser un secret différent pour chaque service devient vite irréaliste. Un gestionnaire de mots de passe peut générer des secrets longs, les stocker dans un coffre chiffré et remplir les formulaires de connexion. Tu ne dois alors retenir que le mot de passe principal du coffre.",
+                "example": "Le gestionnaire peut créer un mot de passe aléatoire différent pour la messagerie, les réseaux sociaux et les boutiques en ligne.",
+                "icon": "lock_person_outlined",
+                "checkQuestion": "Quel est l’avantage principal d’un gestionnaire de mots de passe ?",
+                "checkOptions": [
+                  "Utiliser un même secret sur tous les sites",
+                  "Créer et conserver des secrets uniques dans un coffre protégé",
+                  "Supprimer le besoin de protéger ses appareils"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. Le gestionnaire permet d’utiliser des mots de passe uniques sans devoir tous les mémoriser."
+              },
+              {
+                "eyebrow": "Ajouter une barrière",
+                "title": "La MFA demande plusieurs types de preuve",
+                "body": "L’authentification multifacteur combine au moins deux facteurs différents : quelque chose que tu connais, comme un mot de passe ; quelque chose que tu possèdes, comme un téléphone ou une clé de sécurité ; ou quelque chose que tu es, comme une caractéristique biométrique. Deux mots de passe restent un seul type de facteur.",
+                "example": "Après le mot de passe, une application d’authentification fournit un code temporaire. Le compte ne dépend donc plus uniquement du mot de passe.",
+                "icon": "verified_user_outlined",
+                "checkQuestion": "Quel exemple utilise réellement deux facteurs différents ?",
+                "checkOptions": [
+                  "Deux mots de passe successifs",
+                  "Un mot de passe et un code généré sur un téléphone",
+                  "Le même mot de passe saisi deux fois"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Correct. Le mot de passe est quelque chose que tu connais et le téléphone est quelque chose que tu possèdes."
+              },
+              {
+                "eyebrow": "Utiliser la MFA correctement",
+                "title": "Une demande inattendue doit être refusée",
+                "body": "La MFA réduit le risque, mais elle ne doit pas être validée automatiquement. Si une notification de connexion apparaît alors que tu ne te connectes pas, refuse-la. Accède ensuite au service par son application officielle, vérifie les sessions et change le mot de passe si nécessaire.",
+                "example": "Un attaquant qui connaît déjà un mot de passe peut envoyer plusieurs demandes de validation en espérant qu’une personne accepte par habitude ou fatigue.",
+                "icon": "report_gmailerrorred_outlined",
+                "checkQuestion": "Tu reçois une demande MFA que tu n’as pas déclenchée. Que fais-tu ?",
+                "checkOptions": [
+                  "Je l’accepte pour faire disparaître la notification",
+                  "Je la refuse et je vérifie le compte depuis le service officiel",
+                  "Je communique le code reçu par message"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. Une demande inattendue peut signaler que le mot de passe est déjà connu d’un attaquant."
+              },
+              {
+                "eyebrow": "Préparer la récupération",
+                "title": "Les codes de secours sont aussi des secrets",
+                "body": "Lors de l’activation de la MFA, un service peut fournir des codes de récupération. Ils permettent de retrouver l’accès si le téléphone ou la clé n’est plus disponible. Conserve-les dans un endroit sûr et séparé de l’appareil utilisé pour te connecter. Ne les envoie jamais à une personne qui les demande.",
+                "example": "Une copie protégée des codes de secours peut éviter de perdre définitivement l’accès après la perte du téléphone.",
+                "icon": "backup_outlined",
+                "checkQuestion": "Comment faut-il conserver les codes de récupération ?",
+                "checkOptions": [
+                  "Dans une publication publique",
+                  "Dans un endroit protégé et accessible uniquement à toi",
+                  "Dans un message envoyé à plusieurs contacts"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Oui. Un code de récupération peut donner accès au compte et doit être protégé comme un mot de passe."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Renforce cinq comptes",
+              "instructions": "Choisis la mesure la plus adaptée à chaque situation. Corrige tes erreurs pour débloquer le quiz final.",
+              "questions": [
+                {
+                  "statement": "Tu utilises le même mot de passe pour ta messagerie et un ancien forum.",
+                  "options": [
+                    "Le conserver pour mieux le mémoriser",
+                    "Créer un mot de passe unique pour chaque compte",
+                    "Ajouter uniquement ton année de naissance"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Des mots de passe uniques empêchent qu’une fuite sur un service ouvre directement les autres comptes."
+                },
+                {
+                  "statement": "Tu dois créer un nouveau mot de passe difficile à deviner.",
+                  "options": [
+                    "Choisir un secret long et imprévisible",
+                    "Utiliser ton prénom et ta date de naissance",
+                    "Copier un exemple publié sur Internet"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La longueur et l’imprévisibilité sont essentielles. Un exemple public ne doit jamais devenir ton vrai mot de passe."
+                },
+                {
+                  "statement": "Tu ne peux plus mémoriser tous tes mots de passe uniques.",
+                  "options": [
+                    "Les écrire dans une publication privée sur un réseau social",
+                    "Réutiliser un seul mot de passe",
+                    "Utiliser un gestionnaire de mots de passe protégé"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "Un gestionnaire permet de générer et conserver des secrets uniques dans un coffre chiffré."
+                },
+                {
+                  "statement": "Ton téléphone affiche une validation MFA alors que tu ne te connectes pas.",
+                  "options": [
+                    "Refuser la demande et vérifier immédiatement le compte",
+                    "Accepter pour arrêter les notifications",
+                    "Envoyer une capture avec le code à un inconnu"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Une demande inattendue peut indiquer une tentative de connexion avec un mot de passe compromis."
+                },
+                {
+                  "statement": "Le service fournit des codes de récupération après l’activation de la MFA.",
+                  "options": [
+                    "Les ignorer définitivement",
+                    "Les publier pour ne pas les perdre",
+                    "Les conserver dans un emplacement privé et protégé"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "Les codes de récupération permettent l’accès au compte et doivent rester secrets."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "L’identification désigne le compte ; l’authentification vérifie le droit d’y accéder.",
+              "Chaque compte doit utiliser un mot de passe unique pour limiter les conséquences d’une fuite.",
+              "Un bon secret est long, imprévisible et différent des informations personnelles.",
+              "Un gestionnaire aide à générer et conserver des mots de passe uniques.",
+              "La MFA combine plusieurs types de preuve et protège le compte si le mot de passe fuit.",
+              "Une demande MFA inattendue doit être refusée et les codes de récupération doivent rester secrets."
+            ],
+            "quiz": [
+              {
+                "question": "Quelle différence existe entre identification et authentification ?",
+                "options": [
+                  "L’identification désigne le compte et l’authentification vérifie l’accès",
+                  "Les deux termes signifient exactement mot de passe",
+                  "L’identification remplace toutes les protections"
+                ],
+                "correctIndex": 0,
+                "explanation": "L’identifiant indique le compte concerné ; l’authentification vérifie que la personne est autorisée à y accéder."
+              },
+              {
+                "question": "Pourquoi un mot de passe doit-il être unique pour chaque service ?",
+                "options": [
+                  "Pour que la fuite d’un service ne compromette pas les autres comptes",
+                  "Pour améliorer la vitesse du téléphone",
+                  "Pour ne plus avoir besoin de mises à jour"
+                ],
+                "correctIndex": 0,
+                "explanation": "La réutilisation permet aux attaquants d’essayer les mêmes identifiants sur plusieurs services."
+              },
+              {
+                "question": "À quoi sert principalement un gestionnaire de mots de passe ?",
+                "options": [
+                  "À partager les mots de passe avec tous ses contacts",
+                  "À stocker et générer des mots de passe uniques dans un coffre protégé",
+                  "À désactiver l’authentification des comptes"
+                ],
+                "correctIndex": 1,
+                "explanation": "Le gestionnaire facilite l’utilisation de secrets longs et différents pour chaque compte."
+              },
+              {
+                "question": "Quelle combinaison constitue une authentification multifacteur ?",
+                "options": [
+                  "Deux mots de passe différents",
+                  "Un mot de passe saisi deux fois",
+                  "Un mot de passe et un code fourni par une application d’authentification"
+                ],
+                "correctIndex": 2,
+                "explanation": "Cette combinaison associe quelque chose que tu connais à quelque chose que tu possèdes."
+              },
+              {
+                "question": "Que faire face à une demande MFA que tu n’as pas déclenchée ?",
+                "options": [
+                  "L’accepter rapidement",
+                  "La refuser puis vérifier et sécuriser le compte depuis le service officiel",
+                  "Partager le code reçu pour demander de l’aide"
+                ],
+                "correctIndex": 1,
+                "explanation": "Une demande inattendue peut signaler une tentative d’accès. Refuse-la et contrôle directement le compte."
+              }
+            ]
+          }
         },
         {
           "id": "phishing",
           "title": "Phishing et ingénierie sociale",
-          "summary": "Repère les messages frauduleux et les techniques de manipulation.",
-          "minutes": 8,
+          "summary": "Repère les tentatives de manipulation et vérifie avant d’agir.",
+          "minutes": 11,
           "icon": "phishing_rounded",
           "objectives": [
-            "Identifier les indices d’un message frauduleux.",
-            "Vérifier un expéditeur et un lien.",
-            "Réagir correctement à une tentative de phishing."
-          ]
+            "Comprendre le principe de l’ingénierie sociale.",
+            "Reconnaître les signaux d’un message frauduleux.",
+            "Vérifier un expéditeur, un domaine et une demande.",
+            "Réagir correctement après un clic ou une saisie de données."
+          ],
+          "content": {
+            "introduction": "Une attaque ne cherche pas toujours une faille dans un logiciel : elle peut pousser une personne à agir trop vite. Tu vas apprendre à ralentir, vérifier la demande par un autre chemin et réagir sans honte si tu as déjà cliqué.",
+            "steps": [
+              {
+                "eyebrow": "Point de départ",
+                "title": "L’ingénierie sociale vise la décision humaine",
+                "body": "L’ingénierie sociale regroupe les techniques qui manipulent une personne pour obtenir une information, un paiement ou une action. Le phishing en est une forme fréquente : un message imite un service ou une personne de confiance afin de voler des identifiants ou de faire ouvrir un contenu dangereux.",
+                "example": "Un faux message de livraison affirme qu’un colis est bloqué et demande un paiement urgent sur une page qui ressemble au site officiel.",
+                "icon": "groups_2_outlined",
+                "checkQuestion": "Que cherche principalement une tentative de phishing ?",
+                "checkOptions": [
+                  "À manipuler la personne pour obtenir une action",
+                  "À améliorer la qualité du réseau",
+                  "À mettre à jour automatiquement le téléphone"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Le message utilise la confiance ou l’émotion pour provoquer une action utile à l’attaquant."
+              },
+              {
+                "eyebrow": "Le mécanisme",
+                "title": "Urgence, peur et récompense réduisent la réflexion",
+                "body": "Les messages frauduleux utilisent souvent une urgence artificielle, une menace, une récompense ou une demande inhabituelle. Aucun indice isolé ne prouve une fraude, mais plusieurs signaux réunis doivent te pousser à arrêter l’action et à vérifier.",
+                "example": "« Ton compte sera supprimé dans dix minutes » cherche à empêcher une vérification calme depuis l’application officielle.",
+                "icon": "notification_important_outlined",
+                "checkQuestion": "Quel réflexe adopter face à une demande très urgente ?",
+                "checkOptions": [
+                  "Agir avant de lire",
+                  "Ralentir et vérifier par un canal officiel",
+                  "Transférer immédiatement ses codes"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Oui. L’urgence imposée est une raison de vérifier, pas une raison d’abandonner les précautions."
+              },
+              {
+                "eyebrow": "Vérifier l’identité",
+                "title": "Le nom affiché peut masquer la véritable adresse",
+                "body": "Un message peut afficher le nom d’une banque, d’un collègue ou d’un service connu tout en venant d’une adresse différente. Observe l’adresse complète, les fautes discrètes dans le domaine et le contexte de la demande. Une adresse plausible ne suffit cependant pas : un compte légitime peut aussi être compromis.",
+                "example": "Le nom affiché indique « Assistance », mais l’adresse utilise un domaine sans relation avec le service annoncé.",
+                "icon": "badge_outlined",
+                "checkQuestion": "Que faut-il vérifier en plus du nom affiché ?",
+                "checkOptions": [
+                  "L’adresse complète et le contexte",
+                  "Uniquement la photo de profil",
+                  "La couleur du message"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Le nom affiché est facile à imiter ; l’adresse et la demande apportent davantage de contexte."
+              },
+              {
+                "eyebrow": "Vérifier la destination",
+                "title": "Un lien peut montrer un texte différent de sa destination",
+                "body": "Le texte visible d’un lien peut annoncer un site connu alors que l’adresse réelle mène ailleurs. Sur ordinateur, survole le lien sans cliquer. Sur mobile, utilise l’aperçu avec prudence. Repère le domaine principal et évite de te fier au cadenas seul : HTTPS chiffre la connexion, mais un faux site peut aussi l’utiliser.",
+                "example": "Dans connexion.exemple-securite.net, le domaine contrôlé est exemple-securite.net, même si le mot connexion paraît rassurant.",
+                "icon": "route_outlined",
+                "checkQuestion": "Que prouve le cadenas HTTPS ?",
+                "checkOptions": [
+                  "Que le site est forcément honnête",
+                  "Que la connexion est chiffrée, pas que le site est légitime",
+                  "Que le message vient de ta banque"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. HTTPS protège le transport des données, mais ne garantit pas l’intention du propriétaire du site."
+              },
+              {
+                "eyebrow": "Changer de canal",
+                "title": "Vérifier sans utiliser le chemin proposé",
+                "body": "Si une demande concerne un compte, un paiement ou un document, n’utilise pas le lien ni le numéro fourni dans le message. Ouvre toi-même l’application officielle, saisis l’adresse connue ou contacte la personne avec un moyen déjà vérifié. Cette séparation casse une grande partie du scénario de manipulation.",
+                "example": "Un prétendu responsable demande un virement. Appelle-le avec le numéro déjà enregistré au lieu de répondre au message reçu.",
+                "icon": "verified_user_outlined",
+                "checkQuestion": "Comment vérifier une demande de paiement inhabituelle ?",
+                "checkOptions": [
+                  "Avec le numéro fourni dans le message",
+                  "Par un canal officiel déjà connu",
+                  "En envoyant d’abord ses identifiants"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Correct. Un canal indépendant empêche l’auteur du faux message de contrôler toute la vérification."
+              },
+              {
+                "eyebrow": "Pièces jointes et QR codes",
+                "title": "Le phishing ne se limite pas aux liens bleus",
+                "body": "Une tentative peut arriver par e-mail, SMS, appel, messagerie, pièce jointe ou QR code. Une pièce jointe inattendue peut contenir un document trompeur ou du code dangereux. Un QR code masque sa destination jusqu’à sa lecture. La même règle s’applique : contexte, nécessité et vérification indépendante.",
+                "example": "Une facture inattendue au format compressé ne doit pas être ouverte uniquement parce qu’elle utilise le logo d’une entreprise connue.",
+                "icon": "visibility_outlined",
+                "checkQuestion": "Pourquoi un QR code inattendu mérite-t-il une vérification ?",
+                "checkOptions": [
+                  "Parce qu’il peut masquer l’adresse de destination",
+                  "Parce qu’il désactive toujours Internet",
+                  "Parce qu’il remplace la MFA"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. Le format visuel ne permet pas de connaître immédiatement la destination ni son propriétaire."
+              },
+              {
+                "eyebrow": "Après une erreur",
+                "title": "Réagir rapidement vaut mieux que cacher l’incident",
+                "body": "Si tu as cliqué sans saisir d’information, ferme la page et vérifie le service depuis son accès officiel. Si tu as donné un mot de passe, change-le depuis un appareil de confiance, ferme les sessions inconnues, active la MFA et protège les autres comptes où ce secret a été réutilisé. Signale le message au service ou à ton organisation.",
+                "example": "Après avoir saisi un mot de passe sur une fausse page, commence par sécuriser le compte réel au lieu de retourner sur le lien frauduleux.",
+                "icon": "report_gmailerrorred_outlined",
+                "checkQuestion": "Tu as saisi ton mot de passe sur une page suspecte. Quelle action est prioritaire ?",
+                "checkOptions": [
+                  "Attendre plusieurs jours",
+                  "Sécuriser le compte depuis le service officiel",
+                  "Répondre au fraudeur"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. Une réaction rapide peut empêcher ou limiter l’utilisation du mot de passe compromis."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Vérifie avant de cliquer",
+              "instructions": "Choisis le meilleur réflexe pour chaque message. Corrige tes erreurs pour débloquer le quiz final.",
+              "questions": [
+                {
+                  "statement": "Un SMS annonce un colis bloqué et exige un paiement dans dix minutes.",
+                  "options": [
+                    "Payer depuis le lien",
+                    "Ouvrir directement le site officiel du transporteur",
+                    "Envoyer son code bancaire par réponse"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La vérification doit passer par un accès officiel indépendant du message."
+                },
+                {
+                  "statement": "Le nom affiché est celui de ta banque, mais le domaine de l’expéditeur est inconnu.",
+                  "options": [
+                    "Faire confiance au nom affiché",
+                    "Considérer le message comme suspect et contacter la banque officiellement",
+                    "Transférer ses identifiants"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Le nom affiché peut être imité. Vérifie par l’application ou le numéro officiel."
+                },
+                {
+                  "statement": "Un collègue demande un virement inhabituel par messagerie.",
+                  "options": [
+                    "Confirmer avec lui par un canal déjà connu",
+                    "Exécuter immédiatement la demande",
+                    "Publier le message"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Une vérification indépendante permet de détecter un compte compromis ou une usurpation."
+                },
+                {
+                  "statement": "Tu reçois une pièce jointe inattendue nommée facture.zip.",
+                  "options": [
+                    "L’ouvrir pour voir",
+                    "Vérifier l’expéditeur et la nécessité avant toute ouverture",
+                    "Désactiver l’antivirus"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Une pièce jointe inattendue doit être validée avant d’être ouverte."
+                },
+                {
+                  "statement": "Tu as saisi un mot de passe sur une page qui semble frauduleuse.",
+                  "options": [
+                    "Sécuriser immédiatement le vrai compte",
+                    "Cacher l’incident",
+                    "Continuer à utiliser le même mot de passe partout"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Change le secret, vérifie les sessions, active la MFA et signale l’incident."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "L’ingénierie sociale manipule une personne plutôt qu’un logiciel.",
+              "Urgence, peur, récompense et demande inhabituelle sont des signaux de vigilance.",
+              "Le nom affiché ne remplace pas la vérification de l’adresse et du contexte.",
+              "HTTPS chiffre une connexion mais ne garantit pas qu’un site est honnête.",
+              "Une demande sensible doit être vérifiée par un canal officiel indépendant.",
+              "Après une erreur, sécurise rapidement le compte et signale l’incident."
+            ],
+            "quiz": [
+              {
+                "question": "Qu’est-ce que l’ingénierie sociale ?",
+                "options": [
+                  "La manipulation d’une personne pour obtenir une action ou une information",
+                  "Une méthode pour accélérer un réseau",
+                  "Une mise à jour automatique"
+                ],
+                "correctIndex": 0,
+                "explanation": "Elle exploite la confiance, l’émotion ou les habitudes afin d’influencer une décision."
+              },
+              {
+                "question": "Quel indice doit pousser à ralentir et vérifier ?",
+                "options": [
+                  "Une urgence artificielle et une demande inhabituelle",
+                  "Une information consultée dans l’application officielle",
+                  "Un message attendu confirmé autrement"
+                ],
+                "correctIndex": 0,
+                "explanation": "L’urgence est souvent utilisée pour empêcher une vérification réfléchie."
+              },
+              {
+                "question": "Que signifie le cadenas HTTPS ?",
+                "options": [
+                  "Le propriétaire du site est forcément honnête",
+                  "La connexion avec le site est chiffrée",
+                  "Le site appartient obligatoirement à une banque"
+                ],
+                "correctIndex": 1,
+                "explanation": "Le chiffrement protège la connexion, mais un site frauduleux peut aussi utiliser HTTPS."
+              },
+              {
+                "question": "Comment vérifier une demande sensible reçue par message ?",
+                "options": [
+                  "En utilisant uniquement le lien reçu",
+                  "Par un canal officiel déjà connu",
+                  "En répondant avec son mot de passe"
+                ],
+                "correctIndex": 1,
+                "explanation": "Un canal indépendant empêche l’auteur du message de contrôler la vérification."
+              },
+              {
+                "question": "Que faire après avoir saisi un mot de passe sur une fausse page ?",
+                "options": [
+                  "Sécuriser le compte officiel et les comptes réutilisant ce secret",
+                  "Attendre que le fraudeur réponde",
+                  "Supprimer seulement le message"
+                ],
+                "correctIndex": 0,
+                "explanation": "Change le mot de passe, ferme les sessions inconnues, active la MFA et signale l’incident."
+              }
+            ]
+          }
         }
       ]
     },
@@ -750,38 +1213,719 @@
         {
           "id": "network_basics",
           "title": "Comment fonctionne un réseau ?",
-          "summary": "LAN, WAN, routeur, switch et paquets de données.",
-          "minutes": 8,
+          "summary": "Suis le trajet d’une donnée entre appareils, switch, routeur et Internet.",
+          "minutes": 12,
           "icon": "hub_outlined",
           "objectives": [
-            "Expliquer ce qu’est un réseau.",
-            "Distinguer LAN et WAN.",
-            "Décrire le rôle du routeur, du switch et des paquets."
-          ]
+            "Expliquer ce qu’est un réseau informatique.",
+            "Distinguer un réseau local d’Internet.",
+            "Comprendre le rôle du switch et du routeur.",
+            "Décrire simplement le transport des données par paquets."
+          ],
+          "content": {
+            "introduction": "Avant d’analyser un service ou de comprendre une attaque, il faut savoir comment les appareils communiquent. Cette leçon suit une donnée depuis ton appareil, à travers le réseau local, jusqu’à un service distant.",
+            "steps": [
+              {
+                "eyebrow": "Point de départ",
+                "title": "Un réseau relie des équipements pour échanger",
+                "body": "Un réseau informatique est un ensemble d’équipements capables de communiquer : téléphones, ordinateurs, imprimantes, serveurs ou objets connectés. Ils utilisent des règles communes et une connexion filaire ou sans fil pour transporter des données et partager des services.",
+                "example": "À la maison, un téléphone et un ordinateur reliés à la même box appartiennent généralement au même réseau local.",
+                "icon": "hub_outlined",
+                "checkQuestion": "Quel exemple forme un réseau informatique ?",
+                "checkOptions": [
+                  "Deux appareils connectés qui échangent des données",
+                  "Un ordinateur éteint sans connexion",
+                  "Un fichier imprimé sur papier"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Un réseau permet à plusieurs équipements de communiquer et d’utiliser des ressources."
+              },
+              {
+                "eyebrow": "La bonne échelle",
+                "title": "Le LAN est local, le WAN relie des zones éloignées",
+                "body": "Un LAN couvre une zone limitée, comme un logement, une école ou un bureau. Un WAN relie plusieurs réseaux sur une zone plus vaste. Internet est un immense réseau de réseaux : ton LAN n’est donc pas Internet, même s’il permet d’y accéder.",
+                "example": "Les appareils d’un bureau communiquent sur le LAN. Le routeur relie ensuite ce LAN au réseau du fournisseur d’accès et au reste d’Internet.",
+                "icon": "route_outlined",
+                "checkQuestion": "Qu’est-ce qu’un LAN ?",
+                "checkOptions": [
+                  "Un réseau couvrant une zone locale",
+                  "Un mot de passe",
+                  "Un type de fichier"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Le LAN relie des équipements proches dans un même environnement."
+              },
+              {
+                "eyebrow": "Dans le réseau local",
+                "title": "Le switch relie les appareils d’un même LAN",
+                "body": "Un switch possède plusieurs ports réseau et transmet les données vers le bon équipement du réseau local. Il apprend quels appareils sont accessibles par ses ports. Une box domestique peut intégrer cette fonction, même si le switch n’apparaît pas comme un appareil séparé.",
+                "example": "Dans une entreprise, plusieurs ordinateurs câblés se connectent au switch pour communiquer avec un serveur local et avec le routeur.",
+                "icon": "device_hub_rounded",
+                "checkQuestion": "Quel équipement relie principalement les appareils d’un même LAN câblé ?",
+                "checkOptions": [
+                  "Le switch",
+                  "Le clavier",
+                  "Le navigateur"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. Le switch distribue les communications à l’intérieur du réseau local."
+              },
+              {
+                "eyebrow": "Entre les réseaux",
+                "title": "Le routeur choisit le prochain chemin",
+                "body": "Un routeur relie plusieurs réseaux et transfère les paquets entre eux. Chez toi, la box combine souvent routeur, point d’accès Wi-Fi et parfois switch. Quand la destination n’est pas dans le LAN, l’appareil envoie les données vers sa passerelle, généralement le routeur.",
+                "example": "Pour consulter un site distant, l’ordinateur remet les paquets au routeur, qui les transmet vers le fournisseur d’accès.",
+                "icon": "account_tree_outlined",
+                "checkQuestion": "Quel équipement relie ton réseau local à d’autres réseaux ?",
+                "checkOptions": [
+                  "Le routeur",
+                  "La souris",
+                  "Le gestionnaire de mots de passe"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Le routeur fait circuler les données entre des réseaux différents."
+              },
+              {
+                "eyebrow": "Transporter les données",
+                "title": "Les informations voyagent en paquets",
+                "body": "Les données sont découpées en petites unités appelées paquets. Chaque paquet contient des informations utiles à son transport, notamment une source et une destination. Différents paquets peuvent traverser plusieurs équipements avant d’être réassemblés par le destinataire.",
+                "example": "Une photo envoyée sur Internet n’est pas transportée comme une enveloppe unique : ses données sont découpées, envoyées puis reconstituées.",
+                "icon": "inventory_2_outlined",
+                "checkQuestion": "Pourquoi parle-t-on de paquets sur un réseau ?",
+                "checkOptions": [
+                  "Parce que les données sont découpées pour être transportées",
+                  "Parce que chaque appareil reçoit un colis physique",
+                  "Parce que le Wi-Fi imprime les fichiers"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Le découpage permet de transporter et de gérer efficacement les données."
+              },
+              {
+                "eyebrow": "Sans fil ne signifie pas Internet",
+                "title": "Le Wi-Fi est un moyen d’entrer dans le réseau",
+                "body": "Le Wi-Fi relie un appareil au point d’accès par ondes radio. Il ne constitue pas Internet lui-même. Tu peux être connecté au Wi-Fi alors que la box n’a plus d’accès Internet, et un câble Ethernet peut donner accès au même réseau sans utiliser le Wi-Fi.",
+                "example": "Si le fournisseur d’accès tombe en panne, ton téléphone peut rester connecté au Wi-Fi et communiquer avec une imprimante locale, sans pouvoir ouvrir un site distant.",
+                "icon": "visibility_outlined",
+                "checkQuestion": "Un téléphone connecté au Wi-Fi a-t-il forcément accès à Internet ?",
+                "checkOptions": [
+                  "Oui, toujours",
+                  "Non, le réseau local peut fonctionner sans accès Internet",
+                  "Seulement si le Bluetooth est actif"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. Le Wi-Fi donne accès au réseau local ; la connexion Internet dépend d’un autre lien."
+              },
+              {
+                "eyebrow": "Suivre un trajet",
+                "title": "Une requête traverse plusieurs étapes",
+                "body": "Quand tu demandes une page, l’appareil prépare une requête, l’envoie sur le LAN vers le routeur, puis plusieurs réseaux la transportent jusqu’au serveur. La réponse effectue un trajet de retour. À chaque étape, différents protocoles et équipements accomplissent une tâche précise.",
+                "example": "Téléphone → point d’accès Wi-Fi → routeur → fournisseur d’accès → réseaux intermédiaires → serveur du site.",
+                "icon": "route_outlined",
+                "checkQuestion": "Quelle étape vient normalement après le téléphone sur un Wi-Fi domestique ?",
+                "checkOptions": [
+                  "Le point d’accès ou la box",
+                  "Directement tous les serveurs du monde",
+                  "Une imprimante obligatoire"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. L’appareil rejoint d’abord l’infrastructure de son réseau local."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Reconstruis le réseau",
+              "instructions": "Associe chaque situation au bon élément du réseau.",
+              "questions": [
+                {
+                  "statement": "Plusieurs ordinateurs câblés d’un bureau doivent communiquer dans le même LAN.",
+                  "options": [
+                    "Switch",
+                    "Navigateur",
+                    "Mot de passe"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Le switch relie et dirige les échanges entre les équipements du LAN."
+                },
+                {
+                  "statement": "Le LAN doit envoyer des paquets vers un réseau distant.",
+                  "options": [
+                    "Routeur",
+                    "Écran",
+                    "Clavier"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Le routeur relie les réseaux et choisit le prochain chemin."
+                },
+                {
+                  "statement": "Une photo doit être transportée sur le réseau.",
+                  "options": [
+                    "Elle est découpée en paquets",
+                    "Elle devient un mot de passe",
+                    "Elle doit être imprimée"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Les données sont découpées en unités transportables puis réassemblées."
+                },
+                {
+                  "statement": "Le Wi-Fi fonctionne, mais la liaison du fournisseur est coupée.",
+                  "options": [
+                    "Le LAN peut encore fonctionner sans Internet",
+                    "Tous les appareils s’éteignent",
+                    "Le switch devient un serveur web"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Le Wi-Fi et le LAN sont distincts de la connexion vers Internet."
+                },
+                {
+                  "statement": "Deux réseaux situés dans des bâtiments éloignés doivent être reliés.",
+                  "options": [
+                    "Une liaison de type WAN",
+                    "Un fichier local",
+                    "Une phrase de passe"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Un WAN relie des réseaux sur une zone plus large."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "Un réseau relie des équipements afin d’échanger des données et des services.",
+              "Un LAN couvre une zone locale ; un WAN relie des réseaux plus éloignés.",
+              "Internet est un réseau de réseaux.",
+              "Le switch relie les équipements d’un LAN et le routeur relie différents réseaux.",
+              "Les données sont découpées en paquets pour leur transport.",
+              "Le Wi-Fi donne accès au réseau local mais ne garantit pas l’accès à Internet."
+            ],
+            "quiz": [
+              {
+                "question": "Qu’est-ce qu’un réseau informatique ?",
+                "options": [
+                  "Des équipements reliés pour communiquer",
+                  "Un seul fichier sans appareil",
+                  "Une application de dessin"
+                ],
+                "correctIndex": 0,
+                "explanation": "Un réseau permet à des équipements d’échanger des données et d’utiliser des services."
+              },
+              {
+                "question": "Quel équipement relie principalement les appareils d’un même LAN ?",
+                "options": [
+                  "Le switch",
+                  "Le clavier",
+                  "Le moteur de recherche"
+                ],
+                "correctIndex": 0,
+                "explanation": "Le switch dirige les communications à l’intérieur du réseau local."
+              },
+              {
+                "question": "Quel est le rôle du routeur ?",
+                "options": [
+                  "Relier différents réseaux",
+                  "Créer tous les mots de passe",
+                  "Afficher les pages web"
+                ],
+                "correctIndex": 0,
+                "explanation": "Le routeur transfère les paquets d’un réseau vers un autre."
+              },
+              {
+                "question": "Comment les données sont-elles transportées ?",
+                "options": [
+                  "Sous forme de paquets",
+                  "Uniquement sous forme de documents imprimés",
+                  "Sans aucune règle"
+                ],
+                "correctIndex": 0,
+                "explanation": "Les données sont découpées en paquets contenant les informations nécessaires à leur transport."
+              },
+              {
+                "question": "Quelle affirmation sur le Wi-Fi est correcte ?",
+                "options": [
+                  "Wi-Fi et Internet sont exactement la même chose",
+                  "Le Wi-Fi relie l’appareil au réseau local",
+                  "Le Wi-Fi remplace le routeur dans tous les cas"
+                ],
+                "correctIndex": 1,
+                "explanation": "Le Wi-Fi est un moyen d’accéder au LAN ; l’accès Internet dépend de la liaison vers l’extérieur."
+              }
+            ]
+          }
         },
         {
           "id": "ip_dhcp_nat",
           "title": "Adresses IP, DHCP et NAT",
-          "summary": "Comprends comment les appareils sont identifiés et connectés.",
-          "minutes": 9,
+          "summary": "Comprends comment un appareil reçoit une adresse et communique au-delà du LAN.",
+          "minutes": 12,
           "icon": "pin_drop_outlined",
           "objectives": [
-            "Reconnaître une adresse IPv4.",
-            "Distinguer une IP privée d’une IP publique.",
-            "Comprendre simplement DHCP, NAT et localhost."
-          ]
+            "Lire la forme d’une adresse IPv4.",
+            "Distinguer une adresse privée d’une adresse publique.",
+            "Comprendre le rôle de DHCP, de la passerelle et de NAT.",
+            "Reconnaître localhost comme l’appareil lui-même."
+          ],
+          "content": {
+            "introduction": "Le routeur sait où envoyer un paquet grâce aux adresses réseau. Tu vas découvrir l’adresse IPv4, la configuration automatique par DHCP, la différence entre privé et public, puis le rôle de NAT.",
+            "steps": [
+              {
+                "eyebrow": "Point de départ",
+                "title": "Une adresse IP situe une interface sur un réseau",
+                "body": "Pour envoyer des paquets, le réseau doit distinguer les interfaces connectées. Une adresse IP joue ce rôle dans un réseau donné. Elle identifie une connexion réseau, pas avec certitude une personne : elle peut changer, être partagée ou appartenir à un équipement intermédiaire.",
+                "example": "Un téléphone peut avoir une adresse sur le Wi-Fi de la maison et une autre sur le réseau mobile.",
+                "icon": "pin_drop_outlined",
+                "checkQuestion": "Que représente principalement une adresse IP ?",
+                "checkOptions": [
+                  "Une interface dans un réseau",
+                  "L’identité civile certaine d’une personne",
+                  "Le mot de passe du routeur"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. L’adresse sert au routage réseau et ne suffit pas, seule, à identifier une personne."
+              },
+              {
+                "eyebrow": "Lire une IPv4",
+                "title": "Quatre nombres séparés par des points",
+                "body": "Une adresse IPv4 s’écrit avec quatre nombres compris entre 0 et 255, par exemple 192.168.1.24. Chaque nombre représente huit bits. L’adresse complète contient donc 32 bits. Pour débuter, retiens surtout sa forme et le fait qu’elle appartient à une configuration réseau.",
+                "example": "192.168.1.24 a une forme IPv4 valide ; 192.168.1.999 n’en a pas, car 999 dépasse 255.",
+                "icon": "pin_drop_outlined",
+                "checkQuestion": "Laquelle a une forme IPv4 valide ?",
+                "checkOptions": [
+                  "192.168.1.24",
+                  "192.168.1.999",
+                  "ordinateur.maison"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Une IPv4 contient quatre valeurs de 0 à 255 séparées par des points."
+              },
+              {
+                "eyebrow": "Deux espaces",
+                "title": "Privée dans le LAN, publique vers Internet",
+                "body": "Les adresses privées sont utilisées dans les réseaux locaux et ne sont pas routées directement sur Internet. Les plages courantes commencent par 10., 172.16 à 172.31, ou 192.168. Le routeur possède aussi une adresse publique visible par les services Internet.",
+                "example": "Plusieurs logements peuvent utiliser 192.168.1.20 sans conflit, car cette adresse reste dans chaque LAN. Leur adresse publique, elle, doit être utilisable sur Internet.",
+                "icon": "visibility_outlined",
+                "checkQuestion": "Laquelle est généralement une adresse IPv4 privée ?",
+                "checkOptions": [
+                  "192.168.1.20",
+                  "8.8.8.8",
+                  "300.1.1.1"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. 192.168.0.0/16 est une plage réservée aux réseaux privés."
+              },
+              {
+                "eyebrow": "Configuration automatique",
+                "title": "DHCP fournit les paramètres essentiels",
+                "body": "Quand un appareil rejoint un réseau, DHCP peut lui attribuer automatiquement une adresse IP, un masque de réseau, une passerelle et des serveurs DNS. Sans ce service, il faudrait configurer manuellement chaque appareil et éviter les adresses en double.",
+                "example": "En rejoignant le Wi-Fi, ton téléphone reçoit généralement sa configuration réseau de la box grâce à DHCP.",
+                "icon": "system_update_alt_rounded",
+                "checkQuestion": "Quel service attribue souvent automatiquement une adresse IP dans le LAN ?",
+                "checkOptions": [
+                  "DHCP",
+                  "HTTPS",
+                  "Le gestionnaire de mots de passe"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. DHCP automatise la configuration réseau des appareils clients."
+              },
+              {
+                "eyebrow": "Sortir du LAN",
+                "title": "La passerelle reçoit les destinations extérieures",
+                "body": "Un appareil compare la destination avec son propre réseau. Si elle se trouve ailleurs, il transmet le paquet à sa passerelle par défaut, généralement le routeur. La passerelle connaît un chemin vers d’autres réseaux ; elle ne remplace pas l’adresse de destination finale.",
+                "example": "Pour joindre un serveur Internet, l’ordinateur envoie d’abord le paquet à l’adresse locale de la box utilisée comme passerelle.",
+                "icon": "route_outlined",
+                "checkQuestion": "Où un appareil envoie-t-il normalement un paquet destiné à un autre réseau ?",
+                "checkOptions": [
+                  "À la passerelle par défaut",
+                  "À son écran",
+                  "À tous les appareils au hasard"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. La passerelle transmet les paquets vers les réseaux extérieurs."
+              },
+              {
+                "eyebrow": "Partager l’adresse publique",
+                "title": "NAT traduit les communications",
+                "body": "NAT permet notamment à plusieurs appareils utilisant des adresses privées de partager l’adresse publique du routeur. Le routeur garde une correspondance entre les connexions internes et les réponses reçues afin de renvoyer chaque réponse au bon appareil.",
+                "example": "Un téléphone et un ordinateur visitent des sites en même temps. Les sites voient généralement l’adresse publique de la box, tandis que le routeur distingue leurs connexions.",
+                "icon": "account_tree_outlined",
+                "checkQuestion": "Quel est un rôle courant de NAT à la maison ?",
+                "checkOptions": [
+                  "Permettre à plusieurs appareils privés de partager une adresse publique",
+                  "Créer des mots de passe",
+                  "Remplacer le Wi-Fi"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. NAT traduit et suit les communications entre le LAN privé et l’extérieur."
+              },
+              {
+                "eyebrow": "L’adresse la plus proche",
+                "title": "Localhost désigne la machine elle-même",
+                "body": "L’adresse 127.0.0.1 en IPv4 et le nom localhost renvoient vers l’appareil lui-même. Cette boucle locale permet de tester un service sans envoyer les paquets sur le réseau physique. Elle ne désigne pas la box ni un serveur public.",
+                "example": "Un développeur peut ouvrir un service de test sur localhost afin qu’il reste accessible uniquement depuis sa propre machine.",
+                "icon": "terminal_rounded",
+                "checkQuestion": "Que désigne 127.0.0.1 ?",
+                "checkOptions": [
+                  "L’appareil lui-même",
+                  "Tous les appareils Internet",
+                  "Toujours le routeur domestique"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. 127.0.0.1 est l’adresse de boucle locale IPv4."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Configure le poste",
+              "instructions": "Associe chaque besoin au bon élément de configuration.",
+              "questions": [
+                {
+                  "statement": "Le téléphone rejoint le Wi-Fi et reçoit automatiquement 192.168.1.24.",
+                  "options": [
+                    "DHCP",
+                    "MFA",
+                    "HTTPS"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "DHCP attribue automatiquement les paramètres réseau."
+                },
+                {
+                  "statement": "Le poste doit envoyer un paquet vers un réseau extérieur.",
+                  "options": [
+                    "Passerelle par défaut",
+                    "Corbeille",
+                    "Gestionnaire de fichiers"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La passerelle transmet le paquet vers d’autres réseaux."
+                },
+                {
+                  "statement": "Trois appareils privés partagent la connexion publique de la box.",
+                  "options": [
+                    "NAT",
+                    "LAN sans routeur",
+                    "Mot de passe principal"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "NAT associe les connexions privées à la communication publique du routeur."
+                },
+                {
+                  "statement": "Tu veux tester un service uniquement sur ta propre machine.",
+                  "options": [
+                    "127.0.0.1",
+                    "Une adresse choisie au hasard",
+                    "L’adresse d’un site public"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La boucle locale renvoie le trafic vers l’appareil lui-même."
+                },
+                {
+                  "statement": "Tu observes l’adresse 192.168.10.5.",
+                  "options": [
+                    "Adresse privée courante",
+                    "Preuve certaine de l’identité d’une personne",
+                    "Adresse IPv4 impossible"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "192.168.0.0/16 est réservé aux réseaux privés."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "Une adresse IP identifie une interface dans un contexte réseau, pas une personne avec certitude.",
+              "Une IPv4 contient quatre nombres compris entre 0 et 255.",
+              "Les adresses privées servent dans les LAN ; l’adresse publique est utilisée vers Internet.",
+              "DHCP attribue automatiquement l’adresse, la passerelle et d’autres paramètres.",
+              "NAT permet à plusieurs appareils privés de partager une adresse publique.",
+              "127.0.0.1 et localhost désignent l’appareil lui-même."
+            ],
+            "quiz": [
+              {
+                "question": "Que représente principalement une adresse IP ?",
+                "options": [
+                  "Une interface sur un réseau",
+                  "Une identité civile certaine",
+                  "Un mot de passe"
+                ],
+                "correctIndex": 0,
+                "explanation": "L’adresse sert à acheminer les paquets dans un contexte réseau."
+              },
+              {
+                "question": "Quelle adresse est généralement privée ?",
+                "options": [
+                  "192.168.1.30",
+                  "8.8.8.8",
+                  "400.1.1.1"
+                ],
+                "correctIndex": 0,
+                "explanation": "La plage 192.168.0.0/16 est réservée à l’usage privé."
+              },
+              {
+                "question": "Quel est le rôle de DHCP ?",
+                "options": [
+                  "Attribuer automatiquement une configuration réseau",
+                  "Chiffrer tous les fichiers",
+                  "Créer un compte utilisateur"
+                ],
+                "correctIndex": 0,
+                "explanation": "DHCP fournit notamment une adresse IP, une passerelle et des serveurs DNS."
+              },
+              {
+                "question": "Pourquoi utilise-t-on couramment NAT sur une box ?",
+                "options": [
+                  "Pour partager une adresse publique entre plusieurs appareils privés",
+                  "Pour remplacer les adresses IP",
+                  "Pour garantir qu’aucune attaque n’est possible"
+                ],
+                "correctIndex": 0,
+                "explanation": "Le routeur traduit et suit les connexions entre le LAN privé et Internet."
+              },
+              {
+                "question": "Que désigne localhost ?",
+                "options": [
+                  "La machine elle-même",
+                  "Le serveur DNS mondial",
+                  "Le routeur de tous les utilisateurs"
+                ],
+                "correctIndex": 0,
+                "explanation": "Localhost utilise la boucle locale et ne quitte pas l’appareil."
+              }
+            ]
+          }
         },
         {
           "id": "dns_ports_protocols",
           "title": "DNS, ports et protocoles",
-          "summary": "Relie un domaine à une adresse IP et à un service.",
-          "minutes": 10,
+          "summary": "Relie un nom de domaine à une adresse, un port et un protocole.",
+          "minutes": 12,
           "icon": "dns_outlined",
           "objectives": [
-            "Expliquer le rôle du DNS.",
-            "Comprendre la notion de port.",
-            "Associer HTTP, HTTPS, SSH et DNS à leurs usages."
-          ]
+            "Expliquer le rôle de DNS.",
+            "Comprendre la différence entre une adresse IP et un port.",
+            "Associer HTTP, HTTPS, SSH et DNS à leurs usages courants.",
+            "Suivre simplement l’ouverture d’un service client-serveur."
+          ],
+          "content": {
+            "introduction": "Une adresse IP permet de joindre un appareil, mais celui-ci peut proposer plusieurs services. DNS aide à trouver l’adresse, le port désigne le service et le protocole définit les règles de communication.",
+            "steps": [
+              {
+                "eyebrow": "Point de départ",
+                "title": "Les humains retiennent des noms, les réseaux utilisent des adresses",
+                "body": "Un nom de domaine comme exemple.fr est plus facile à retenir qu’une adresse IP. Avant de contacter le serveur, l’appareil doit obtenir l’adresse associée au nom. Cette traduction est le rôle principal du système DNS.",
+                "example": "Le navigateur reçoit un nom de domaine, demande son adresse IP, puis utilise cette adresse pour commencer la connexion.",
+                "icon": "dns_outlined",
+                "checkQuestion": "Quel est le rôle principal de DNS ?",
+                "checkOptions": [
+                  "Associer un nom de domaine à des informations comme une adresse IP",
+                  "Créer les mots de passe",
+                  "Remplacer tous les routeurs"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. DNS fournit notamment les adresses liées aux noms de domaine."
+              },
+              {
+                "eyebrow": "Résoudre un nom",
+                "title": "La réponse peut venir d’un cache ou d’un résolveur",
+                "body": "L’appareil vérifie d’abord s’il connaît déjà la réponse dans son cache. Sinon, il interroge généralement un résolveur DNS configuré par le réseau. Celui-ci cherche la réponse auprès de l’infrastructure DNS et la renvoie. Le cache évite de répéter immédiatement toute la recherche.",
+                "example": "La box, le fournisseur d’accès ou un service choisi peut fournir le résolveur DNS utilisé par l’appareil.",
+                "icon": "account_tree_outlined",
+                "checkQuestion": "Pourquoi utilise-t-on un cache DNS ?",
+                "checkOptions": [
+                  "Pour réutiliser temporairement une réponse connue",
+                  "Pour supprimer Internet",
+                  "Pour remplacer l’adresse IP par un mot de passe"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Une réponse mise en cache accélère les recherches suivantes jusqu’à son expiration."
+              },
+              {
+                "eyebrow": "Plusieurs services",
+                "title": "L’adresse indique la machine, le port indique le service",
+                "body": "Une même adresse IP peut héberger plusieurs services. Le numéro de port aide le système à remettre la communication au bon programme. Un port réseau est un nombre logique, pas une prise physique. Il existe de nombreux ports, de 0 à 65535.",
+                "example": "Un serveur peut proposer un site web et un accès d’administration sur la même IP, mais sur des ports différents.",
+                "icon": "device_hub_rounded",
+                "checkQuestion": "À quoi sert principalement un numéro de port ?",
+                "checkOptions": [
+                  "À désigner un service sur une machine",
+                  "À identifier une personne",
+                  "À mesurer la vitesse du clavier"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. L’IP mène vers l’hôte et le port vers le service concerné."
+              },
+              {
+                "eyebrow": "Des règles communes",
+                "title": "Un protocole définit comment communiquer",
+                "body": "Un protocole est un ensemble de règles comprises par les deux côtés : format des messages, ordre des échanges et comportement attendu. Sans règles communes, un client et un serveur ne pourraient pas interpréter correctement leurs messages.",
+                "example": "HTTP définit les échanges du Web ; DNS définit des messages permettant de demander et recevoir des informations sur les domaines.",
+                "icon": "inventory_2_outlined",
+                "checkQuestion": "Qu’est-ce qu’un protocole réseau ?",
+                "checkOptions": [
+                  "Un ensemble de règles de communication",
+                  "Une marque de routeur",
+                  "Un fichier obligatoirement dangereux"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Les protocoles permettent aux systèmes d’échanger des messages interprétables."
+              },
+              {
+                "eyebrow": "Services courants",
+                "title": "Quelques ports donnent des repères",
+                "body": "HTTP utilise couramment le port 80, HTTPS le 443, SSH le 22 et DNS le 53. Ce sont des valeurs par défaut, pas des obligations absolues : un service peut écouter ailleurs. Un port ouvert indique qu’un service répond probablement, pas qu’il est vulnérable.",
+                "example": "Une adresse terminée par :8443 peut proposer un service HTTPS sur un port différent du 443 habituel.",
+                "icon": "dns_outlined",
+                "checkQuestion": "Quel port est couramment associé à HTTPS ?",
+                "checkOptions": [
+                  "443",
+                  "22",
+                  "53"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. HTTPS utilise couramment TCP 443, même si une autre configuration reste possible."
+              },
+              {
+                "eyebrow": "HTTP et HTTPS",
+                "title": "Le S ajoute une protection du transport",
+                "body": "HTTPS utilise TLS pour chiffrer la connexion et vérifier le certificat présenté par le serveur. Cela limite l’écoute et la modification des échanges pendant leur transport. Cependant, un site frauduleux peut posséder un certificat valide : il faut toujours vérifier le domaine et la demande.",
+                "example": "Le cadenas indique une connexion chiffrée avec le domaine affiché, pas que l’offre ou le propriétaire est honnête.",
+                "icon": "verified_user_outlined",
+                "checkQuestion": "Que protège principalement HTTPS ?",
+                "checkOptions": [
+                  "Le transport des données entre le client et le serveur",
+                  "La sincérité de tout contenu",
+                  "Tous les fichiers stockés sur l’appareil"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. HTTPS sécurise la connexion, mais l’utilisateur doit encore vérifier le domaine et le contexte."
+              },
+              {
+                "eyebrow": "Client et serveur",
+                "title": "Une connexion rassemble plusieurs éléments",
+                "body": "Le client résout d’abord le nom grâce à DNS, contacte l’adresse IP sur un port, puis parle le protocole attendu par le service. Si un seul élément est incorrect — nom, adresse, port, service ou protocole — la communication peut échouer.",
+                "example": "Pour ouvrir un site HTTPS : nom de domaine → résolution DNS → adresse IP → port 443 → échange HTTPS.",
+                "icon": "route_outlined",
+                "checkQuestion": "Quel ordre décrit correctement l’accès à un site HTTPS ?",
+                "checkOptions": [
+                  "Résoudre le nom, contacter l’IP sur le port, utiliser HTTPS",
+                  "Choisir un mot de passe puis supprimer DNS",
+                  "Contacter un port sans destination"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Chaque couche apporte l’information nécessaire à l’étape suivante."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Relie le service",
+              "instructions": "Associe chaque besoin au nom, à l’adresse, au port ou au protocole approprié.",
+              "questions": [
+                {
+                  "statement": "Transformer exemple.fr en adresse IP.",
+                  "options": [
+                    "DNS",
+                    "MFA",
+                    "NAT uniquement"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "DNS associe les noms de domaine à des informations, notamment des adresses IP."
+                },
+                {
+                  "statement": "Désigner le service web sécurisé sur une machine.",
+                  "options": [
+                    "Port 443",
+                    "Port 22",
+                    "127.0.0.1 uniquement"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "HTTPS utilise couramment le port 443."
+                },
+                {
+                  "statement": "Administrer à distance une machine autorisée avec un canal sécurisé.",
+                  "options": [
+                    "SSH",
+                    "HTTP",
+                    "DHCP"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "SSH fournit couramment un accès distant chiffré et utilise par défaut le port 22."
+                },
+                {
+                  "statement": "Définir le format et l’ordre des messages échangés.",
+                  "options": [
+                    "Un protocole",
+                    "Une adresse privée",
+                    "Une sauvegarde"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Un protocole fixe les règles comprises par le client et le serveur."
+                },
+                {
+                  "statement": "Un service répond sur un port inhabituel.",
+                  "options": [
+                    "C’est possible selon la configuration",
+                    "C’est toujours impossible",
+                    "Cela prouve automatiquement une vulnérabilité"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Les ports standards sont des conventions ; un administrateur peut choisir un autre port."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "DNS associe les noms de domaine à des informations comme les adresses IP.",
+              "Le cache DNS conserve temporairement certaines réponses.",
+              "L’adresse IP désigne l’hôte et le port aide à désigner le service.",
+              "Un protocole définit les règles d’un échange.",
+              "HTTP, HTTPS, SSH et DNS utilisent couramment les ports 80, 443, 22 et 53.",
+              "HTTPS chiffre la connexion mais ne garantit pas qu’un site est honnête."
+            ],
+            "quiz": [
+              {
+                "question": "Quel est le rôle principal de DNS ?",
+                "options": [
+                  "Résoudre des noms de domaine",
+                  "Créer les utilisateurs",
+                  "Remplacer tous les protocoles"
+                ],
+                "correctIndex": 0,
+                "explanation": "DNS fournit notamment les adresses associées aux noms de domaine."
+              },
+              {
+                "question": "Que désigne un port réseau ?",
+                "options": [
+                  "Un service ou une application sur un hôte",
+                  "Une personne avec certitude",
+                  "Une prise électrique"
+                ],
+                "correctIndex": 0,
+                "explanation": "Le numéro de port permet au système de remettre la communication au bon service."
+              },
+              {
+                "question": "Quel port est couramment associé à SSH ?",
+                "options": [
+                  "22",
+                  "53",
+                  "443"
+                ],
+                "correctIndex": 0,
+                "explanation": "SSH utilise le port 22 par défaut."
+              },
+              {
+                "question": "Qu’est-ce qu’un protocole ?",
+                "options": [
+                  "Un ensemble de règles de communication",
+                  "Une adresse IP privée",
+                  "Un mot de passe temporaire"
+                ],
+                "correctIndex": 0,
+                "explanation": "Le protocole définit comment les deux côtés structurent et interprètent leurs échanges."
+              },
+              {
+                "question": "Quelle affirmation sur HTTPS est correcte ?",
+                "options": [
+                  "Il chiffre la connexion, mais le domaine doit encore être vérifié",
+                  "Il rend tout site honnête",
+                  "Il remplace DNS et les adresses IP"
+                ],
+                "correctIndex": 0,
+                "explanation": "TLS protège le transport, sans garantir la légitimité du contenu ou du propriétaire."
+              }
+            ]
+          }
         }
       ]
     },
@@ -793,26 +1937,495 @@
         {
           "id": "linux_terminal",
           "title": "Linux et le terminal",
-          "summary": "Découvre Linux et tes premières commandes.",
-          "minutes": 10,
+          "summary": "Navigue dans un laboratoire Linux et lis des fichiers avec des commandes sûres.",
+          "minutes": 13,
           "icon": "terminal_rounded",
           "objectives": [
-            "Comprendre le rôle d’un système d’exploitation.",
-            "Naviguer avec pwd, ls et cd.",
-            "Lire et créer des fichiers dans une simulation sûre."
-          ]
+            "Comprendre le rôle de Linux, du terminal et du shell.",
+            "Identifier l’utilisateur et le dossier courant.",
+            "Lister et parcourir une arborescence.",
+            "Créer et lire des fichiers dans un laboratoire personnel."
+          ],
+          "content": {
+            "introduction": "Le terminal permet de demander précisément au système d’exécuter une action. Tu vas apprendre quelques commandes essentielles dans un dossier de laboratoire, sans privilèges élevés et sans toucher aux fichiers importants du système.",
+            "steps": [
+              {
+                "eyebrow": "Point de départ",
+                "title": "Linux est un système, le terminal est une interface",
+                "body": "Linux gère le matériel, les processus, les utilisateurs, les fichiers et le réseau. Le terminal est une interface textuelle. À l’intérieur, un shell lit les commandes, les interprète et demande au système de les exécuter. Ces termes sont liés, mais ils ne désignent pas la même chose.",
+                "example": "Une fenêtre de terminal peut lancer un shell comme Bash ou Zsh sur un système Linux.",
+                "icon": "terminal_rounded",
+                "checkQuestion": "Quel est le rôle du shell ?",
+                "checkOptions": [
+                  "Interpréter les commandes saisies",
+                  "Remplacer le système d’exploitation",
+                  "Créer automatiquement Internet"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Le shell analyse la commande et lance les programmes demandés."
+              },
+              {
+                "eyebrow": "Lire l’invite",
+                "title": "La commande s’exécute avec un utilisateur et un contexte",
+                "body": "L’invite peut afficher le nom de l’utilisateur, la machine et le dossier courant. La commande whoami indique l’utilisateur actif. Les droits de cet utilisateur déterminent les fichiers et actions accessibles. Travaille avec un compte normal et n’utilise pas sudo sans comprendre la commande.",
+                "example": "whoami peut répondre alex. Cela signifie que la commande suivante utilise normalement les droits du compte alex.",
+                "icon": "badge_outlined",
+                "checkQuestion": "Quelle commande affiche l’utilisateur courant ?",
+                "checkOptions": [
+                  "whoami",
+                  "pwd",
+                  "cat"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. whoami aide à vérifier avec quelle identité les commandes sont exécutées."
+              },
+              {
+                "eyebrow": "Se repérer",
+                "title": "pwd affiche le dossier courant",
+                "body": "Le système de fichiers est organisé comme une arborescence. Une commande agit souvent relativement au dossier courant. pwd affiche son chemin absolu, depuis la racine /. Vérifie ce chemin avant de créer, déplacer ou modifier un fichier.",
+                "example": "Si pwd affiche /home/alex/cyber-lab, une commande utilisant notes.txt vise normalement ce fichier dans cyber-lab.",
+                "icon": "pin_drop_outlined",
+                "checkQuestion": "Quelle commande indique où tu te trouves ?",
+                "checkOptions": [
+                  "pwd",
+                  "ls",
+                  "whoami"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. pwd signifie print working directory et affiche le chemin du dossier courant."
+              },
+              {
+                "eyebrow": "Observer avant d’agir",
+                "title": "ls liste le contenu",
+                "body": "La commande ls affiche les fichiers et dossiers visibles. ls -la ajoute les éléments cachés et des informations comme les droits, le propriétaire et la taille. Commence par observer le contenu avant de choisir le prochain chemin.",
+                "example": "Dans un laboratoire, ls peut afficher preuves, notes.txt et README. ls -la montre aussi les noms commençant par un point.",
+                "icon": "visibility_outlined",
+                "checkQuestion": "Que fait ls -la ?",
+                "checkOptions": [
+                  "Liste le contenu avec les éléments cachés et des détails",
+                  "Supprime tous les fichiers",
+                  "Change de réseau"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Les options -l et -a rendent l’observation plus complète."
+              },
+              {
+                "eyebrow": "Se déplacer",
+                "title": "cd change le dossier courant",
+                "body": "cd suivi d’un chemin ouvre un autre dossier. cd preuves entre dans le sous-dossier preuves ; cd .. remonte d’un niveau ; cd sans argument revient généralement dans le dossier personnel. Un chemin absolu commence par /, tandis qu’un chemin relatif part du dossier actuel.",
+                "example": "Depuis /home/alex/cyber-lab, cd preuves peut mener à /home/alex/cyber-lab/preuves.",
+                "icon": "route_outlined",
+                "checkQuestion": "Quelle commande remonte d’un niveau ?",
+                "checkOptions": [
+                  "cd ..",
+                  "pwd ..",
+                  "ls .. --delete"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Les deux points représentent le dossier parent."
+              },
+              {
+                "eyebrow": "Créer un laboratoire",
+                "title": "mkdir et touch préparent un espace sûr",
+                "body": "mkdir crée un dossier et touch peut créer un fichier vide. Pour pratiquer, crée un dossier dans ton espace personnel, vérifie-le avec pwd et ls, puis limite les manipulations à cet emplacement. Un laboratoire clairement identifié réduit les erreurs.",
+                "example": "mkdir cyber-lab crée le dossier ; cd cyber-lab y entre ; touch notes.txt crée un fichier vide de travail.",
+                "icon": "inventory_2_outlined",
+                "checkQuestion": "Quelle commande crée un dossier nommé cyber-lab ?",
+                "checkOptions": [
+                  "mkdir cyber-lab",
+                  "cat cyber-lab",
+                  "whoami cyber-lab"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. mkdir signifie make directory."
+              },
+              {
+                "eyebrow": "Lire sans modifier",
+                "title": "cat affiche le contenu d’un petit fichier texte",
+                "body": "cat suivi d’un fichier affiche son contenu dans le terminal. Utilise-le pour de petits fichiers texte dont tu connais l’origine. Avant toute commande de suppression ou toute utilisation de sudo, arrête-toi et vérifie le chemin, la cible et l’effet attendu.",
+                "example": "cat notes.txt lit le fichier notes.txt du dossier courant sans le modifier.",
+                "icon": "terminal_rounded",
+                "checkQuestion": "Quelle commande lit un petit fichier nommé indice.txt ?",
+                "checkOptions": [
+                  "cat indice.txt",
+                  "mkdir indice.txt",
+                  "cd indice.txt --remove"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. cat affiche le contenu texte du fichier."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Parcours le laboratoire",
+              "instructions": "Choisis la commande la plus adaptée à chaque étape. Toutes les actions restent dans un dossier d’exercice.",
+              "questions": [
+                {
+                  "statement": "Vérifier l’utilisateur qui exécute les commandes.",
+                  "options": [
+                    "whoami",
+                    "mkdir",
+                    "cat"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "whoami affiche l’identité active."
+                },
+                {
+                  "statement": "Afficher le chemin du dossier actuel.",
+                  "options": [
+                    "pwd",
+                    "ls",
+                    "cd .."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "pwd affiche le chemin absolu du dossier courant."
+                },
+                {
+                  "statement": "Voir aussi les éléments cachés et les détails.",
+                  "options": [
+                    "ls -la",
+                    "pwd -delete",
+                    "cat --network"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "ls -la liste les éléments cachés avec des informations détaillées."
+                },
+                {
+                  "statement": "Entrer dans le sous-dossier preuves.",
+                  "options": [
+                    "cd preuves",
+                    "cat preuves",
+                    "whoami preuves"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "cd change le dossier courant."
+                },
+                {
+                  "statement": "Lire le fichier indice.txt sans le modifier.",
+                  "options": [
+                    "cat indice.txt",
+                    "mkdir indice.txt",
+                    "sudo indice.txt"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "cat affiche le contenu d’un petit fichier texte."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "Linux gère le système ; le terminal fournit une interface ; le shell interprète les commandes.",
+              "whoami affiche l’utilisateur actif et pwd le dossier courant.",
+              "ls et ls -la permettent d’observer le contenu avant d’agir.",
+              "cd navigue dans l’arborescence et cd .. remonte au dossier parent.",
+              "mkdir crée un dossier, touch un fichier vide et cat lit un petit fichier texte.",
+              "Travaille dans un laboratoire personnel et vérifie toujours la cible avant une action sensible."
+            ],
+            "quiz": [
+              {
+                "question": "Quelle différence existe entre terminal et shell ?",
+                "options": [
+                  "Le terminal est l’interface et le shell interprète les commandes",
+                  "Ils désignent obligatoirement le matériel",
+                  "Le shell est un câble réseau"
+                ],
+                "correctIndex": 0,
+                "explanation": "Le terminal accueille la session, tandis que le shell traite les commandes."
+              },
+              {
+                "question": "Quelle commande affiche le dossier courant ?",
+                "options": [
+                  "pwd",
+                  "whoami",
+                  "mkdir"
+                ],
+                "correctIndex": 0,
+                "explanation": "pwd affiche le chemin du working directory."
+              },
+              {
+                "question": "Que fait cd .. ?",
+                "options": [
+                  "Remonte au dossier parent",
+                  "Supprime le dossier courant",
+                  "Affiche l’utilisateur"
+                ],
+                "correctIndex": 0,
+                "explanation": "Les deux points désignent le niveau parent de l’arborescence."
+              },
+              {
+                "question": "Quelle commande liste aussi les fichiers cachés avec des détails ?",
+                "options": [
+                  "ls -la",
+                  "cat -network",
+                  "pwd -all"
+                ],
+                "correctIndex": 0,
+                "explanation": "-a inclut les éléments cachés et -l affiche une liste détaillée."
+              },
+              {
+                "question": "Quel est le meilleur cadre pour débuter ?",
+                "options": [
+                  "Un dossier de laboratoire personnel sans privilèges inutiles",
+                  "Les fichiers système d’un serveur inconnu",
+                  "Une commande sudo copiée sans lecture"
+                ],
+                "correctIndex": 0,
+                "explanation": "Un environnement personnel et limité permet d’apprendre sans risquer les données ou systèmes d’autrui."
+              }
+            ]
+          }
         },
         {
           "id": "first_ctf",
           "title": "Ton premier mini-CTF",
-          "summary": "Utilise les notions apprises pour retrouver un flag.",
-          "minutes": 12,
+          "summary": "Analyse un incident simulé, relie les indices et rédige une réponse responsable.",
+          "minutes": 16,
           "icon": "flag_outlined",
           "objectives": [
-            "Suivre des indices dans un environnement simulé.",
-            "Identifier une IP et un service.",
-            "Trouver un flag en utilisant le terminal."
-          ]
+            "Respecter le périmètre d’un exercice autorisé.",
+            "Utiliser les commandes Linux apprises pour lire des indices.",
+            "Relier phishing, IP, ports et authentification.",
+            "Proposer des mesures de protection après l’analyse."
+          ],
+          "content": {
+            "introduction": "Bienvenue dans ton premier mini-CTF guidé. Tu n’attaques aucun système : tu analyses un dossier de preuves simulées fourni par CyberParcours. Le flag confirme ton raisonnement, mais le véritable objectif est de comprendre l’incident et de proposer une réponse.",
+            "steps": [
+              {
+                "eyebrow": "Règle de mission",
+                "title": "Commencer par l’autorisation et le périmètre",
+                "body": "Le laboratoire autorise uniquement la lecture des fichiers présents dans le dossier cyberparcours-ctf. Aucun scan, aucune connexion externe et aucun test sur un domaine réel ne sont nécessaires. Les adresses .example et 203.0.113.0/24 sont réservées à la documentation.",
+                "example": "Périmètre : fichiers simulés locaux. Objectif : reconstruire l’incident, trouver le flag et recommander des protections.",
+                "icon": "gavel_rounded",
+                "checkQuestion": "Quelle action respecte le périmètre ?",
+                "checkOptions": [
+                  "Lire les fichiers simulés fournis",
+                  "Scanner un site public ressemblant au scénario",
+                  "Tester le compte réel d’une autre personne"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Un exercice autorise seulement les actions explicitement prévues dans son périmètre."
+              },
+              {
+                "eyebrow": "Briefing",
+                "title": "Une connexion inconnue a été signalée",
+                "body": "Une association fictive reçoit une alerte concernant le compte de formation de Léa. Elle te remet une copie locale de quatre fichiers : README.txt, message.txt, network.txt et sessions.txt. Tu dois identifier la cause probable et les premières mesures de réponse.",
+                "example": "Le scénario porte sur l’analyse d’éléments déjà collectés, pas sur l’exploitation d’une machine.",
+                "icon": "notification_important_outlined",
+                "checkQuestion": "Quel est ton premier objectif ?",
+                "checkOptions": [
+                  "Comprendre les preuves fournies",
+                  "Effacer immédiatement tous les fichiers",
+                  "Chercher une cible sur Internet"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Une analyse commence par préserver, lire et comprendre les éléments disponibles."
+              },
+              {
+                "eyebrow": "Étape terminal",
+                "title": "Observer le dossier avant d’ouvrir un fichier",
+                "body": "Dans la simulation, pwd confirme que tu te trouves dans /home/learner/cyberparcours-ctf. La commande ls -la affiche les quatre fichiers annoncés. Le nombre et les noms correspondent au briefing : tu peux poursuivre sans sortir du dossier.",
+                "example": "pwd puis ls -la : deux commandes d’observation qui ne modifient pas les preuves.",
+                "icon": "terminal_rounded",
+                "checkQuestion": "Quelle commande utiliser pour vérifier le chemin courant ?",
+                "checkOptions": [
+                  "pwd",
+                  "mkdir",
+                  "sudo"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. pwd vérifie le contexte avant toute autre action."
+              },
+              {
+                "eyebrow": "Indice 1 · message.txt",
+                "title": "Le message crée une urgence et masque le domaine",
+                "body": "cat message.txt révèle un message demandant de confirmer le compte en cinq minutes. Le texte du lien annonce connexion.cyberparcours.fr, mais la destination simulée est cyberparcours-login.example. L’urgence, la différence de domaine et la demande de mot de passe indiquent un phishing probable.",
+                "example": "Le domaine .example est réservé à cette simulation et ne doit pas être visité pour résoudre l’exercice.",
+                "icon": "phishing_rounded",
+                "checkQuestion": "Quel indice est le plus important ?",
+                "checkOptions": [
+                  "La destination ne correspond pas au domaine annoncé",
+                  "Le message contient une formule de politesse",
+                  "Le texte utilise une couleur"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Le décalage entre l’apparence et la destination révèle la tentative de redirection."
+              },
+              {
+                "eyebrow": "Indice 2 · network.txt",
+                "title": "L’adresse et le port racontent le trajet",
+                "body": "cat network.txt affiche poste=192.168.1.24, passerelle=192.168.1.1 et destination=203.0.113.42:443. Les deux premières adresses sont privées. La destination appartient à une plage de documentation et le port 443 correspond couramment à HTTPS.",
+                "example": "Le cadenas éventuel aurait chiffré la connexion vers la fausse destination, sans rendre cette destination légitime.",
+                "icon": "route_outlined",
+                "checkQuestion": "Que signifie :443 dans la destination ?",
+                "checkOptions": [
+                  "Le service utilise couramment le port HTTPS",
+                  "L’adresse est forcément sûre",
+                  "Le poste possède 443 utilisateurs"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Le port indique le service visé, pas la fiabilité de son propriétaire."
+              },
+              {
+                "eyebrow": "Indice 3 · sessions.txt",
+                "title": "Une session inconnue confirme le risque",
+                "body": "cat sessions.txt indique une connexion depuis un appareil inconnu après la saisie du mot de passe, puis trois demandes MFA refusées. Le refus de la MFA a probablement empêché une action supplémentaire, mais le mot de passe doit être considéré comme compromis.",
+                "example": "La bonne réaction est de passer par le service officiel, changer le secret, fermer les sessions inconnues et vérifier les méthodes de récupération.",
+                "icon": "report_gmailerrorred_outlined",
+                "checkQuestion": "Que suggèrent les demandes MFA non déclenchées ?",
+                "checkOptions": [
+                  "Quelqu’un tente probablement d’utiliser le compte",
+                  "Le Wi-Fi est nécessairement coupé",
+                  "Le mot de passe est devenu plus fort"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. Une demande MFA inattendue peut indiquer que la première étape d’authentification a déjà été franchie."
+              },
+              {
+                "eyebrow": "Relier les preuves",
+                "title": "Observer, vérifier, protéger",
+                "body": "README.txt demande de résumer la méthode en trois actions. Tu as observé les fichiers sans les modifier, vérifié le domaine et le contexte, puis choisi les protections adaptées. En réunissant les trois verbes en majuscules, tu obtiens le flag de validation.",
+                "example": "Flag : CYBER{OBSERVER_VERIFIER_PROTEGER}",
+                "icon": "flag_outlined",
+                "checkQuestion": "Que représente le flag dans cet exercice ?",
+                "checkOptions": [
+                  "La validation d’un raisonnement complet",
+                  "Une autorisation pour attaquer Internet",
+                  "Le seul objectif de la cybersécurité"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Le flag confirme l’analyse ; la compréhension et la réponse restent l’objectif principal."
+              },
+              {
+                "eyebrow": "Rapport final",
+                "title": "Une analyse utile se termine par des actions",
+                "body": "Le rapport conclut à un phishing ayant exposé le mot de passe. Il recommande de changer immédiatement ce mot de passe depuis le service officiel, fermer les sessions inconnues, conserver la MFA, vérifier les autres comptes en cas de réutilisation et signaler le message. Il note aussi que HTTPS n’aurait pas rendu le faux domaine légitime.",
+                "example": "Cause probable, preuves observées, impact possible et mesures de réponse : quatre parties simples pour transmettre une analyse claire.",
+                "icon": "verified_user_outlined",
+                "checkQuestion": "Quelle mesure doit figurer dans le rapport ?",
+                "checkOptions": [
+                  "Changer le mot de passe compromis et fermer les sessions inconnues",
+                  "Désactiver définitivement la MFA",
+                  "Publier les identifiants pour prévenir les autres"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. La réponse doit limiter l’accès et empêcher une nouvelle utilisation du secret compromis."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Rédige le constat",
+              "instructions": "Sélectionne la conclusion soutenue par chaque preuve du laboratoire simulé.",
+              "questions": [
+                {
+                  "statement": "Le texte du lien et sa destination utilisent des domaines différents.",
+                  "options": [
+                    "Indice de phishing",
+                    "Preuve d’un réseau plus rapide",
+                    "Mise à jour réussie"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La destination masquée est un signal fort de tentative de redirection frauduleuse."
+                },
+                {
+                  "statement": "Le poste possède l’adresse 192.168.1.24.",
+                  "options": [
+                    "Adresse privée du LAN",
+                    "Identité certaine de Léa",
+                    "Port HTTPS"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "192.168.0.0/16 est une plage privée utilisée dans les réseaux locaux."
+                },
+                {
+                  "statement": "La destination se termine par :443.",
+                  "options": [
+                    "Service couramment associé à HTTPS",
+                    "Garantie que le site est honnête",
+                    "Adresse localhost"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "443 indique couramment HTTPS, sans prouver la légitimité du domaine."
+                },
+                {
+                  "statement": "Trois demandes MFA apparaissent sans action de l’utilisatrice.",
+                  "options": [
+                    "Tentatives d’accès probables",
+                    "Preuve que le compte est sans risque",
+                    "Fonctionnement de DHCP"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Ces demandes peuvent suivre l’utilisation d’un mot de passe déjà exposé."
+                },
+                {
+                  "statement": "Le mot de passe a été saisi sur la fausse page.",
+                  "options": [
+                    "Le changer depuis le service officiel et vérifier les sessions",
+                    "Le conserver car la MFA existe",
+                    "Le publier dans le rapport"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La MFA réduit le risque mais ne rend pas un mot de passe compromis réutilisable en sécurité."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "Un CTF doit rester dans un périmètre explicitement autorisé.",
+              "pwd, ls -la et cat permettent d’observer un petit laboratoire sans modifier les preuves.",
+              "Urgence et domaine masqué soutiennent l’hypothèse de phishing.",
+              "Une IP privée, une destination et un port décrivent une partie du trajet réseau.",
+              "Une demande MFA inattendue peut signaler l’utilisation d’un mot de passe compromis.",
+              "Le flag valide le raisonnement, mais le rapport et les protections donnent du sens à l’exercice."
+            ],
+            "quiz": [
+              {
+                "question": "Pourquoi le périmètre est-il lu avant les preuves ?",
+                "options": [
+                  "Pour connaître les actions autorisées",
+                  "Pour obtenir le droit de viser d’autres systèmes",
+                  "Pour éviter de comprendre le scénario"
+                ],
+                "correctIndex": 0,
+                "explanation": "L’autorisation définit précisément les limites techniques et légales de l’exercice."
+              },
+              {
+                "question": "Quel élément soutient le mieux l’hypothèse de phishing ?",
+                "options": [
+                  "Le domaine réel diffère du domaine annoncé",
+                  "Le fichier possède une taille",
+                  "Le poste utilise Linux"
+                ],
+                "correctIndex": 0,
+                "explanation": "La destination masquée, associée à l’urgence et à la demande de secret, constitue un signal fort."
+              },
+              {
+                "question": "Que permet de comprendre destination=203.0.113.42:443 ?",
+                "options": [
+                  "Une adresse de destination et un service HTTPS probable",
+                  "Le nom de la victime",
+                  "Le mot de passe utilisé"
+                ],
+                "correctIndex": 0,
+                "explanation": "L’adresse situe la destination réseau et le port 443 correspond couramment à HTTPS."
+              },
+              {
+                "question": "Pourquoi faut-il changer le mot de passe même si la MFA a refusé les demandes ?",
+                "options": [
+                  "Parce que le mot de passe a déjà été exposé",
+                  "Parce que la MFA crée les fuites",
+                  "Parce que tout port 443 est dangereux"
+                ],
+                "correctIndex": 0,
+                "explanation": "La seconde barrière a aidé, mais le premier facteur ne doit plus être considéré comme secret."
+              },
+              {
+                "question": "Quel est le principal résultat de la mission ?",
+                "options": [
+                  "Une analyse reliant les preuves à des mesures de protection",
+                  "Un flag sans explication",
+                  "Une liste de cibles publiques"
+                ],
+                "correctIndex": 0,
+                "explanation": "La cybersécurité transforme les observations en compréhension, communication et réduction du risque."
+              }
+            ]
+          }
         }
       ]
     }
