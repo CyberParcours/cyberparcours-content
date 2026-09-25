@@ -100,7 +100,15 @@ Le parcours CyberParcours doit :
 
 ## État du projet
 
-Le premier catalogue comprend **3 modules et 10 leçons planifiées**. Les premières leçons sont progressivement enrichies avant l’ouverture du parcours complet et du premier mini-CTF guidé.
+Le catalogue initial comprend **3 modules et 10 leçons complètes**, depuis les fondamentaux de la protection personnelle jusqu’à un premier mini-CTF guidé. Chaque leçon contient des explications progressives, une activité pratique et un quiz final.
+
+## Droits d’auteur
+
+© 2026 **CyberParcours**. Tous droits réservés.
+
+Ce dépôt est public afin que l’application puisse télécharger gratuitement les mises à jour du catalogue. Sa visibilité publique ne signifie pas que son contenu est placé sous une licence open source.
+
+Le contenu pédagogique, les textes, les activités et les quiz ne peuvent pas être reproduits, modifiés, redistribués ou exploités commercialement sans l’autorisation écrite préalable de CyberParcours, sous réserve des droits prévus par la loi et des fonctionnalités autorisées par GitHub.
 
 ---
 
