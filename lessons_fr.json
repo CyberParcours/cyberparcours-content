@@ -1,0 +1,820 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "language": "fr",
+  "modules": [
+    {
+      "title": "Module 1 · Se protéger",
+      "subtitle": "Comprendre les risques et adopter les bons réflexes.",
+      "color": "#27D7F2",
+      "lessons": [
+        {
+          "id": "cyber_intro",
+          "title": "Bienvenue dans la cybersécurité",
+          "summary": "Comprends ce que protège la cybersécurité, comment elle agit et comment apprendre légalement.",
+          "minutes": 10,
+          "icon": "security_rounded",
+          "objectives": [
+            "Définir simplement la cybersécurité.",
+            "Reconnaître ses objectifs et ses principales missions.",
+            "Découvrir plusieurs métiers du domaine.",
+            "Comprendre le rôle indispensable de l’autorisation."
+          ],
+          "content": {
+            "introduction": "Tu vas découvrir pourquoi la cybersécurité existe, ce qu’elle protège et comment des personnes aux métiers très différents travaillent ensemble. Avance étape par étape : chaque vérification prépare la suivante.",
+            "steps": [
+              {
+                "eyebrow": "Point de départ",
+                "title": "Un matin, ton compte ne répond plus",
+                "body": "Imagine : ton mot de passe ne fonctionne plus, des messages partent en ton nom et tes fichiers en ligne sont devenus inaccessibles. Ce n’est pas seulement un problème informatique. Ton identité, tes données et tes contacts peuvent être touchés.",
+                "example": "La cybersécurité sert à réduire la probabilité de ce type d’incident, à le détecter rapidement et à limiter ses conséquences.",
+                "icon": "notification_important_outlined",
+                "checkQuestion": "Qu’est-ce qui peut être affecté dans cette situation ?",
+                "checkOptions": [
+                  "Uniquement la vitesse du téléphone",
+                  "Le compte, les données et l’identité de la personne",
+                  "Seulement la batterie du téléphone"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. Un incident numérique peut avoir des conséquences techniques, personnelles et parfois financières."
+              },
+              {
+                "eyebrow": "Concept essentiel",
+                "title": "Que protège-t-on réellement ?",
+                "body": "La cybersécurité protège plusieurs éléments : les appareils, les comptes, les données, les réseaux et les services. Ces éléments sont liés. Un compte compromis peut donner accès à des données ; un appareil infecté peut menacer tout un réseau.",
+                "example": "Un hôpital protège les dossiers des patients, les comptes du personnel, les ordinateurs et les services nécessaires aux soins.",
+                "icon": "inventory_2_outlined",
+                "checkQuestion": "Le site d’un hôpital devient indisponible. Quel élément doit être rétabli ?",
+                "checkOptions": [
+                  "Un service numérique",
+                  "La couleur du site",
+                  "Le modèle des claviers"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. La disponibilité d’un service fait partie des objectifs de sécurité."
+              },
+              {
+                "eyebrow": "Trois objectifs simples",
+                "title": "Privées, correctes et accessibles",
+                "body": "Une information doit rester privée pour les personnes non autorisées, rester correcte sans modification indésirable et être accessible aux personnes autorisées lorsqu’elles en ont besoin. On appelle ces objectifs confidentialité, intégrité et disponibilité.",
+                "example": "Un dossier médical ne doit pas être lu par n’importe qui, modifié en secret ou rendu inaccessible au médecin.",
+                "icon": "verified_user_outlined",
+                "checkQuestion": "Un fichier important a été modifié sans autorisation. Quel objectif est touché ?",
+                "checkOptions": [
+                  "La disponibilité",
+                  "L’intégrité",
+                  "La rapidité"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Correct. L’intégrité signifie que les informations restent exactes et ne sont pas modifiées sans autorisation."
+              },
+              {
+                "eyebrow": "Comprendre un incident",
+                "title": "Une attaque est souvent une chaîne d’actions",
+                "body": "Un incident peut commencer par un message trompeur. La personne ouvre un lien, saisit son mot de passe sur une fausse page, puis l’attaquant utilise ce mot de passe. Chaque étape offre une occasion de prévenir ou de détecter le problème.",
+                "example": "Vérifier l’adresse du site et activer l’authentification à deux facteurs peuvent empêcher que le mot de passe volé suffise.",
+                "icon": "account_tree_outlined",
+                "checkQuestion": "Quelle action peut casser cette chaîne avant la compromission du compte ?",
+                "checkOptions": [
+                  "Vérifier le lien avant de saisir son mot de passe",
+                  "Répondre rapidement au message",
+                  "Réutiliser le même mot de passe partout"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Observer avant d’agir est l’un des premiers réflexes de sécurité."
+              },
+              {
+                "eyebrow": "Le travail quotidien",
+                "title": "Prévenir, détecter et réagir",
+                "body": "La cybersécurité ne consiste pas uniquement à bloquer des attaques. Il faut prévenir avec des règles et des protections, détecter les comportements inhabituels, puis réagir pour contenir l’incident et restaurer le fonctionnement normal.",
+                "example": "Une sauvegarde aide à restaurer des fichiers ; une alerte aide à détecter l’incident ; une mise à jour peut corriger une faiblesse avant son exploitation.",
+                "icon": "health_and_safety_outlined",
+                "checkQuestion": "Une alerte signale des connexions inhabituelles. À quelle action correspond-elle ?",
+                "checkOptions": [
+                  "Prévenir",
+                  "Détecter",
+                  "Décorer"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Oui. L’alerte aide à détecter une activité anormale afin de pouvoir réagir."
+              },
+              {
+                "eyebrow": "Un domaine, plusieurs métiers",
+                "title": "Tout le monde ne fait pas le même travail",
+                "body": "La Blue Team surveille et défend. La Red Team teste la résistance avec une autorisation. Les spécialistes GRC travaillent sur les risques, les règles et la conformité. D’autres personnes analysent des logiciels, répondent aux incidents, sécurisent le cloud ou sensibilisent les utilisateurs.",
+                "example": "Une même entreprise peut avoir besoin d’un analyste défensif, d’un auditeur, d’un spécialiste des risques et d’un formateur.",
+                "icon": "groups_2_outlined",
+                "checkQuestion": "Quelle équipe surveille et défend principalement les systèmes ?",
+                "checkOptions": [
+                  "La Blue Team",
+                  "La Red Team sans autorisation",
+                  "Le service de publicité"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. La Blue Team se concentre sur la surveillance, la défense et la réponse aux incidents."
+              },
+              {
+                "eyebrow": "Apprendre en sécurité",
+                "title": "La technique ne remplace jamais l’autorisation",
+                "body": "Tester un système qui ne t’appartient pas exige une autorisation explicite et un périmètre précis. Pour apprendre, tu peux utiliser ton propre laboratoire, des plateformes éducatives ou des CTF. Un CTF est seulement une forme d’exercice parmi d’autres : la cybersécurité est bien plus large que la recherche d’un flag.",
+                "example": "Dans un environnement autorisé, tu peux observer, analyser et faire des erreurs sans viser les données ou les services d’une autre personne.",
+                "icon": "gavel_rounded",
+                "checkQuestion": "Pourquoi une plateforme CTF est-elle adaptée à l’apprentissage ?",
+                "checkOptions": [
+                  "Parce que tout Internet devient autorisé",
+                  "Parce que son environnement est conçu et autorisé pour l’exercice",
+                  "Parce qu’aucune règle ne s’y applique"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. Le cadre contrôlé permet d’apprendre légalement, mais ses règles et son périmètre doivent toujours être respectés."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Autorisé ou non autorisé ?",
+              "instructions": "Analyse chaque situation. Corrige tes erreurs pour débloquer le quiz final.",
+              "questions": [
+                {
+                  "statement": "Tu testes une machine virtuelle que tu as créée dans ton laboratoire personnel.",
+                  "options": [
+                    "Autorisé",
+                    "Non autorisé"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Tu contrôles cet environnement et tu peux y apprendre sans viser les systèmes d’autrui."
+                },
+                {
+                  "statement": "Tu analyses le site d’une entreprise inconnue pour chercher des failles, sans lui demander la permission.",
+                  "options": [
+                    "Autorisé",
+                    "Non autorisé"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Une intention éducative ne remplace pas une autorisation explicite du propriétaire."
+                },
+                {
+                  "statement": "Une entreprise te confie un test avec une autorisation écrite, des dates et un périmètre précis.",
+                  "options": [
+                    "Autorisé",
+                    "Non autorisé"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Le test est encadré : respecte strictement le périmètre et signale les résultats de façon responsable."
+                },
+                {
+                  "statement": "Un programme public de bug bounty autorise les tests, mais tu vises un domaine explicitement exclu de son périmètre.",
+                  "options": [
+                    "Autorisé",
+                    "Non autorisé"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Une autorisation reste limitée par son périmètre. Un domaine exclu ne doit pas être testé."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "La cybersécurité protège les personnes, appareils, comptes, données, réseaux et services.",
+              "Confidentialité, intégrité et disponibilité sont trois objectifs essentiels.",
+              "Prévenir, détecter et réagir sont trois actions complémentaires.",
+              "Le domaine rassemble de nombreux métiers techniques et non techniques.",
+              "Les tests nécessitent une autorisation explicite et un périmètre précis.",
+              "Un CTF est un environnement d’apprentissage, pas la définition de la cybersécurité."
+            ],
+            "quiz": [
+              {
+                "question": "Quel est l’objectif principal de la cybersécurité ?",
+                "options": [
+                  "Protéger les systèmes, les réseaux et les données",
+                  "Rendre tous les appareils plus rapides",
+                  "Apprendre uniquement à programmer"
+                ],
+                "correctIndex": 0,
+                "explanation": "La cybersécurité protège les personnes et les ressources numériques en prévenant, détectant et traitant les incidents."
+              },
+              {
+                "question": "Un document a été modifié sans autorisation. Quel objectif est touché ?",
+                "options": [
+                  "L’intégrité",
+                  "La vitesse",
+                  "La taille de l’écran"
+                ],
+                "correctIndex": 0,
+                "explanation": "L’intégrité garantit que l’information reste exacte et n’est pas modifiée sans autorisation."
+              },
+              {
+                "question": "Quel est le rôle principal d’une Blue Team ?",
+                "options": [
+                  "Surveiller, défendre et réagir aux incidents",
+                  "Tester des systèmes sans prévenir",
+                  "Créer des publicités numériques"
+                ],
+                "correctIndex": 0,
+                "explanation": "La Blue Team se concentre sur la défense, la surveillance et la réponse aux incidents."
+              },
+              {
+                "question": "Quelles sont trois actions complémentaires en cybersécurité ?",
+                "options": [
+                  "Télécharger, cliquer et partager",
+                  "Prévenir, détecter et réagir",
+                  "Scanner, attaquer et publier"
+                ],
+                "correctIndex": 1,
+                "explanation": "Les protections réduisent le risque, la surveillance détecte les anomalies et la réponse limite les conséquences."
+              },
+              {
+                "question": "Tu remarques une faille possible sur un site public. Quelle est la bonne réaction ?",
+                "options": [
+                  "L’exploiter pour vérifier jusqu’où elle va",
+                  "Ne pas l’exploiter et la signaler par un canal responsable",
+                  "Publier immédiatement les détails"
+                ],
+                "correctIndex": 1,
+                "explanation": "N’exploite pas la faille. Utilise le canal de signalement du propriétaire ou son programme de divulgation."
+              }
+            ]
+          }
+        },
+        {
+          "id": "risk_basics",
+          "title": "Menace, vulnérabilité et risque",
+          "summary": "Apprends à ne plus confondre ces notions essentielles.",
+          "minutes": 10,
+          "icon": "warning_amber_rounded",
+          "objectives": [
+            "Reconnaître une menace.",
+            "Identifier une vulnérabilité.",
+            "Évaluer un risque dans un exemple simple.",
+            "Comprendre comment une protection réduit le risque."
+          ],
+          "content": {
+            "introduction": "Une menace, une vulnérabilité et un risque ne désignent pas la même chose. Cette distinction permet de comprendre un problème avant de choisir une protection.",
+            "steps": [
+              {
+                "eyebrow": "Point de départ",
+                "title": "Commencer par ce qui compte",
+                "body": "Avant de parler de danger, il faut identifier ce que l’on veut protéger. Un compte, un ordinateur, une photo, un dossier médical ou un service en ligne peuvent être des éléments importants. On les appelle souvent des actifs.",
+                "example": "Pour une famille, les photos personnelles peuvent être précieuses. Pour un hôpital, les dossiers des patients et la disponibilité des soins sont essentiels.",
+                "icon": "star_border_rounded",
+                "checkQuestion": "Lequel de ces éléments peut être un actif numérique ?",
+                "checkOptions": [
+                  "Un dossier contenant des photos importantes",
+                  "Uniquement un ordinateur très cher",
+                  "Seulement un mot de passe oublié"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. Un actif est quelque chose qui a de la valeur et que l’on souhaite protéger."
+              },
+              {
+                "eyebrow": "Premier concept",
+                "title": "La menace : ce qui peut causer un dommage",
+                "body": "Une menace est une cause possible de dommage. Elle peut être volontaire, comme un cybercriminel, ou accidentelle, comme une erreur humaine, une panne ou un incendie. Une menace n’a pas forcément déjà provoqué un incident.",
+                "example": "Un message de phishing, un logiciel malveillant, une coupure électrique et la suppression accidentelle d’un fichier sont des menaces possibles.",
+                "icon": "warning_amber_rounded",
+                "checkQuestion": "Lequel de ces exemples représente une menace ?",
+                "checkOptions": [
+                  "Un attaquant qui envoie un faux formulaire de connexion",
+                  "Un mot de passe long et unique",
+                  "Une sauvegarde récente"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Oui. L’attaquant et son message peuvent provoquer un dommage : ils représentent une menace."
+              },
+              {
+                "eyebrow": "Deuxième concept",
+                "title": "La vulnérabilité : une faiblesse exploitable",
+                "body": "Une vulnérabilité est une faiblesse. Elle peut venir d’un logiciel non mis à jour, d’un mot de passe faible, d’une mauvaise configuration ou d’une procédure insuffisante. La faiblesse ne provoque pas seule le dommage, mais elle peut faciliter une attaque ou une erreur.",
+                "example": "Utiliser le même mot de passe simple sur plusieurs comptes crée une faiblesse, même si personne ne l’a encore exploité.",
+                "icon": "broken_image_outlined",
+                "checkQuestion": "Lequel de ces exemples représente une vulnérabilité ?",
+                "checkOptions": [
+                  "Un compte protégé par le mot de passe 123456",
+                  "Une alerte de sécurité correctement traitée",
+                  "Une sauvegarde testée et protégée"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. Un mot de passe facile à deviner est une faiblesse qui peut être exploitée."
+              },
+              {
+                "eyebrow": "Troisième concept",
+                "title": "Le risque relie la menace, la faiblesse et les conséquences",
+                "body": "Le risque décrit la possibilité qu’une menace profite d’une vulnérabilité et provoque un impact. Sans contexte, une faiblesse ne permet pas toujours de mesurer le danger réel. Il faut se demander ce qui peut arriver et quelles seraient les conséquences.",
+                "example": "Un compte utilise un mot de passe faible. Un attaquant tente de le deviner. Le risque est que le compte soit compromis et que ses données soient volées.",
+                "icon": "device_hub_rounded",
+                "checkQuestion": "Quelle phrase décrit le mieux un risque ?",
+                "checkOptions": [
+                  "Un logiciel existe",
+                  "Un attaquant pourrait exploiter un mot de passe faible et voler les données",
+                  "Un utilisateur ferme son ordinateur"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. La phrase relie une menace, une vulnérabilité et une conséquence possible."
+              },
+              {
+                "eyebrow": "Évaluer sans compliquer",
+                "title": "Probabilité et impact",
+                "body": "Pour comparer les risques, on examine deux questions : est-il probable que cela arrive, et quelles seraient les conséquences ? Un événement très probable mais peu grave peut demander une réponse différente d’un événement rare mais catastrophique.",
+                "example": "La perte d’un brouillon peut être gênante. L’indisponibilité du système d’urgence d’un hôpital peut avoir un impact critique.",
+                "icon": "balance_rounded",
+                "checkQuestion": "Quel risque possède probablement le plus grand impact ?",
+                "checkOptions": [
+                  "Perdre la couleur personnalisée d’une application",
+                  "Rendre indisponible le système d’urgence d’un hôpital",
+                  "Déplacer une icône sur l’écran"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Oui. L’impact dépend des conséquences sur les personnes, les données et les services."
+              },
+              {
+                "eyebrow": "Réduire le risque",
+                "title": "Une protection agit sur la probabilité ou l’impact",
+                "body": "Une mesure de sécurité réduit un risque, mais ne le supprime pas toujours complètement. Les mises à jour corrigent des faiblesses, la MFA rend certains vols de mot de passe moins efficaces et les sauvegardes limitent les conséquences d’une perte de données.",
+                "example": "Une sauvegarde ne bloque pas forcément un rançongiciel, mais elle peut aider à restaurer les fichiers et réduire l’impact.",
+                "icon": "security_rounded",
+                "checkQuestion": "Quelle mesure réduit le risque lié à un mot de passe volé ?",
+                "checkOptions": [
+                  "Activer l’authentification multifacteur",
+                  "Partager le mot de passe",
+                  "Ignorer les alertes de connexion"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Correct. La MFA ajoute une vérification supplémentaire et réduit la probabilité de compromission."
+              },
+              {
+                "eyebrow": "Le bon réflexe",
+                "title": "Tous les problèmes n’ont pas la même priorité",
+                "body": "Une équipe ne peut pas tout corriger en même temps. Elle commence par les risques les plus importants selon les actifs exposés, la facilité d’exploitation, la probabilité et l’impact. Le contexte transforme une simple liste de faiblesses en plan d’action utile.",
+                "example": "Une faiblesse sur un serveur accessible depuis Internet est souvent plus urgente que la même faiblesse sur une machine de laboratoire isolée.",
+                "icon": "low_priority_rounded",
+                "checkQuestion": "Quel problème doit généralement être traité en priorité ?",
+                "checkOptions": [
+                  "Une faiblesse facilement exploitable sur un service critique exposé",
+                  "Un détail esthétique sans conséquence",
+                  "Une machine éteinte destinée au recyclage"
+                ],
+                "correctIndex": 0,
+                "successExplanation": "Exact. La priorité vient du contexte, de la probabilité et des conséquences possibles."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Classe les situations",
+              "instructions": "Choisis la catégorie la plus précise pour chaque situation. Une explication apparaît après ta réponse.",
+              "questions": [
+                {
+                  "statement": "Un cybercriminel envoie une fausse page de connexion.",
+                  "options": [
+                    "Menace",
+                    "Vulnérabilité",
+                    "Risque",
+                    "Protection"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Le cybercriminel et sa tentative peuvent provoquer un dommage : il s’agit d’une menace."
+                },
+                {
+                  "statement": "Un compte utilise le mot de passe 123456.",
+                  "options": [
+                    "Menace",
+                    "Vulnérabilité",
+                    "Risque",
+                    "Protection"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Le mot de passe facile à deviner est une faiblesse : c’est une vulnérabilité."
+                },
+                {
+                  "statement": "Un attaquant pourrait deviner ce mot de passe et accéder aux messages privés.",
+                  "options": [
+                    "Menace",
+                    "Vulnérabilité",
+                    "Risque",
+                    "Protection"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "La phrase associe la menace, la faiblesse et la conséquence possible : elle décrit un risque."
+                },
+                {
+                  "statement": "L’utilisateur active la MFA sur son compte.",
+                  "options": [
+                    "Menace",
+                    "Vulnérabilité",
+                    "Risque",
+                    "Protection"
+                  ],
+                  "correctIndex": 3,
+                  "explanation": "La MFA est une mesure de sécurité qui réduit le risque de compromission."
+                },
+                {
+                  "statement": "Un serveur accessible sur Internet n’a pas reçu ses mises à jour.",
+                  "options": [
+                    "Menace",
+                    "Vulnérabilité",
+                    "Risque",
+                    "Protection"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "L’absence de mises à jour peut laisser des faiblesses exploitables."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "Un actif est un élément qui a de la valeur et que l’on souhaite protéger.",
+              "Une menace peut provoquer un dommage.",
+              "Une vulnérabilité est une faiblesse exploitable.",
+              "Un risque associe menace, vulnérabilité et conséquences possibles.",
+              "Probabilité et impact permettent de fixer les priorités.",
+              "Une mesure de sécurité réduit la probabilité ou l’impact."
+            ],
+            "quiz": [
+              {
+                "question": "Qu’est-ce qu’une menace ?",
+                "options": [
+                  "Une cause possible de dommage",
+                  "Uniquement un virus déjà installé",
+                  "Une mesure de protection"
+                ],
+                "correctIndex": 0,
+                "explanation": "Une menace est une personne, une action ou un événement susceptible de provoquer un dommage."
+              },
+              {
+                "question": "Qu’est-ce qu’une vulnérabilité ?",
+                "options": [
+                  "Une faiblesse qui peut être exploitée",
+                  "La conséquence financière finale",
+                  "Une sauvegarde fonctionnelle"
+                ],
+                "correctIndex": 0,
+                "explanation": "Une vulnérabilité est une faiblesse technique, humaine ou organisationnelle."
+              },
+              {
+                "question": "Quelle phrase décrit un risque ?",
+                "options": [
+                  "Un ordinateur possède un écran",
+                  "Une menace pourrait exploiter une faiblesse et provoquer un dommage",
+                  "Une mise à jour a été installée"
+                ],
+                "correctIndex": 1,
+                "explanation": "Le risque relie une menace, une vulnérabilité et les conséquences possibles."
+              },
+              {
+                "question": "Quels éléments permettent notamment de comparer les risques ?",
+                "options": [
+                  "La probabilité et l’impact",
+                  "La marque et la couleur de l’ordinateur",
+                  "Le nombre d’icônes sur le bureau"
+                ],
+                "correctIndex": 0,
+                "explanation": "La probabilité d’un événement et son impact aident à déterminer sa priorité."
+              },
+              {
+                "question": "Quel est le rôle d’une mesure de sécurité ?",
+                "options": [
+                  "Garantir qu’aucun incident ne sera jamais possible",
+                  "Réduire la probabilité ou l’impact d’un risque",
+                  "Masquer le risque sans le traiter"
+                ],
+                "correctIndex": 1,
+                "explanation": "Une protection réduit le risque, mais ne garantit pas toujours sa disparition complète."
+              }
+            ]
+          }
+        },
+        {
+          "id": "personal_data",
+          "title": "Protéger ses données personnelles",
+          "summary": "Reconnais les données importantes, limite leur exposition et prépare leur récupération.",
+          "minutes": 10,
+          "icon": "privacy_tip_outlined",
+          "objectives": [
+            "Reconnaître une donnée personnelle ou sensible.",
+            "Limiter le partage et les permissions inutiles.",
+            "Comprendre le rôle des mises à jour et des sauvegardes.",
+            "Réagir correctement après une alerte de sécurité."
+          ],
+          "content": {
+            "introduction": "Tes données racontent qui tu es, ce que tu fais et parfois comment accéder à tes comptes. Dans cette leçon, tu vas apprendre à reconnaître les informations importantes, à limiter leur exposition et à les récupérer après un incident.",
+            "steps": [
+              {
+                "eyebrow": "Point de départ",
+                "title": "Une donnée personnelle peut permettre de te reconnaître",
+                "body": "Une donnée personnelle est une information qui permet de t’identifier directement ou en la combinant avec d’autres informations. Ton nom, ton adresse e-mail, une photo, ta localisation ou un identifiant de compte peuvent donc être des données personnelles.",
+                "example": "Un prénom seul ne suffit pas toujours. Associé à une photo, une ville et un lieu de travail, il peut permettre d’identifier précisément une personne.",
+                "icon": "badge_outlined",
+                "checkQuestion": "Quel élément est une donnée personnelle ?",
+                "checkOptions": [
+                  "La couleur bleue utilisée seule",
+                  "Une adresse e-mail liée à une personne",
+                  "Un nombre choisi au hasard sans contexte"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. Une adresse e-mail peut permettre d’identifier une personne ou de retrouver ses comptes."
+              },
+              {
+                "eyebrow": "Niveau de protection",
+                "title": "Toutes les données n’ont pas les mêmes conséquences",
+                "body": "Certaines informations demandent une protection renforcée : données de santé, informations bancaires, documents d’identité ou données biométriques. Les mots de passe et codes de récupération sont encore différents : ce sont des secrets d’authentification qui peuvent donner directement accès à un compte.",
+                "example": "Une photo de vacances et le code de récupération d’un compte ne présentent pas le même risque. Le second ne doit jamais être publié ni envoyé à une personne qui le demande.",
+                "icon": "lock_person_outlined",
+                "checkQuestion": "Quelle information ne doit jamais être publiée ?",
+                "checkOptions": [
+                  "Le nom d’une couleur préférée",
+                  "La météo du jour",
+                  "Un code de récupération de compte"
+                ],
+                "correctIndex": 2,
+                "successExplanation": "Correct. Un code de récupération peut permettre de contourner le mot de passe et de prendre le contrôle du compte."
+              },
+              {
+                "eyebrow": "Avant de partager",
+                "title": "Une donnée suit un trajet",
+                "body": "Une information peut être collectée, envoyée, stockée, copiée puis supprimée. Avant de la transmettre, demande-toi qui la recevra, pourquoi elle est nécessaire, où elle sera conservée et combien de temps. Partager moins réduit ce qui peut être exposé.",
+                "example": "Une application de lampe torche n’a normalement pas besoin d’accéder à tes contacts. Une demande sans rapport avec son fonctionnement doit attirer ton attention.",
+                "icon": "route_outlined",
+                "checkQuestion": "Une application demande une permission sans rapport avec son usage. Quel est le bon réflexe ?",
+                "checkOptions": [
+                  "Tout accepter automatiquement",
+                  "Refuser et vérifier pourquoi elle est demandée",
+                  "Publier la demande avec ses informations personnelles"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Oui. Une application ne devrait recevoir que les permissions nécessaires à son fonctionnement."
+              },
+              {
+                "eyebrow": "Comprendre l’exposition",
+                "title": "Une fuite ne vient pas toujours d’un piratage complexe",
+                "body": "Des données peuvent être exposées par un appareil perdu, un document envoyé au mauvais destinataire, un compte mal protégé, une permission excessive ou une publication trop précise. Plusieurs petites informations peuvent aussi être assemblées pour préparer une fraude.",
+                "example": "Une photo d’un billet de voyage peut révéler un nom, une destination et parfois un code de réservation utilisable par une autre personne.",
+                "icon": "visibility_outlined",
+                "checkQuestion": "Quel comportement limite l’exposition des données ?",
+                "checkOptions": [
+                  "Partager tous les documents pour gagner du temps",
+                  "Laisser le téléphone déverrouillé dans un lieu public",
+                  "Masquer les informations sensibles avant de publier une photo"
+                ],
+                "correctIndex": 2,
+                "successExplanation": "Exact. Il faut vérifier tout ce qui apparaît dans une image ou un document avant de le partager."
+              },
+              {
+                "eyebrow": "Corriger les faiblesses",
+                "title": "Les mises à jour ferment des portes connues",
+                "body": "Une mise à jour peut corriger une vulnérabilité découverte dans le système ou une application. La retarder laisse parfois une faiblesse connue disponible plus longtemps. Active les mises à jour automatiques lorsque c’est possible et utilise les sources officielles.",
+                "example": "Mettre à jour le téléphone ne sert pas uniquement à ajouter des fonctions : la mise à jour peut aussi corriger une faille de sécurité.",
+                "icon": "system_update_alt_rounded",
+                "checkQuestion": "Pourquoi installer les mises à jour de sécurité ?",
+                "checkOptions": [
+                  "Pour rendre inutile toute autre protection",
+                  "Pour corriger des vulnérabilités connues",
+                  "Pour publier automatiquement ses fichiers"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Correct. Les mises à jour réduisent l’exposition aux faiblesses déjà identifiées et corrigées."
+              },
+              {
+                "eyebrow": "Préparer la récupération",
+                "title": "Synchroniser n’est pas toujours sauvegarder",
+                "body": "La synchronisation garde les mêmes fichiers sur plusieurs appareils, mais une suppression ou une modification peut se propager partout. Une sauvegarde est une copie séparée qui permet de restaurer les données. Elle doit être régulière, protégée et testée.",
+                "example": "Si un dossier synchronisé est supprimé par erreur, la suppression peut être reproduite en ligne. Une copie séparée et récente permet de récupérer les fichiers.",
+                "icon": "backup_outlined",
+                "checkQuestion": "Quel est le rôle principal d’une sauvegarde ?",
+                "checkOptions": [
+                  "Partager publiquement tous les fichiers",
+                  "Empêcher toutes les attaques possibles",
+                  "Restaurer des données perdues ou endommagées"
+                ],
+                "correctIndex": 2,
+                "successExplanation": "Oui. Une sauvegarde limite l’impact d’une suppression, d’une panne ou de certains incidents."
+              },
+              {
+                "eyebrow": "Après une alerte",
+                "title": "Réagir vite, dans le bon ordre",
+                "body": "Si tu penses qu’un compte ou un appareil expose tes données, utilise un appareil de confiance pour sécuriser le compte, fermer les sessions inconnues et vérifier les informations de récupération. Préviens le service concerné et, si des données bancaires sont touchées, contacte rapidement ta banque.",
+                "example": "Après une alerte de connexion inconnue, ne clique pas sur le lien reçu. Ouvre directement l’application officielle, vérifie les sessions et sécurise le compte.",
+                "icon": "report_gmailerrorred_outlined",
+                "checkQuestion": "Tu reçois une alerte de connexion inconnue. Quelle action est la plus sûre ?",
+                "checkOptions": [
+                  "Cliquer immédiatement sur le lien du message",
+                  "Ouvrir directement l’application officielle et vérifier les sessions",
+                  "Ignorer définitivement l’alerte"
+                ],
+                "correctIndex": 1,
+                "successExplanation": "Exact. Accède au service par son application ou son adresse officielle au lieu de faire confiance au lien reçu."
+              }
+            ],
+            "activity": {
+              "title": "Mission · Protège un nouveau téléphone",
+              "instructions": "Pour chaque situation, choisis l’action la plus sûre. Corrige tes erreurs pour débloquer le quiz final.",
+              "questions": [
+                {
+                  "statement": "Une application de retouche photo demande l’accès permanent à ta localisation.",
+                  "options": [
+                    "Accepter toutes les permissions",
+                    "Refuser si cette permission n’est pas nécessaire",
+                    "Envoyer aussi une copie de sa pièce d’identité"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Une permission doit correspondre à une fonction utile. Sinon, refuse-la ou limite son accès."
+                },
+                {
+                  "statement": "Tu veux conserver des photos importantes présentes sur ton téléphone.",
+                  "options": [
+                    "Les laisser uniquement sur le téléphone",
+                    "Les publier pour en garder une copie",
+                    "Créer une copie séparée et vérifier qu’elle peut être restaurée"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "Une sauvegarde séparée réduit le risque de perte si le téléphone est cassé, perdu ou compromis."
+                },
+                {
+                  "statement": "Le système propose une mise à jour de sécurité depuis les réglages officiels.",
+                  "options": [
+                    "L’installer dès que possible",
+                    "La repousser sans limite",
+                    "Chercher une copie sur un site inconnu"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Les mises à jour officielles corrigent notamment des vulnérabilités connues."
+                },
+                {
+                  "statement": "Une personne te demande par message le code de récupération de ton compte.",
+                  "options": [
+                    "L’envoyer si le message semble urgent",
+                    "Refuser et ne jamais transmettre ce code",
+                    "Le publier pour demander conseil"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Un code de récupération est un secret d’authentification. Un service légitime ne te demandera pas de le partager par message."
+                },
+                {
+                  "statement": "Tu reçois un message parlant d’une connexion inconnue sur ton compte.",
+                  "options": [
+                    "Utiliser obligatoirement le lien du message",
+                    "Répondre avec son mot de passe",
+                    "Vérifier le compte depuis l’application officielle"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "Passe par l’application ou l’adresse officielle afin d’éviter un éventuel lien de phishing."
+                }
+              ]
+            },
+            "summaryPoints": [
+              "Une donnée personnelle permet d’identifier une personne, parfois en la combinant avec d’autres informations.",
+              "Les données sensibles et les secrets d’authentification demandent une protection renforcée.",
+              "Partager moins et limiter les permissions réduit l’exposition.",
+              "Les mises à jour corrigent des vulnérabilités connues.",
+              "Une sauvegarde séparée permet de restaurer des données perdues ou endommagées.",
+              "Après une alerte, vérifie le service depuis son application ou son adresse officielle."
+            ],
+            "quiz": [
+              {
+                "question": "Qu’est-ce qu’une donnée personnelle ?",
+                "options": [
+                  "Uniquement un mot de passe",
+                  "Une information permettant d’identifier une personne directement ou indirectement",
+                  "N’importe quelle information sans contexte"
+                ],
+                "correctIndex": 1,
+                "explanation": "Une donnée personnelle peut identifier une personne seule ou lorsqu’elle est associée à d’autres informations."
+              },
+              {
+                "question": "Quel élément est un secret d’authentification ?",
+                "options": [
+                  "Le modèle public d’un téléphone",
+                  "La date du jour",
+                  "Un code de récupération de compte"
+                ],
+                "correctIndex": 2,
+                "explanation": "Un code de récupération peut donner accès à un compte et ne doit jamais être partagé."
+              },
+              {
+                "question": "Pourquoi limiter les permissions d’une application ?",
+                "options": [
+                  "Pour réduire les données auxquelles elle peut accéder",
+                  "Pour empêcher le téléphone de s’allumer",
+                  "Pour rendre les sauvegardes inutiles"
+                ],
+                "correctIndex": 0,
+                "explanation": "Une application ne doit accéder qu’aux données nécessaires à son fonctionnement."
+              },
+              {
+                "question": "Quelle affirmation sur les sauvegardes est correcte ?",
+                "options": [
+                  "La synchronisation remplace toujours une sauvegarde",
+                  "Une sauvegarde empêche toutes les attaques",
+                  "Une copie séparée peut permettre de restaurer des données perdues"
+                ],
+                "correctIndex": 2,
+                "explanation": "Une sauvegarde séparée et vérifiée permet de récupérer des données après une perte ou un incident."
+              },
+              {
+                "question": "Tu reçois une alerte avec un lien concernant une connexion inconnue. Que fais-tu ?",
+                "options": [
+                  "Je saisis immédiatement mon mot de passe dans le lien",
+                  "J’ouvre directement l’application officielle pour vérifier mon compte",
+                  "Je transfère le message avec mes codes de récupération"
+                ],
+                "correctIndex": 1,
+                "explanation": "Accéder directement au service évite de faire confiance à un lien qui pourrait être frauduleux."
+              }
+            ]
+          }
+        },
+        {
+          "id": "passwords_mfa",
+          "title": "Mots de passe et authentification",
+          "summary": "Crée des mots de passe solides et découvre la MFA.",
+          "minutes": 8,
+          "icon": "password_rounded",
+          "objectives": [
+            "Créer une phrase de passe robuste.",
+            "Comprendre le rôle d’un gestionnaire de mots de passe.",
+            "Expliquer le principe de l’authentification multifacteur."
+          ]
+        },
+        {
+          "id": "phishing",
+          "title": "Phishing et ingénierie sociale",
+          "summary": "Repère les messages frauduleux et les techniques de manipulation.",
+          "minutes": 8,
+          "icon": "phishing_rounded",
+          "objectives": [
+            "Identifier les indices d’un message frauduleux.",
+            "Vérifier un expéditeur et un lien.",
+            "Réagir correctement à une tentative de phishing."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Module 2 · Comprendre les réseaux",
+      "subtitle": "Suivre le trajet des données sur Internet.",
+      "color": "#54F28A",
+      "lessons": [
+        {
+          "id": "network_basics",
+          "title": "Comment fonctionne un réseau ?",
+          "summary": "LAN, WAN, routeur, switch et paquets de données.",
+          "minutes": 8,
+          "icon": "hub_outlined",
+          "objectives": [
+            "Expliquer ce qu’est un réseau.",
+            "Distinguer LAN et WAN.",
+            "Décrire le rôle du routeur, du switch et des paquets."
+          ]
+        },
+        {
+          "id": "ip_dhcp_nat",
+          "title": "Adresses IP, DHCP et NAT",
+          "summary": "Comprends comment les appareils sont identifiés et connectés.",
+          "minutes": 9,
+          "icon": "pin_drop_outlined",
+          "objectives": [
+            "Reconnaître une adresse IPv4.",
+            "Distinguer une IP privée d’une IP publique.",
+            "Comprendre simplement DHCP, NAT et localhost."
+          ]
+        },
+        {
+          "id": "dns_ports_protocols",
+          "title": "DNS, ports et protocoles",
+          "summary": "Relie un domaine à une adresse IP et à un service.",
+          "minutes": 10,
+          "icon": "dns_outlined",
+          "objectives": [
+            "Expliquer le rôle du DNS.",
+            "Comprendre la notion de port.",
+            "Associer HTTP, HTTPS, SSH et DNS à leurs usages."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Module 3 · Premiers pas techniques",
+      "subtitle": "Utiliser Linux et résoudre une première mission.",
+      "color": "#9B8CFF",
+      "lessons": [
+        {
+          "id": "linux_terminal",
+          "title": "Linux et le terminal",
+          "summary": "Découvre Linux et tes premières commandes.",
+          "minutes": 10,
+          "icon": "terminal_rounded",
+          "objectives": [
+            "Comprendre le rôle d’un système d’exploitation.",
+            "Naviguer avec pwd, ls et cd.",
+            "Lire et créer des fichiers dans une simulation sûre."
+          ]
+        },
+        {
+          "id": "first_ctf",
+          "title": "Ton premier mini-CTF",
+          "summary": "Utilise les notions apprises pour retrouver un flag.",
+          "minutes": 12,
+          "icon": "flag_outlined",
+          "objectives": [
+            "Suivre des indices dans un environnement simulé.",
+            "Identifier une IP et un service.",
+            "Trouver un flag en utilisant le terminal."
+          ]
+        }
+      ]
+    }
+  ]
+}
