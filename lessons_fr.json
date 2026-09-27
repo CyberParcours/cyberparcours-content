@@ -167,9 +167,9 @@
                 {
                   "statement": "Une alerte indique une connexion inhabituelle, mais aucune modification du compte n’est encore confirmée.",
                   "options": [
-                    "Le compte est forcément contrôlé par un attaquant",
-                    "Il existe un indice à vérifier avant de conclure",
-                    "L’alerte doit être ignorée tant que le mot de passe fonctionne"
+                    "Le compte est nécessairement contrôlé par un attaquant",
+                    "Il existe un indice à vérifier avant de tirer une conclusion",
+                    "Il n’y a aucun risque tant qu’aucune modification n’est visible"
                   ],
                   "correctIndex": 1,
                   "explanation": "Une alerte est un élément de détection. Elle justifie une vérification, mais ne prouve pas à elle seule toute la chaîne de l’incident."
@@ -178,8 +178,8 @@
                   "statement": "Après cette alerte, l’adresse de récupération a été remplacée sans l’accord du propriétaire.",
                   "options": [
                     "C’est un fait supplémentaire qui renforce l’hypothèse de compromission",
-                    "Cela prouve uniquement une panne du téléphone",
-                    "Cela garantit que les autres comptes sont protégés"
+                    "C’est probablement une simple erreur d’affichage du service",
+                    "Cela suffit à confirmer que tous les autres comptes sont compromis"
                   ],
                   "correctIndex": 0,
                   "explanation": "La modification non autorisée est un fait important. Associée à la connexion inconnue, elle renforce fortement l’hypothèse d’un accès frauduleux."
@@ -187,9 +187,9 @@
                 {
                   "statement": "Le propriétaire ferme les sessions inconnues et change son mot de passe depuis le service officiel.",
                   "options": [
-                    "Il réalise principalement des actions de réaction",
-                    "Il réalise uniquement une action de détection",
-                    "Il effectue un test d’intrusion"
+                    "Il réalise principalement des actions de réaction à l’incident",
+                    "Il se contente de détecter un comportement inhabituel",
+                    "Il effectue un test de sécurité offensif sur le service"
                   ],
                   "correctIndex": 0,
                   "explanation": "Ces actions cherchent à contenir l’incident et à reprendre le contrôle du compte. Elles font partie de la réaction."
@@ -197,9 +197,9 @@
                 {
                   "statement": "Tu veux reproduire ce scénario pour apprendre à reconnaître une fausse page de connexion.",
                   "options": [
-                    "Tu peux copier un vrai site et l’envoyer à des inconnus",
-                    "Tu dois utiliser un laboratoire ou une plateforme explicitement autorisée",
-                    "Tu peux tester un site public si tu ne conserves aucune donnée"
+                    "Tu peux reproduire la page sur Internet si tu n’enregistres aucun mot de passe",
+                    "Tu dois utiliser un laboratoire ou une plateforme qui autorise explicitement ce test",
+                    "Tu peux tester le vrai service à condition de prévenir les personnes après l’exercice"
                   ],
                   "correctIndex": 1,
                   "explanation": "L’apprentissage doit rester dans un environnement contrôlé et autorisé. L’absence d’intention malveillante ne remplace pas l’autorisation."
@@ -207,9 +207,9 @@
                 {
                   "statement": "Une sauvegarde permet de récupérer des fichiers supprimés pendant l’incident.",
                   "options": [
-                    "Elle a principalement servi à restaurer les données et limiter l’impact",
-                    "Elle a empêché toute tentative de connexion",
-                    "Elle a identifié automatiquement l’auteur de l’incident"
+                    "Elle permet de restaurer les données et de limiter l’impact de l’incident",
+                    "Elle empêche à elle seule toute nouvelle tentative de connexion",
+                    "Elle permet d’identifier avec certitude l’origine de l’incident"
                   ],
                   "correctIndex": 0,
                   "explanation": "Une sauvegarde n’empêche pas nécessairement l’attaque, mais elle peut réduire ses conséquences et accélérer la restauration."
@@ -229,9 +229,9 @@
               {
                 "question": "Quelle définition décrit le mieux la cybersécurité ?",
                 "options": [
-                  "L’ensemble des techniques destinées uniquement à identifier les attaquants",
-                  "Les méthodes permettant de protéger les personnes et ressources numériques, puis de gérer les incidents",
-                  "L’utilisation d’outils offensifs pour vérifier tous les systèmes accessibles"
+                  "L’ensemble des techniques utilisées uniquement pour retrouver les auteurs d’attaques",
+                  "Les pratiques qui protègent les personnes et les ressources numériques et aident à gérer les incidents",
+                  "L’utilisation d’outils offensifs sur tout système accessible depuis Internet"
                 ],
                 "correctIndex": 1,
                 "explanation": "La cybersécurité comprend la prévention, la détection, la réaction et la restauration. Elle protège aussi bien les personnes que les ressources numériques."
@@ -239,9 +239,9 @@
               {
                 "question": "Un service fonctionne encore, mais certaines informations ont été modifiées sans autorisation. Quel objectif est principalement compromis ?",
                 "options": [
-                  "La disponibilité",
-                  "La confidentialité",
-                  "L’intégrité"
+                  "La disponibilité, car le service aurait dû être complètement arrêté",
+                  "La confidentialité, car toute modification implique nécessairement une fuite",
+                  "L’intégrité, car des informations ont été modifiées sans autorisation"
                 ],
                 "correctIndex": 2,
                 "explanation": "L’intégrité garantit que les informations restent correctes et ne sont pas altérées sans autorisation."
@@ -249,9 +249,9 @@
               {
                 "question": "Quelle suite respecte le mieux le cycle présenté dans la leçon ?",
                 "options": [
-                  "Utiliser un mot de passe unique, repérer une connexion inconnue, fermer les sessions frauduleuses",
-                  "Recevoir une alerte, ignorer les faits, supprimer immédiatement toutes les preuves",
-                  "Restaurer une sauvegarde, provoquer un incident, désactiver ensuite la surveillance"
+                  "Utiliser un mot de passe unique, repérer une connexion inconnue, puis fermer les sessions frauduleuses",
+                  "Attendre qu’un incident soit confirmé, supprimer les alertes, puis modifier les preuves",
+                  "Restaurer les données avant toute prévention, puis désactiver la surveillance"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le mot de passe unique participe à la prévention, l’alerte à la détection et la fermeture des sessions à la réaction."
@@ -259,9 +259,9 @@
               {
                 "question": "Pourquoi une connexion inhabituelle ne suffit-elle pas toujours à prouver qu’un compte est compromis ?",
                 "options": [
-                  "Parce qu’une alerte ne contient jamais d’information utile",
-                  "Parce qu’il faut comparer plusieurs faits et envisager des explications légitimes",
-                  "Parce qu’une connexion provenant d’un autre pays est toujours normale"
+                  "Parce qu’une alerte signale toujours un simple problème technique",
+                  "Parce qu’il faut vérifier d’autres faits et envisager aussi des explications légitimes",
+                  "Parce qu’une connexion inhabituelle est normale dès qu’elle vient d’un autre pays"
                 ],
                 "correctIndex": 1,
                 "explanation": "Une alerte est un indice. Il faut vérifier l’appareil, l’heure et les actions associées avant de tirer une conclusion définitive."
@@ -269,9 +269,9 @@
               {
                 "question": "Un programme de bug bounty autorise les tests sur un domaine, mais exclut explicitement son API. Quelle règle s’applique ?",
                 "options": [
-                  "L’API peut être testée si la méthode utilisée est non destructive",
-                  "L’API peut être testée après avoir terminé le domaine autorisé",
-                  "L’API reste hors périmètre et ne doit pas être testée"
+                  "L’API peut être testée si les requêtes restent peu nombreuses",
+                  "L’API peut être testée après avoir terminé les tests autorisés sur le domaine",
+                  "L’API est hors périmètre et ne doit pas être testée"
                 ],
                 "correctIndex": 2,
                 "explanation": "L’autorisation n’est valable que dans le périmètre annoncé. Une ressource exclue ne doit pas être testée."
@@ -440,7 +440,7 @@
                     "Vulnérabilité",
                     "Risque",
                     "Menace",
-                    "Protection"
+                    "Mesure de protection"
                   ],
                   "correctIndex": 2,
                   "explanation": "Le cybercriminel et sa tentative peuvent provoquer un dommage : il s’agit d’une menace."
@@ -450,7 +450,7 @@
                   "options": [
                     "Menace",
                     "Risque",
-                    "Protection",
+                    "Mesure de protection",
                     "Vulnérabilité"
                   ],
                   "correctIndex": 3,
@@ -462,7 +462,7 @@
                     "Risque",
                     "Menace",
                     "Vulnérabilité",
-                    "Protection"
+                    "Mesure de protection"
                   ],
                   "correctIndex": 0,
                   "explanation": "La phrase associe la menace, la faiblesse et la conséquence possible : elle décrit un risque."
@@ -471,7 +471,7 @@
                   "statement": "L’utilisateur active la MFA sur son compte.",
                   "options": [
                     "Menace",
-                    "Protection",
+                    "Mesure de protection",
                     "Vulnérabilité",
                     "Risque"
                   ],
@@ -484,7 +484,7 @@
                     "Menace",
                     "Risque",
                     "Vulnérabilité",
-                    "Protection"
+                    "Mesure de protection"
                   ],
                   "correctIndex": 2,
                   "explanation": "L’absence de mises à jour peut laisser des faiblesses exploitables."
@@ -505,9 +505,9 @@
               {
                 "question": "Quelle proposition décrit une menace plutôt qu’une vulnérabilité ?",
                 "options": [
-                  "Un mot de passe est réutilisé sur plusieurs services",
-                  "Un attaquant tente de voler des comptes",
-                  "La MFA n’est pas activée"
+                  "Le même mot de passe est utilisé sur plusieurs services",
+                  "Un attaquant tente de voler les comptes des utilisateurs",
+                  "L’authentification multifacteur n’est pas activée"
                 ],
                 "correctIndex": 1,
                 "explanation": "L’attaquant représente une cause possible de dommage. Les deux autres propositions décrivent des faiblesses."
@@ -515,9 +515,9 @@
               {
                 "question": "Un serveur non corrigé est accessible depuis Internet. Quel élément est la vulnérabilité ?",
                 "options": [
-                  "L’accès depuis Internet",
-                  "L’interruption possible du service",
-                  "L’absence de correctif"
+                  "Le fait que le serveur soit accessible depuis Internet",
+                  "La possibilité que le service soit interrompu après une attaque",
+                  "L’absence du correctif de sécurité sur le serveur"
                 ],
                 "correctIndex": 2,
                 "explanation": "L’absence de correctif est la faiblesse exploitable. L’exposition influence la probabilité et l’interruption représente un impact possible."
@@ -525,9 +525,9 @@
               {
                 "question": "Pourquoi combine-t-on probabilité et impact ?",
                 "options": [
-                  "Pour comparer les risques et choisir les priorités",
-                  "Pour garantir la date exacte du prochain incident",
-                  "Pour remplacer l’analyse des actifs concernés"
+                  "Pour comparer les risques et décider lesquels traiter en priorité",
+                  "Pour prévoir avec certitude la date du prochain incident",
+                  "Pour éviter d’identifier les ressources qui pourraient être touchées"
                 ],
                 "correctIndex": 0,
                 "explanation": "Ces deux critères aident à comparer des scénarios sans prétendre prédire exactement l’avenir."
@@ -535,9 +535,9 @@
               {
                 "question": "Une sauvegarde réduit surtout l’impact d’un rançongiciel, mais n’empêche pas l’infection. Que montre cet exemple ?",
                 "options": [
-                  "Une sauvegarde est une mesure de détection",
-                  "Le risque disparaît dès qu’une copie existe",
-                  "Une mesure peut réduire une partie du risque sans le supprimer"
+                  "Une sauvegarde sert uniquement à détecter l’infection plus rapidement",
+                  "Une sauvegarde supprime entièrement le risque de rançongiciel",
+                  "Une mesure peut réduire une partie du risque sans le faire disparaître"
                 ],
                 "correctIndex": 2,
                 "explanation": "La sauvegarde peut faciliter la restauration, mais d’autres protections restent nécessaires."
@@ -545,9 +545,9 @@
               {
                 "question": "Quelle situation doit généralement être traitée en priorité ?",
                 "options": [
-                  "Une faiblesse difficile à exploiter dans un laboratoire isolé",
-                  "Une faiblesse facilement exploitable sur un service critique exposé",
-                  "Une faiblesse corrigée dont la protection a été vérifiée"
+                  "Une faiblesse difficile à exploiter sur une machine de laboratoire isolée",
+                  "Une faiblesse facile à exploiter sur un service critique exposé à Internet",
+                  "Une faiblesse déjà corrigée dont la correction a été vérifiée"
                 ],
                 "correctIndex": 1,
                 "explanation": "L’exposition, la facilité d’exploitation et l’impact critique augmentent la priorité du risque."
@@ -713,9 +713,9 @@
                 {
                   "statement": "Une application de retouche photo demande l’accès permanent à ta localisation.",
                   "options": [
-                    "Refuser si cette permission n’est pas nécessaire",
-                    "Accepter toutes les permissions",
-                    "Envoyer aussi une copie de sa pièce d’identité"
+                    "Refuser l’accès permanent si la localisation n’est pas nécessaire à la fonction utilisée",
+                    "Accepter l’accès, car une application publiée est forcément digne de confiance",
+                    "Autoriser la localisation uniquement parce que l’application est gratuite"
                   ],
                   "correctIndex": 0,
                   "explanation": "Une permission doit correspondre à une fonction utile. Sinon, refuse-la ou limite son accès."
@@ -723,9 +723,9 @@
                 {
                   "statement": "Tu veux conserver des photos importantes présentes sur ton téléphone.",
                   "options": [
-                    "Les laisser uniquement sur le téléphone",
-                    "Créer une copie séparée et vérifier qu’elle peut être restaurée",
-                    "Les publier pour en garder une copie"
+                    "Les conserver seulement sur le téléphone puisqu’il est protégé par un code",
+                    "Créer une copie séparée et vérifier qu’elle peut réellement être restaurée",
+                    "Activer uniquement la synchronisation et considérer qu’elle remplace toute sauvegarde"
                   ],
                   "correctIndex": 1,
                   "explanation": "Une sauvegarde séparée réduit le risque de perte si le téléphone est cassé, perdu ou compromis."
@@ -733,9 +733,9 @@
                 {
                   "statement": "Le système propose une mise à jour de sécurité depuis les réglages officiels.",
                   "options": [
-                    "La repousser sans limite",
-                    "Chercher une copie sur un site inconnu",
-                    "L’installer dès que possible"
+                    "La reporter indéfiniment si le téléphone fonctionne normalement",
+                    "Télécharger une version proposée sur un site non officiel pour aller plus vite",
+                    "L’installer dès que possible depuis les réglages officiels"
                   ],
                   "correctIndex": 2,
                   "explanation": "Les mises à jour officielles corrigent notamment des vulnérabilités connues."
@@ -743,9 +743,9 @@
                 {
                   "statement": "Une personne te demande par message le code de récupération de ton compte.",
                   "options": [
-                    "Refuser et ne jamais transmettre ce code",
-                    "L’envoyer si le message semble urgent",
-                    "Le publier pour demander conseil"
+                    "Refuser et ne jamais transmettre le code de récupération",
+                    "L’envoyer si la personne connaît déjà ton adresse électronique",
+                    "Le transmettre seulement si la demande semble provenir du support technique"
                   ],
                   "correctIndex": 0,
                   "explanation": "Un code de récupération est un secret d’authentification. Un service légitime ne te demandera pas de le partager par message."
@@ -753,9 +753,9 @@
                 {
                   "statement": "Tu reçois un message parlant d’une connexion inconnue sur ton compte.",
                   "options": [
-                    "Utiliser obligatoirement le lien du message",
-                    "Vérifier le compte depuis l’application officielle",
-                    "Répondre avec son mot de passe"
+                    "Utiliser le lien du message si le logo et le nom du service semblent corrects",
+                    "Ouvrir directement l’application ou le site officiel pour vérifier le compte",
+                    "Répondre au message afin de demander si l’alerte est authentique"
                   ],
                   "correctIndex": 1,
                   "explanation": "Passe par l’application ou l’adresse officielle afin d’éviter un éventuel lien de phishing."
@@ -776,9 +776,9 @@
               {
                 "question": "Pourquoi plusieurs informations ordinaires peuvent-elles devenir sensibles lorsqu’elles sont réunies ?",
                 "options": [
-                  "Elles deviennent automatiquement des mots de passe",
-                  "Elles sont toujours chiffrées lorsqu’elles sont combinées",
-                  "Elles peuvent permettre d’identifier ou de profiler précisément une personne"
+                  "Parce que leur réunion les transforme automatiquement en identifiants de connexion",
+                  "Parce qu’elles deviennent chiffrées dès qu’elles sont regroupées",
+                  "Parce qu’elles peuvent permettre d’identifier ou de profiler précisément une personne"
                 ],
                 "correctIndex": 2,
                 "explanation": "Une identité peut être reconstruite indirectement en croisant plusieurs informations."
@@ -786,9 +786,9 @@
               {
                 "question": "Une application météo demande l’accès permanent aux contacts. Quel principe appliquer ?",
                 "options": [
-                  "Refuser ou retirer la permission si elle n’est pas nécessaire au service",
-                  "Accepter, car toute application peut avoir besoin de tous les accès",
-                  "Désactiver toutes les sauvegardes avant d’accepter"
+                  "Refuser ou retirer la permission si les contacts ne sont pas nécessaires au service météo",
+                  "Accepter la permission, car une application peut utiliser tous les accès disponibles",
+                  "Accepter temporairement puis désactiver les sauvegardes du téléphone"
                 ],
                 "correctIndex": 0,
                 "explanation": "La minimisation consiste à limiter les données et permissions au besoin réel de l’application."
@@ -796,9 +796,9 @@
               {
                 "question": "Quelle différence décrit correctement synchronisation et sauvegarde ?",
                 "options": [
-                  "La synchronisation protège toujours contre les suppressions",
+                  "La synchronisation conserve toujours les fichiers supprimés sur un appareil",
                   "La synchronisation reproduit les changements, tandis qu’une copie séparée peut permettre une restauration",
-                  "Une sauvegarde remplace les mises à jour de sécurité"
+                  "La sauvegarde sert surtout à installer automatiquement les mises à jour de sécurité"
                 ],
                 "correctIndex": 1,
                 "explanation": "Une suppression peut se synchroniser partout ; une sauvegarde séparée conserve un état restaurable."
@@ -806,9 +806,9 @@
               {
                 "question": "Un téléphone chiffré est perdu. Quelle mesure complète utilement le chiffrement ?",
                 "options": [
-                  "La publication du code de récupération",
-                  "La désactivation permanente des mises à jour",
-                  "Un verrouillage fort et la possibilité de révoquer les sessions"
+                  "Conserver le code de déverrouillage avec le téléphone pour faciliter sa restitution",
+                  "Désactiver les mises à jour afin de préserver la clé de chiffrement",
+                  "Utiliser un verrouillage fort et pouvoir révoquer les sessions du compte"
                 ],
                 "correctIndex": 2,
                 "explanation": "Le verrouillage et la gestion des sessions limitent l’accès, tandis que le chiffrement protège les données stockées."
@@ -816,9 +816,9 @@
               {
                 "question": "Après une alerte de connexion inconnue reçue par e-mail, quelle action est la plus sûre ?",
                 "options": [
-                  "Ouvrir directement le service officiel, vérifier les sessions et sécuriser le compte",
-                  "Utiliser le lien du message pour gagner du temps",
-                  "Répondre au message en envoyant un code de récupération"
+                  "Accéder au service officiel, vérifier les sessions et sécuriser le compte",
+                  "Suivre le lien reçu, à condition que la page affiche un cadenas",
+                  "Répondre à l’expéditeur avec un code de récupération pour confirmer son identité"
                 ],
                 "correctIndex": 0,
                 "explanation": "Passer par le service officiel évite de suivre un éventuel lien frauduleux et permet de vérifier les faits."
@@ -984,9 +984,9 @@
                 {
                   "statement": "Tu utilises le même mot de passe pour ta messagerie et un ancien forum.",
                   "options": [
-                    "Le conserver pour mieux le mémoriser",
-                    "Créer un mot de passe unique pour chaque compte",
-                    "Ajouter uniquement ton année de naissance"
+                    "Le conserver, car sa réutilisation facilite uniquement la mémorisation",
+                    "Créer un mot de passe différent et unique pour chaque compte",
+                    "Modifier seulement un caractère entre les deux services"
                   ],
                   "correctIndex": 1,
                   "explanation": "Des mots de passe uniques empêchent qu’une fuite sur un service ouvre directement les autres comptes."
@@ -994,9 +994,9 @@
                 {
                   "statement": "Tu dois créer un nouveau mot de passe difficile à deviner.",
                   "options": [
-                    "Utiliser ton prénom et ta date de naissance",
-                    "Copier un exemple publié sur Internet",
-                    "Choisir un secret long et imprévisible"
+                    "Utiliser une information personnelle accompagnée de quelques chiffres",
+                    "Reprendre un exemple complexe trouvé sur Internet",
+                    "Choisir un secret long, unique et difficile à prévoir"
                   ],
                   "correctIndex": 2,
                   "explanation": "La longueur et l’imprévisibilité sont essentielles. Un exemple public ne doit jamais devenir ton vrai mot de passe."
@@ -1004,9 +1004,9 @@
                 {
                   "statement": "Tu ne peux plus mémoriser tous tes mots de passe uniques.",
                   "options": [
-                    "Utiliser un gestionnaire de mots de passe protégé",
-                    "Les écrire dans une publication privée sur un réseau social",
-                    "Réutiliser un seul mot de passe"
+                    "Utiliser un gestionnaire de mots de passe correctement protégé",
+                    "Conserver tous les mots de passe dans une note en ligne partagée",
+                    "Réutiliser un mot de passe complexe sur tous les comptes"
                   ],
                   "correctIndex": 0,
                   "explanation": "Un gestionnaire permet de générer et conserver des secrets uniques dans un coffre chiffré."
@@ -1014,9 +1014,9 @@
                 {
                   "statement": "Ton téléphone affiche une validation MFA alors que tu ne te connectes pas.",
                   "options": [
-                    "Accepter pour arrêter les notifications",
-                    "Refuser la demande et vérifier immédiatement le compte",
-                    "Envoyer une capture avec le code à un inconnu"
+                    "Accepter une fois pour vérifier si les notifications s’arrêtent",
+                    "Refuser la demande et vérifier immédiatement le compte depuis le service officiel",
+                    "Ignorer toutes les demandes tant qu’aucune alerte par e-mail n’arrive"
                   ],
                   "correctIndex": 1,
                   "explanation": "Une demande inattendue peut indiquer une tentative de connexion avec un mot de passe compromis."
@@ -1024,9 +1024,9 @@
                 {
                   "statement": "Le service fournit des codes de récupération après l’activation de la MFA.",
                   "options": [
-                    "Les ignorer définitivement",
-                    "Les publier pour ne pas les perdre",
-                    "Les conserver dans un emplacement privé et protégé"
+                    "Les laisser uniquement dans la boîte de réception qui a servi à créer le compte",
+                    "Les enregistrer avec le mot de passe principal dans un document non protégé",
+                    "Les conserver dans un emplacement privé, protégé et accessible en cas de besoin"
                   ],
                   "correctIndex": 2,
                   "explanation": "Les codes de récupération permettent l’accès au compte et doivent rester secrets."
@@ -1047,9 +1047,9 @@
               {
                 "question": "Pourquoi un service peut-il accepter un attaquant comme utilisateur légitime ?",
                 "options": [
-                  "Parce que le service vérifie les preuves d’authentification, qui peuvent avoir été volées",
-                  "Parce que l’identification suffit toujours sans mot de passe",
-                  "Parce qu’un compte ne peut appartenir qu’à l’appareil d’origine"
+                  "Parce que le service vérifie des preuves d’authentification qui peuvent avoir été volées",
+                  "Parce que le nom d’utilisateur suffit toujours à valider une connexion",
+                  "Parce que le service reconnaît uniquement l’appareil utilisé lors de la création du compte"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le service vérifie les preuves présentées. Si elles sont compromises, il peut être trompé."
@@ -1057,9 +1057,9 @@
               {
                 "question": "Quel danger crée principalement la réutilisation d’un mot de passe ?",
                 "options": [
-                  "Le mot de passe devient automatiquement plus court",
-                  "Le gestionnaire de mots de passe cesse de fonctionner",
-                  "La fuite d’un service peut permettre l’accès à plusieurs autres comptes"
+                  "Le mot de passe perd automatiquement une partie de ses caractères",
+                  "Le gestionnaire de mots de passe ne peut plus chiffrer les autres secrets",
+                  "La fuite d’un service peut donner accès à plusieurs autres comptes"
                 ],
                 "correctIndex": 2,
                 "explanation": "Les identifiants volés sont souvent testés automatiquement sur d’autres services."
@@ -1067,9 +1067,9 @@
               {
                 "question": "Quelle stratégie produit généralement un meilleur mot de passe mémorisable ?",
                 "options": [
-                  "Le prénom suivi de l’année actuelle et d’un symbole",
-                  "Une longue combinaison de mots indépendants, unique pour ce compte",
-                  "Une citation connue utilisée sur plusieurs services"
+                  "Un prénom, une année récente et un symbole facile à retenir",
+                  "Une longue combinaison de mots indépendants, créée uniquement pour ce compte",
+                  "Une phrase connue, même si elle est utilisée sur plusieurs services"
                 ],
                 "correctIndex": 1,
                 "explanation": "La longueur, l’imprévisibilité et l’unicité sont plus utiles que des substitutions prévisibles."
@@ -1077,9 +1077,9 @@
               {
                 "question": "Tu reçois plusieurs demandes MFA sans essayer de te connecter. Que dois-tu supposer ?",
                 "options": [
-                  "Le mot de passe peut être connu ; il faut refuser et sécuriser le compte officiel",
-                  "La répétition prouve qu’il s’agit du vrai service",
-                  "Il faut accepter une demande pour arrêter les notifications"
+                  "Le mot de passe peut être connu ; il faut refuser les demandes et sécuriser le compte officiel",
+                  "Les notifications répétées prouvent que la demande provient du vrai service",
+                  "Une seule demande peut être acceptée sans risque pour interrompre les suivantes"
                 ],
                 "correctIndex": 0,
                 "explanation": "Une attaque par fatigue MFA cherche précisément à provoquer une validation par lassitude."
@@ -1087,9 +1087,9 @@
               {
                 "question": "Pourquoi les codes de récupération doivent-ils être conservés séparément ?",
                 "options": [
-                  "Ils ne fonctionnent que s’ils sont publiés",
-                  "Ils remplacent définitivement le mot de passe principal",
-                  "Ils peuvent permettre l’accès lorsque le second facteur habituel est indisponible"
+                  "Parce qu’ils deviennent invalides s’ils sont enregistrés dans un gestionnaire de mots de passe",
+                  "Parce qu’ils remplacent définitivement le mot de passe dès leur création",
+                  "Parce qu’ils peuvent permettre l’accès lorsque le second facteur habituel est indisponible"
                 ],
                 "correctIndex": 2,
                 "explanation": "Ces codes sont des secrets de secours puissants et doivent rester accessibles uniquement au propriétaire."
@@ -1255,9 +1255,9 @@
                 {
                   "statement": "Un SMS annonce un colis bloqué et exige un paiement dans dix minutes.",
                   "options": [
-                    "Payer depuis le lien",
-                    "Envoyer son code bancaire par réponse",
-                    "Ouvrir directement le site officiel du transporteur"
+                    "Utiliser rapidement le lien afin d’éviter les frais supplémentaires annoncés",
+                    "Répondre au SMS pour demander une preuve avant de communiquer les données bancaires",
+                    "Ouvrir directement le site ou l’application officielle du transporteur"
                   ],
                   "correctIndex": 2,
                   "explanation": "La vérification doit passer par un accès officiel indépendant du message."
@@ -1265,9 +1265,9 @@
                 {
                   "statement": "Le nom affiché est celui de ta banque, mais le domaine de l’expéditeur est inconnu.",
                   "options": [
-                    "Considérer le message comme suspect et contacter la banque officiellement",
-                    "Faire confiance au nom affiché",
-                    "Transférer ses identifiants"
+                    "Traiter le message comme suspect et contacter la banque par un moyen officiel",
+                    "Faire confiance au nom affiché puisqu’il correspond à celui de la banque",
+                    "Utiliser le lien si la page obtenue ressemble au site habituel"
                   ],
                   "correctIndex": 0,
                   "explanation": "Le nom affiché peut être imité. Vérifie par l’application ou le numéro officiel."
@@ -1275,9 +1275,9 @@
                 {
                   "statement": "Un collègue demande un virement inhabituel par messagerie.",
                   "options": [
-                    "Exécuter immédiatement la demande",
-                    "Confirmer avec lui par un canal déjà connu",
-                    "Publier le message"
+                    "Effectuer le virement si le message emploie le ton habituel du collègue",
+                    "Confirmer la demande par un canal déjà connu, distinct du message reçu",
+                    "Répondre dans la même conversation pour demander une seconde confirmation"
                   ],
                   "correctIndex": 1,
                   "explanation": "Une vérification indépendante permet de détecter un compte compromis ou une usurpation."
@@ -1285,9 +1285,9 @@
                 {
                   "statement": "Tu reçois une pièce jointe inattendue nommée facture.zip.",
                   "options": [
-                    "L’ouvrir pour voir",
-                    "Désactiver l’antivirus",
-                    "Vérifier l’expéditeur et la nécessité avant toute ouverture"
+                    "Ouvrir l’archive sans extraire les fichiers afin de limiter le risque",
+                    "Analyser l’archive après avoir désactivé temporairement les protections",
+                    "Vérifier l’expéditeur et la légitimité de l’envoi avant toute ouverture"
                   ],
                   "correctIndex": 2,
                   "explanation": "Une pièce jointe inattendue doit être validée avant d’être ouverte."
@@ -1295,9 +1295,9 @@
                 {
                   "statement": "Tu as saisi un mot de passe sur une page qui semble frauduleuse.",
                   "options": [
-                    "Sécuriser immédiatement le vrai compte",
-                    "Cacher l’incident",
-                    "Continuer à utiliser le même mot de passe partout"
+                    "Sécuriser immédiatement le vrai compte depuis son service officiel",
+                    "Attendre de recevoir une alerte de connexion avant de modifier quoi que ce soit",
+                    "Fermer seulement la fausse page, car le mot de passe n’a pas forcément été transmis"
                   ],
                   "correctIndex": 0,
                   "explanation": "Change le secret, vérifie les sessions, active la MFA et signale l’incident."
@@ -1318,9 +1318,9 @@
               {
                 "question": "Pourquoi un message personnalisé avec ton vrai nom peut-il tout de même être frauduleux ?",
                 "options": [
-                  "Les vrais services ne connaissent jamais le nom de leurs utilisateurs",
-                  "Des informations publiques ou volées peuvent rendre le scénario crédible",
-                  "Un message frauduleux contient obligatoirement des fautes"
+                  "Parce qu’un service légitime n’utilise jamais le vrai nom de ses clients",
+                  "Parce que des informations publiques ou volées peuvent rendre un message frauduleux crédible",
+                  "Parce que la présence du vrai nom prouve seulement que l’expéditeur connaît ton adresse IP"
                 ],
                 "correctIndex": 1,
                 "explanation": "L’ingénierie sociale utilise le contexte disponible pour gagner la confiance de la cible."
@@ -1338,9 +1338,9 @@
               {
                 "question": "Que prouve principalement le cadenas HTTPS ?",
                 "options": [
-                  "Le contenu du site a été approuvé par une banque",
-                  "Le domaine appartient forcément à l’organisation imitée",
-                  "La connexion avec le domaine affiché est chiffrée"
+                  "Que l’organisation imitée a vérifié et approuvé le contenu de la page",
+                  "Que le propriétaire du domaine est nécessairement le service attendu",
+                  "Que la connexion avec le domaine affiché est chiffrée"
                 ],
                 "correctIndex": 2,
                 "explanation": "HTTPS protège le transport, mais un site frauduleux peut lui aussi utiliser un certificat valide."
@@ -1348,9 +1348,9 @@
               {
                 "question": "Comment vérifier une demande urgente de virement prétendument envoyée par un collègue ?",
                 "options": [
-                  "Répondre au message pour demander confirmation",
+                  "Répondre au même message et attendre une confirmation écrite",
                   "Utiliser un numéro déjà connu ou parler directement au collègue",
-                  "Appeler uniquement le numéro ajouté dans la signature du message"
+                  "Appeler le numéro indiqué dans la signature du message reçu"
                 ],
                 "correctIndex": 1,
                 "explanation": "Un canal indépendant et déjà vérifié évite de rester dans le scénario contrôlé par l’attaquant."
@@ -1359,8 +1359,8 @@
                 "question": "Après avoir saisi un mot de passe sur une fausse page, quelle action est prioritaire ?",
                 "options": [
                   "Sécuriser le vrai compte, fermer les sessions et protéger les comptes où le secret a été réutilisé",
-                  "Retourner sur la fausse page pour supprimer le mot de passe",
-                  "Attendre une seconde alerte afin de confirmer l’incident"
+                  "Retourner sur la fausse page et tenter d’y remplacer le mot de passe saisi",
+                  "Attendre une nouvelle activité suspecte pour être certain qu’il y a eu un incident"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le secret doit être considéré comme exposé ; la réaction doit passer par les services officiels."
@@ -1533,9 +1533,9 @@
                 {
                   "statement": "Un ordinateur échange des fichiers avec le serveur du bureau, mais aucun site Internet ne s’ouvre.",
                   "options": [
-                    "Le câble local est forcément débranché",
-                    "Le LAN fonctionne au moins en partie ; il faut vérifier la passerelle et l’accès Internet",
-                    "Le serveur du bureau est nécessairement le routeur"
+                    "Le réseau local est forcément en panne malgré l’accès au serveur du bureau",
+                    "Le LAN fonctionne au moins en partie ; il faut vérifier la passerelle et l’accès à Internet",
+                    "Le serveur du bureau fournit nécessairement lui-même l’accès à Internet"
                   ],
                   "correctIndex": 1,
                   "explanation": "La communication locale réussit. Le problème se situe probablement après le LAN ou dans un service intermédiaire."
@@ -1543,9 +1543,9 @@
                 {
                   "statement": "Tous les appareils Wi-Fi perdent le signal, mais un ordinateur câblé continue d’accéder au réseau.",
                   "options": [
-                    "Internet entier est arrêté",
-                    "Le switch ne peut plus transmettre aucune donnée",
-                    "Le point d’accès Wi-Fi ou sa liaison doit être vérifié"
+                    "La connexion Internet du fournisseur est nécessairement interrompue",
+                    "Le switch ne transmet plus aucune donnée, y compris vers l’ordinateur câblé",
+                    "Le point d’accès Wi-Fi ou sa liaison avec le réseau doit être vérifié"
                   ],
                   "correctIndex": 2,
                   "explanation": "La connexion câblée fonctionne ; le problème est donc probablement spécifique au Wi-Fi."
@@ -1553,9 +1553,9 @@
                 {
                   "statement": "Deux ordinateurs du même bureau sont reliés au même switch et doivent communiquer localement.",
                   "options": [
-                    "Le switch transmet les données dans le LAN",
-                    "Chaque paquet doit obligatoirement traverser Internet",
-                    "Le navigateur choisit le port physique du câble"
+                    "Le switch transmet les données entre les appareils du réseau local",
+                    "Les données doivent passer par Internet avant de revenir dans le bureau",
+                    "Le routeur est toujours nécessaire, même lorsque les deux appareils sont sur le même LAN"
                   ],
                   "correctIndex": 0,
                   "explanation": "Le switch relie les équipements locaux et transmet leurs trames vers le bon port."
@@ -1563,9 +1563,9 @@
                 {
                   "statement": "Le navigateur demande une page à un serveur web.",
                   "options": [
-                    "Le navigateur devient la passerelle du LAN",
-                    "Le navigateur joue le rôle de client",
-                    "Le serveur doit initier la demande vers le navigateur"
+                    "Le navigateur joue le rôle de passerelle pour le réseau local",
+                    "Le navigateur agit comme client et envoie une requête au serveur",
+                    "Le serveur doit contacter le navigateur avant de pouvoir recevoir sa demande"
                   ],
                   "correctIndex": 1,
                   "explanation": "Le client initie la requête vers le service fourni par le serveur."
@@ -1573,9 +1573,9 @@
                 {
                   "statement": "Une photo volumineuse traverse plusieurs réseaux avant d’arriver au destinataire.",
                   "options": [
-                    "Elle doit suivre un câble unique de bout en bout",
-                    "Le routeur transforme la photo en nom de domaine",
-                    "Elle est découpée en paquets transportés puis réassemblés"
+                    "Elle est envoyée comme un seul bloc qui doit emprunter le même chemin de bout en bout",
+                    "Elle est convertie en nom de domaine chaque fois qu’elle traverse un routeur",
+                    "Elle est découpée en paquets transportés puis réassemblés à destination"
                   ],
                   "correctIndex": 2,
                   "explanation": "Les données sont découpées afin d’être transportées efficacement sur les réseaux."
@@ -1596,9 +1596,9 @@
               {
                 "question": "Quelle différence décrit correctement LAN et Internet ?",
                 "options": [
-                  "Le LAN utilise uniquement des câbles et Internet uniquement le Wi-Fi",
-                  "Tout appareil connecté au LAN possède forcément un accès Internet",
-                  "Le LAN relie des équipements localement ; Internet relie de nombreux réseaux"
+                  "Un LAN fonctionne seulement avec des câbles, tandis qu’Internet fonctionne uniquement en Wi-Fi",
+                  "Tout appareil présent sur un LAN dispose automatiquement d’un accès à Internet",
+                  "Un LAN relie des équipements localement, tandis qu’Internet relie de nombreux réseaux"
                 ],
                 "correctIndex": 2,
                 "explanation": "Un réseau local peut fonctionner même si sa connexion vers Internet est interrompue."
@@ -1606,9 +1606,9 @@
               {
                 "question": "Quel équipement transmet principalement les données entre appareils d’un même LAN câblé ?",
                 "options": [
-                  "Le résolveur DNS",
-                  "Le switch",
-                  "Le serveur web distant"
+                  "Le résolveur DNS, car il choisit le destinataire de chaque trame locale",
+                  "Le switch, qui relie les appareils d’un même réseau local câblé",
+                  "Le serveur web distant, qui organise les échanges entre les appareils du bureau"
                 ],
                 "correctIndex": 1,
                 "explanation": "Le switch relie les équipements du LAN et transmet les trames vers le port approprié."
@@ -1617,8 +1617,8 @@
                 "question": "Pourquoi l’appareil envoie-t-il un paquet au routeur ?",
                 "options": [
                   "Parce que la destination se trouve sur un autre réseau",
-                  "Parce que tout paquet doit être stocké par le routeur",
-                  "Parce que le switch ne peut transporter aucune donnée locale"
+                  "Parce que le routeur doit conserver une copie permanente de chaque paquet",
+                  "Parce qu’un switch ne peut transmettre que des données provenant d’Internet"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le routeur sert de passerelle vers les destinations situées hors du réseau local."
@@ -1626,9 +1626,9 @@
               {
                 "question": "Que signifie être connecté au Wi-Fi sans pouvoir ouvrir de site ?",
                 "options": [
-                  "Le Wi-Fi et Internet fonctionnent nécessairement",
-                  "Le téléphone n’appartient plus au LAN",
-                  "La liaison avec le réseau local existe, mais l’accès Internet ou un service intermédiaire peut être en panne"
+                  "La connexion Wi-Fi et l’accès à Internet fonctionnent nécessairement tous les deux",
+                  "L’appareil est connecté au point d’accès, mais ne fait plus partie du réseau local",
+                  "La liaison locale existe, mais l’accès à Internet ou un service intermédiaire peut être défaillant"
                 ],
                 "correctIndex": 2,
                 "explanation": "Wi-Fi décrit la liaison locale ; il ne garantit pas que tout le trajet jusqu’à Internet fonctionne."
@@ -1636,9 +1636,9 @@
               {
                 "question": "Dans un échange web classique, quelle association est correcte ?",
                 "options": [
-                  "Le routeur crée la page demandée",
-                  "Le navigateur est client et le serveur web répond à sa requête",
-                  "Le switch distant choisit le mot de passe de l’utilisateur"
+                  "Le routeur produit la page demandée avant de l’envoyer au navigateur",
+                  "Le navigateur est le client et le serveur web répond à sa requête",
+                  "Le switch choisit le service web en fonction du compte de l’utilisateur"
                 ],
                 "correctIndex": 1,
                 "explanation": "Le client initie la requête applicative, tandis que le serveur fournit le service demandé."
@@ -1804,9 +1804,9 @@
                 {
                   "statement": "Le téléphone rejoint le Wi-Fi et reçoit automatiquement une adresse, un masque, une passerelle et un DNS.",
                   "options": [
-                    "NAT a créé le compte utilisateur",
-                    "Localhost a contacté Internet",
-                    "DHCP a fourni la configuration"
+                    "NAT a attribué l’adresse locale et choisi le serveur DNS",
+                    "La passerelle a utilisé localhost pour configurer le téléphone",
+                    "DHCP a fourni automatiquement les paramètres réseau"
                   ],
                   "correctIndex": 2,
                   "explanation": "DHCP attribue automatiquement les principaux paramètres réseau."
@@ -1815,8 +1815,8 @@
                   "statement": "L’ordinateur peut joindre l’imprimante locale, mais aucune passerelle n’apparaît dans sa configuration.",
                   "options": [
                     "Le LAN peut fonctionner, mais il manque probablement le chemin vers les réseaux extérieurs",
-                    "L’adresse privée devient automatiquement publique",
-                    "DNS remplace toujours la passerelle absente"
+                    "L’adresse privée sera automatiquement convertie en adresse publique sans passerelle",
+                    "Le serveur DNS peut remplacer la passerelle pour tout le trafic extérieur"
                   ],
                   "correctIndex": 0,
                   "explanation": "Une destination locale peut rester accessible, tandis que la sortie du LAN exige généralement une passerelle."
@@ -1824,9 +1824,9 @@
                 {
                   "statement": "Un téléphone et un ordinateur visitent deux sites, qui voient la même adresse publique.",
                   "options": [
-                    "Les deux appareils utilisent nécessairement la même adresse privée",
-                    "NAT permet à la box de partager l’adresse publique",
-                    "DHCP chiffre les requêtes des deux appareils"
+                    "Les deux appareils possèdent nécessairement la même adresse privée sur le LAN",
+                    "NAT permet à la box de partager une adresse publique entre plusieurs appareils",
+                    "DHCP chiffre les connexions afin que les sites voient la même adresse"
                   ],
                   "correctIndex": 1,
                   "explanation": "La box traduit et suit les connexions de plusieurs adresses privées derrière une adresse publique."
@@ -1834,9 +1834,9 @@
                 {
                   "statement": "Un serveur de test répond sur 127.0.0.1, mais pas depuis un autre appareil du LAN.",
                   "options": [
-                    "Le service se trouve forcément sur Internet",
-                    "Le routeur a remplacé l’adresse par DNS",
-                    "Le service est lié à la boucle locale de la machine"
+                    "Le service est accessible uniquement depuis Internet et bloque le réseau local",
+                    "Le routeur a remplacé l’adresse locale du service par une réponse DNS",
+                    "Le service écoute sur la boucle locale et n’est accessible que depuis cette machine"
                   ],
                   "correctIndex": 2,
                   "explanation": "127.0.0.1 désigne la machine elle-même et n’est pas joignable depuis un autre appareil."
@@ -1844,9 +1844,9 @@
                 {
                   "statement": "L’interface Wi-Fi utilise 192.168.1.24, puis obtient une autre adresse sur le réseau mobile.",
                   "options": [
-                    "Une même machine peut avoir plusieurs interfaces et adresses",
-                    "L’identité civile de l’utilisateur a changé",
-                    "Une adresse IP doit rester identique sur tous les réseaux"
+                    "Une même machine peut utiliser plusieurs interfaces et plusieurs adresses IP",
+                    "L’adresse IP identifie la personne et doit donc changer avec le type de connexion",
+                    "Une machine doit conserver la même adresse IP quel que soit le réseau utilisé"
                   ],
                   "correctIndex": 0,
                   "explanation": "Les adresses appartiennent aux interfaces dans leur contexte réseau, pas directement à la personne."
@@ -1867,9 +1867,9 @@
               {
                 "question": "Pourquoi une adresse IP ne permet-elle pas d’identifier avec certitude une personne ?",
                 "options": [
-                  "Elle décrit une interface et peut changer ou être partagée",
-                  "Elle contient uniquement le nom complet du propriétaire",
-                  "Elle est toujours identique sur Wi-Fi et réseau mobile"
+                  "Parce qu’elle désigne une interface et peut être dynamique ou partagée entre plusieurs personnes",
+                  "Parce qu’elle contient le nom du propriétaire uniquement sur les réseaux privés",
+                  "Parce qu’elle reste identique seulement lorsque la personne utilise le Wi-Fi"
                 ],
                 "correctIndex": 0,
                 "explanation": "Une adresse IP appartient à une interface dans un contexte réseau et n’est pas une identité civile permanente."
@@ -1879,7 +1879,7 @@
                 "options": [
                   "8.8.8.0/24 et 1.1.1.0/24",
                   "10.0.0.0/8 et 192.168.0.0/16",
-                  "127.0.0.0/8 et toutes les adresses en 203."
+                  "127.0.0.0/8 et 203.0.113.0/24"
                 ],
                 "correctIndex": 1,
                 "explanation": "Les plages 10., 172.16–172.31 et 192.168. sont réservées aux réseaux privés."
@@ -1887,9 +1887,9 @@
               {
                 "question": "Que fournit généralement DHCP en plus d’une adresse IP ?",
                 "options": [
-                  "Un compte administrateur et son mot de passe",
-                  "Le contenu des pages web consultées",
-                  "Un masque, une passerelle et des serveurs DNS"
+                  "Un compte administrateur permettant de modifier le routeur",
+                  "La liste des sites auxquels le réseau autorise l’accès",
+                  "Un masque de réseau, une passerelle et des serveurs DNS"
                 ],
                 "correctIndex": 2,
                 "explanation": "DHCP automatise les principaux paramètres nécessaires à la communication réseau."
@@ -1897,9 +1897,9 @@
               {
                 "question": "Quel rôle joue NAT sur une box domestique ?",
                 "options": [
-                  "Associer les connexions privées à l’adresse publique partagée",
-                  "Transformer tous les noms de domaine en mots de passe",
-                  "Garantir qu’aucun appareil interne ne peut être compromis"
+                  "Associer les connexions des appareils privés à l’adresse publique partagée",
+                  "Attribuer les noms de domaine et chiffrer toutes les requêtes DNS",
+                  "Empêcher automatiquement toute connexion malveillante vers un appareil interne"
                 ],
                 "correctIndex": 0,
                 "explanation": "NAT traduit et suit les communications ; il ne constitue pas à lui seul une protection complète."
@@ -1907,9 +1907,9 @@
               {
                 "question": "Quelle différence existe entre localhost et l’adresse Wi-Fi de la machine ?",
                 "options": [
-                  "Localhost désigne toujours la box",
-                  "Localhost reste dans la machine ; l’adresse Wi-Fi participe au réseau local",
-                  "Les deux désignent forcément un serveur public"
+                  "Localhost désigne la box, tandis que l’adresse Wi-Fi désigne l’ordinateur",
+                  "Localhost reste dans la machine, tandis que l’adresse Wi-Fi permet de participer au LAN",
+                  "Les deux adresses servent à rendre la machine accessible publiquement sur Internet"
                 ],
                 "correctIndex": 1,
                 "explanation": "La boucle locale sert aux communications internes à la machine, tandis que l’interface Wi-Fi communique avec le LAN."
@@ -2075,9 +2075,9 @@
                 {
                   "statement": "L’adresse IP du serveur répond, mais son nom de domaine n’est jamais résolu.",
                   "options": [
-                    "Vérifier DNS et le résolveur configuré",
-                    "Changer immédiatement le port du serveur",
-                    "Désactiver le chiffrement du disque"
+                    "Vérifier la configuration DNS et le résolveur utilisé",
+                    "Changer le port du serveur, car un port différent corrige la résolution du nom",
+                    "Modifier la passerelle, car DNS n’intervient pas dans l’utilisation des noms de domaine"
                   ],
                   "correctIndex": 0,
                   "explanation": "La connectivité vers l’adresse existe ; le symptôme concerne la traduction du nom."
@@ -2085,9 +2085,9 @@
                 {
                   "statement": "DNS renvoie une adresse, mais la connexion au port attendu est refusée.",
                   "options": [
-                    "Le nom n’existe pas",
-                    "Le client ne possède aucune adresse IP",
-                    "Le service peut être arrêté ou ne pas écouter sur ce port"
+                    "Le nom de domaine n’existe pas puisque le service refuse la connexion",
+                    "Le client n’a pas d’adresse IP, même s’il a obtenu la réponse DNS",
+                    "Le service peut être arrêté ou ne pas écouter sur le port demandé"
                   ],
                   "correctIndex": 2,
                   "explanation": "La résolution a réussi. Le refus indique plutôt un problème au niveau du port ou du service."
@@ -2095,9 +2095,9 @@
                 {
                   "statement": "Un service web de laboratoire répond sur le port 8443 avec HTTPS.",
                   "options": [
-                    "HTTPS fonctionne exclusivement sur 443",
-                    "C’est possible : les ports habituels sont des conventions, pas des obligations",
-                    "Le port 8443 prouve une vulnérabilité"
+                    "HTTPS ne peut pas fonctionner, car il est réservé exclusivement au port 443",
+                    "C’est possible : les ports habituels sont des conventions et peuvent être modifiés",
+                    "Le choix du port 8443 démontre que le service est vulnérable"
                   ],
                   "correctIndex": 1,
                   "explanation": "Un administrateur peut configurer un service sur un autre port ; il faut observer le protocole réellement utilisé."
@@ -2105,9 +2105,9 @@
                 {
                   "statement": "Le navigateur affiche un cadenas sur un domaine très proche de celui de la banque, mais différent.",
                   "options": [
-                    "La connexion est chiffrée, mais le domaine reste suspect",
-                    "Le cadenas prouve que le site appartient à la banque",
-                    "TLS corrige automatiquement le nom du domaine"
+                    "La connexion est chiffrée, mais le domaine différent reste suspect",
+                    "Le cadenas confirme que le domaine appartient bien à la banque imitée",
+                    "TLS redirige automatiquement le navigateur vers le domaine officiel de la banque"
                   ],
                   "correctIndex": 0,
                   "explanation": "HTTPS protège le transport vers le domaine affiché ; il ne rend pas un domaine trompeur légitime."
@@ -2115,9 +2115,9 @@
                 {
                   "statement": "Une application temps réel choisit UDP pour certains échanges.",
                   "options": [
-                    "Elle n’utilise plus aucune adresse ni aucun port",
-                    "UDP transforme les noms de domaine en adresses",
-                    "Elle peut privilégier un faible délai plutôt que les contrôles intégrés de TCP"
+                    "Elle renonce aux adresses et aux ports afin de réduire le délai",
+                    "Elle utilise UDP pour résoudre plus rapidement les noms de domaine",
+                    "Elle peut privilégier un faible délai plutôt que les contrôles de livraison intégrés à TCP"
                   ],
                   "correctIndex": 2,
                   "explanation": "UDP offre un transport plus simple, utile lorsque l’application gère elle-même les pertes ou privilégie le délai."
@@ -2138,9 +2138,9 @@
               {
                 "question": "Que se passe-t-il généralement après la résolution DNS d’un site ?",
                 "options": [
-                  "DNS transmet directement toute la page web",
-                  "Le client utilise l’adresse obtenue pour contacter le service sur un port",
-                  "Le nom de domaine remplace définitivement l’adresse IP"
+                  "Le serveur DNS transmet directement le contenu complet de la page au navigateur",
+                  "Le client utilise l’adresse obtenue pour contacter le service sur un port déterminé",
+                  "Le nom de domaine remplace ensuite l’adresse IP dans tous les paquets échangés"
                 ],
                 "correctIndex": 1,
                 "explanation": "DNS fournit l’adresse ; la connexion et l’échange applicatif utilisent ensuite d’autres protocoles."
@@ -2148,9 +2148,9 @@
               {
                 "question": "Pourquoi une ancienne adresse DNS peut-elle encore apparaître après une modification ?",
                 "options": [
-                  "Le port 53 transforme toujours les nouvelles adresses",
-                  "HTTPS interdit les changements DNS",
-                  "Une réponse peut rester temporairement dans un cache"
+                  "Le port 53 conserve toujours l’ancienne adresse jusqu’au redémarrage du serveur",
+                  "HTTPS empêche temporairement toute modification des enregistrements DNS",
+                  "Une ancienne réponse peut rester dans un cache jusqu’à son expiration"
                 ],
                 "correctIndex": 2,
                 "explanation": "Les réponses DNS sont conservées pendant une durée définie afin d’éviter des recherches répétées."
@@ -2158,9 +2158,9 @@
               {
                 "question": "Que représente le port 443 dans une connexion classique ?",
                 "options": [
-                  "Un service HTTPS probable, sans garantir le contenu du site",
-                  "Une preuve que le serveur est sans vulnérabilité",
-                  "L’identité permanente de l’utilisateur"
+                  "Un service probablement HTTPS, sans garantie sur la légitimité de son contenu",
+                  "Un serveur vérifié comme étant exempt de toute vulnérabilité",
+                  "Un service réservé aux connexions de personnes déjà authentifiées"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le numéro donne un indice sur le service attendu, mais il ne prouve ni sa sécurité ni son honnêteté."
@@ -2168,9 +2168,9 @@
               {
                 "question": "Quelle affirmation compare correctement TCP et UDP ?",
                 "options": [
-                  "UDP garantit toujours l’ordre de tous les paquets",
-                  "TCP intègre davantage de contrôle de livraison ; UDP privilégie un échange plus simple",
-                  "TCP est un système de résolution de noms"
+                  "UDP garantit l’ordre et la retransmission de tous les paquets, contrairement à TCP",
+                  "TCP intègre davantage de contrôles de livraison ; UDP fournit un échange plus simple",
+                  "TCP résout les noms de domaine, tandis qu’UDP attribue les adresses IP"
                 ],
                 "correctIndex": 1,
                 "explanation": "Les deux transports répondent à des besoins différents et sont choisis par les applications."
@@ -2178,9 +2178,9 @@
               {
                 "question": "Que garantit HTTPS lorsqu’il est correctement établi ?",
                 "options": [
-                  "L’absence de toute vulnérabilité dans l’application",
-                  "La légitimité commerciale de chaque page",
-                  "Le chiffrement du transport avec le domaine présenté, pas l’honnêteté du contenu"
+                  "Que l’application web ne contient aucune vulnérabilité exploitable",
+                  "Que le propriétaire du domaine est nécessairement une organisation honnête",
+                  "Que le transport avec le domaine présenté est chiffré, pas que son contenu est fiable"
                 ],
                 "correctIndex": 2,
                 "explanation": "TLS protège la communication et le certificat, mais un site frauduleux peut aussi utiliser HTTPS."
@@ -2244,7 +2244,7 @@
                 "eyebrow": "Se repérer",
                 "title": "pwd affiche le dossier courant",
                 "body": "Le système de fichiers est organisé comme une arborescence. Une commande agit souvent relativement au dossier courant. pwd affiche son chemin absolu, depuis la racine /. Vérifie ce chemin avant de créer, déplacer ou modifier un fichier. Le chemin affiché par pwd constitue ton point de repère. Avant une opération importante, relis-le caractère par caractère. Des dossiers portant des noms proches peuvent contenir des données totalement différentes.",
-                "example": "Si pwd affiche /home/alex/cyber-lab, une commande utilisant notes.txt vise normalement ce fichier dans cyber-lab.",
+                "example": "Si pwd affiche /home/utilisateur/cyber-lab, une commande utilisant notes.txt vise normalement ce fichier dans cyber-lab.",
                 "icon": "pin_drop_outlined",
                 "checkQuestion": "Quelle commande indique où tu te trouves ?",
                 "checkOptions": [
@@ -2274,7 +2274,7 @@
                 "eyebrow": "Se déplacer",
                 "title": "cd change le dossier courant",
                 "body": "cd suivi d’un chemin ouvre un autre dossier. cd preuves entre dans le sous-dossier preuves ; cd .. remonte d’un niveau ; cd sans argument revient généralement dans le dossier personnel. Un chemin absolu commence par /, tandis qu’un chemin relatif part du dossier actuel. L’autocomplétion avec la touche Tab réduit les erreurs de frappe et révèle les noms disponibles. Si plusieurs choix existent, le shell peut les afficher. Cette habitude est plus sûre que de recopier approximativement un long chemin.",
-                "example": "Depuis /home/alex/cyber-lab, cd preuves peut mener à /home/alex/cyber-lab/preuves.",
+                "example": "Depuis /home/utilisateur/cyber-lab, cd preuves peut mener à /home/utilisateur/cyber-lab/preuves.",
                 "icon": "route_outlined",
                 "checkQuestion": "Quelle commande remonte d’un niveau ?",
                 "checkOptions": [
@@ -2334,7 +2334,7 @@
                 "eyebrow": "Réflexe de sécurité",
                 "title": "Observer avant de modifier",
                 "body": "Une commande copiée peut supprimer, remplacer ou envoyer des données. Avant de l’exécuter, identifie la commande, les options, les chemins et les privilèges demandés. Dans un exercice, commence par pwd, ls et une lecture des instructions. N’ajoute pas sudo simplement parce qu’une commande échoue. Travaille dans ton dossier de laboratoire et conserve une copie des fichiers importants.",
-                "example": "Si une instruction vise / au lieu de /home/alex/cyber-lab, arrête-toi : la portée n’est plus celle du laboratoire.",
+                "example": "Si une instruction vise / au lieu de /home/utilisateur/cyber-lab, arrête-toi : la portée n’est plus celle du laboratoire.",
                 "icon": "gavel_rounded",
                 "checkQuestion": "Une commande inconnue demande sudo. Quel est le premier réflexe ?",
                 "checkOptions": [
@@ -2351,11 +2351,11 @@
               "instructions": "Choisis la commande ou le raisonnement adapté à chaque étape, sans utiliser de privilèges inutiles.",
               "questions": [
                 {
-                  "statement": "Avant de créer un fichier, tu veux confirmer que tu es dans /home/alex/cyber-lab.",
+                  "statement": "Avant de créer un fichier, tu veux confirmer que tu es dans /home/utilisateur/cyber-lab.",
                   "options": [
-                    "cat",
-                    "pwd",
-                    "whoami"
+                    "ls, pour afficher le contenu sans indiquer précisément le dossier courant",
+                    "pwd, pour afficher le chemin absolu du dossier courant",
+                    "whoami, pour afficher le nom du compte actuellement connecté"
                   ],
                   "correctIndex": 1,
                   "explanation": "pwd affiche le chemin absolu du dossier courant."
@@ -2364,8 +2364,8 @@
                   "statement": "Tu veux voir les fichiers cachés et les informations détaillées du dossier.",
                   "options": [
                     "ls -la",
-                    "cd ..",
-                    "touch -hidden"
+                    "ls, qui masque les fichiers cachés et affiche moins de détails",
+                    "pwd -la, qui affiche le chemin et les permissions du dossier"
                   ],
                   "correctIndex": 0,
                   "explanation": "ls -la inclut les éléments cachés et un affichage détaillé."
@@ -2373,9 +2373,9 @@
                 {
                   "statement": "Depuis cyber-lab, tu dois entrer dans le sous-dossier preuves.",
                   "options": [
-                    "cat preuves",
-                    "pwd preuves",
-                    "cd preuves"
+                    "ls preuves, qui affiche le contenu sans changer de dossier",
+                    "pwd preuves, qui définit preuves comme nouveau dossier courant",
+                    "cd preuves, qui change le dossier courant vers le sous-dossier"
                   ],
                   "correctIndex": 2,
                   "explanation": "cd change le dossier courant vers le chemin indiqué."
@@ -2383,9 +2383,9 @@
                 {
                   "statement": "Une instruction inconnue propose sudo avant une commande visant un chemin système.",
                   "options": [
-                    "L’exécuter puis chercher son effet",
-                    "Comprendre la commande, sa cible et la nécessité des privilèges avant d’agir",
-                    "Remplacer sudo par deux mots de passe"
+                    "L’exécuter d’abord, car sudo protège automatiquement le système contre les erreurs",
+                    "Comprendre la commande, sa cible et la nécessité des privilèges avant de l’exécuter",
+                    "Retirer sudo puis exécuter la commande, car une commande sans sudo est toujours sans danger"
                   ],
                   "correctIndex": 1,
                   "explanation": "Les droits élevés augmentent l’impact potentiel ; l’analyse doit précéder l’exécution."
@@ -2395,7 +2395,7 @@
                   "options": [
                     "Commande : ls ; options : -la ; argument : preuves",
                     "Commande : preuves ; options : ls ; argument : -la",
-                    "Commande : -la ; options : preuves ; argument : ls"
+                    "Commande : ls -la ; option : preuves ; aucun argument"
                   ],
                   "correctIndex": 0,
                   "explanation": "Cette lecture permet de comprendre l’action, sa modification et sa cible."
@@ -2416,9 +2416,9 @@
               {
                 "question": "Quelle relation existe entre terminal, shell et Linux ?",
                 "options": [
-                  "Le shell est le matériel et Linux uniquement une fenêtre",
-                  "Le terminal remplace le système d’exploitation",
-                  "Le terminal affiche l’interface, le shell interprète les commandes et Linux exécute les opérations"
+                  "Le shell affiche la fenêtre, le terminal exécute le noyau et Linux interprète les commandes",
+                  "Le terminal remplace Linux pendant toute la durée d’une commande",
+                  "Le terminal fournit l’interface, le shell interprète les commandes et Linux réalise les opérations"
                 ],
                 "correctIndex": 2,
                 "explanation": "Ces éléments coopèrent mais remplissent des rôles différents."
@@ -2426,19 +2426,19 @@
               {
                 "question": "Pourquoi exécuter pwd avant de manipuler des fichiers ?",
                 "options": [
-                  "Pour confirmer le dossier sur lequel les chemins relatifs vont agir",
-                  "Pour obtenir automatiquement les droits administrateur",
-                  "Pour afficher le contenu de tous les fichiers"
+                  "Pour confirmer le dossier dans lequel les chemins relatifs vont être interprétés",
+                  "Pour obtenir temporairement les droits administrateur dans ce dossier",
+                  "Pour afficher le contenu de chaque fichier présent dans le dossier"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le dossier courant détermine la cible de nombreux chemins relatifs."
               },
               {
-                "question": "Depuis /home/alex/lab, que représente notes.txt ?",
+                "question": "Depuis /home/utilisateur/lab, que représente notes.txt ?",
                 "options": [
-                  "Un chemin absolu commençant à la racine",
-                  "Un chemin relatif vers /home/alex/lab/notes.txt",
-                  "Une option du shell"
+                  "Un chemin absolu qui commence à la racine du système",
+                  "Un chemin relatif désignant /home/utilisateur/lab/notes.txt",
+                  "Une option transmise automatiquement à la dernière commande exécutée"
                 ],
                 "correctIndex": 1,
                 "explanation": "Sans / initial, le chemin est interprété à partir du dossier courant."
@@ -2446,9 +2446,9 @@
               {
                 "question": "Dans ls -la preuves, quel rôle joue -la ?",
                 "options": [
-                  "Il désigne le dossier cible",
-                  "Il crée automatiquement les fichiers cachés",
-                  "Il regroupe des options qui modifient l’affichage de ls"
+                  "Il indique que preuves est le dossier sur lequel la commande doit agir",
+                  "Il crée les fichiers cachés avant d’afficher le contenu du dossier",
+                  "Il regroupe des options qui modifient la façon dont ls affiche les fichiers"
                 ],
                 "correctIndex": 2,
                 "explanation": "Les options changent le comportement de la commande, tandis que preuves est son argument."
@@ -2456,9 +2456,9 @@
               {
                 "question": "Pourquoi éviter d’ajouter sudo à une commande incomprise ?",
                 "options": [
-                  "Les privilèges peuvent augmenter fortement l’impact d’une erreur",
-                  "sudo empêche toujours la commande de fonctionner",
-                  "Un compte normal ne peut lire aucun fichier personnel"
+                  "Parce que les privilèges élevés peuvent augmenter fortement les conséquences d’une erreur",
+                  "Parce que sudo empêche systématiquement la commande d’accéder aux fichiers système",
+                  "Parce que toute commande lancée sans sudo est automatiquement limitée à la lecture"
                 ],
                 "correctIndex": 0,
                 "explanation": "Comprendre l’effet et la portée est indispensable avant d’utiliser des droits élevés."
@@ -2624,9 +2624,9 @@
                 {
                   "statement": "README.txt limite l’exercice aux quatre fichiers locaux et interdit toute connexion externe.",
                   "options": [
-                    "C’est une invitation à scanner le domaine simulé",
-                    "C’est la preuve que le compte est compromis",
-                    "C’est une règle de périmètre à respecter"
+                    "Le domaine mentionné peut être testé s’il semble lié aux fichiers du laboratoire",
+                    "Les connexions externes sont permises tant qu’aucune donnée n’est modifiée",
+                    "Seuls les quatre fichiers locaux appartiennent au périmètre autorisé"
                   ],
                   "correctIndex": 2,
                   "explanation": "Le briefing définit les actions autorisées et les limites du laboratoire."
@@ -2634,9 +2634,9 @@
                 {
                   "statement": "Le texte du lien annonce un domaine, mais la destination simulée en utilise un autre.",
                   "options": [
-                    "C’est une preuve que DNS est en panne",
-                    "C’est un indice de phishing",
-                    "C’est le flag final"
+                    "C’est probablement une redirection normale puisque le texte du lien est correct",
+                    "La différence entre le domaine annoncé et la destination constitue un indice de phishing",
+                    "Cela prouve à lui seul que le compte de la victime a déjà été compromis"
                   ],
                   "correctIndex": 1,
                   "explanation": "La différence entre le domaine annoncé et la destination soutient l’hypothèse de tromperie."
@@ -2644,9 +2644,9 @@
                 {
                   "statement": "Une session inconnue apparaît après la saisie du mot de passe, suivie de demandes MFA refusées.",
                   "options": [
-                    "La chronologie renforce l’hypothèse d’un accès avec le mot de passe exposé",
-                    "La MFA prouve que personne n’a obtenu le mot de passe",
-                    "L’adresse privée identifie l’auteur"
+                    "La chronologie renforce l’hypothèse d’un accès utilisant le mot de passe exposé",
+                    "Le refus des demandes MFA suffit à exclure toute compromission du premier facteur",
+                    "La session inconnue est probablement légitime puisque la MFA n’a pas été acceptée"
                   ],
                   "correctIndex": 0,
                   "explanation": "L’ordre des événements relie l’exposition du secret à la tentative d’accès."
@@ -2654,9 +2654,9 @@
                 {
                   "statement": "Le fichier indique une destination sur le port 443.",
                   "options": [
-                    "Cela prouve que le message vient du vrai service",
-                    "Cela révèle le nom de l’attaquant",
-                    "Cela suggère HTTPS, sans prouver que la destination est légitime"
+                    "Le port 443 confirme que la destination appartient au véritable service",
+                    "Le port 443 permet d’identifier l’auteur de la connexion",
+                    "Le port 443 suggère HTTPS, sans prouver que la destination est légitime"
                   ],
                   "correctIndex": 2,
                   "explanation": "Le port fournit un indice technique, pas une preuve d’identité ou d’honnêteté."
@@ -2664,9 +2664,9 @@
                 {
                   "statement": "Tu rédiges la conclusion de la mission.",
                   "options": [
-                    "Donner uniquement le flag",
-                    "Présenter les preuves, l’interprétation, l’impact possible et les actions prioritaires",
-                    "Ajouter des cibles publiques qui ne figurent pas dans le périmètre"
+                    "Présenter uniquement le flag, puisqu’il résume toutes les preuves analysées",
+                    "Présenter les preuves, leur interprétation, l’impact possible et les actions prioritaires",
+                    "Ajouter des hypothèses sur des systèmes extérieurs afin de compléter le scénario"
                   ],
                   "correctIndex": 1,
                   "explanation": "Une analyse utile explique le raisonnement et aide à protéger le compte."
@@ -2687,9 +2687,9 @@
               {
                 "question": "Pourquoi lire le périmètre avant d’ouvrir les preuves ?",
                 "options": [
-                  "Pour connaître les actions, systèmes et limites autorisés",
-                  "Pour obtenir automatiquement des privilèges supplémentaires",
-                  "Pour éviter de documenter les commandes"
+                  "Pour connaître les actions, les ressources et les limites autorisées pendant l’exercice",
+                  "Pour obtenir l’autorisation implicite de tester les systèmes liés au scénario",
+                  "Pour déterminer quelles commandes peuvent être exécutées avec sudo"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le périmètre définit ce que l’exercice permet et les conditions à respecter."
@@ -2697,9 +2697,9 @@
               {
                 "question": "Quel ensemble soutient le mieux l’hypothèse de compromission par phishing ?",
                 "options": [
-                  "Présence de fichiers texte et utilisation de Linux",
-                  "Connexion HTTPS et adresse privée du poste",
-                  "Domaine trompeur, saisie du mot de passe puis session inconnue"
+                  "L’utilisation de Linux, la présence de fichiers texte et une connexion au réseau local",
+                  "Une connexion chiffrée sur le port 443 et une adresse privée sur le poste",
+                  "Un domaine trompeur, la saisie du mot de passe puis l’apparition d’une session inconnue"
                 ],
                 "correctIndex": 2,
                 "explanation": "Ces trois éléments forment une chronologie cohérente reliant le message à l’accès au compte."
@@ -2707,9 +2707,9 @@
               {
                 "question": "Que peut-on conclure de destination=203.0.113.42:443 dans ce laboratoire ?",
                 "options": [
-                  "La preuve que la destination était légitime",
-                  "Une connexion simulée vers une adresse de documentation sur un port HTTPS probable",
-                  "L’identité exacte de la personne ayant créé le message"
+                  "La destination était légitime puisqu’elle utilisait le port habituel de HTTPS",
+                  "Une connexion simulée visait une adresse de documentation sur un port généralement associé à HTTPS",
+                  "L’adresse et le port permettent d’identifier précisément la personne qui a créé le message"
                 ],
                 "correctIndex": 1,
                 "explanation": "L’adresse et le port décrivent une destination technique, sans garantir sa légitimité ni identifier l’auteur."
@@ -2717,9 +2717,9 @@
               {
                 "question": "Pourquoi changer le mot de passe alors que les demandes MFA ont été refusées ?",
                 "options": [
-                  "Le premier facteur a déjà été exposé et peut être réutilisé",
-                  "La MFA rend automatiquement tous les mots de passe publics",
-                  "Le port 443 exige un nouveau mot de passe"
+                  "Le mot de passe a peut-être déjà été compromis et pourrait être réutilisé",
+                  "Le refus des demandes MFA invalide automatiquement le mot de passe actuel",
+                  "La MFA protège la session inconnue, mais pas les autres comptes utilisant le même appareil"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le refus de la MFA a aidé, mais le mot de passe compromis doit être remplacé."
@@ -2727,9 +2727,9 @@
               {
                 "question": "Quel résultat démontre le mieux la réussite pédagogique de la mission ?",
                 "options": [
-                  "Le flag seul, sans explication",
-                  "Une liste de systèmes extérieurs à tester ensuite",
-                  "Une conclusion justifiée par les preuves et accompagnée d’actions de protection"
+                  "Trouver le flag sans pouvoir expliquer comment les indices conduisent à la conclusion",
+                  "Identifier de nouvelles cibles extérieures qui pourraient être testées après la mission",
+                  "Formuler une conclusion fondée sur les preuves et proposer des actions de protection adaptées"
                 ],
                 "correctIndex": 2,
                 "explanation": "Le but est de comprendre le raisonnement et de proposer une réponse utile, pas seulement de trouver une chaîne de validation."
