@@ -32,9 +32,9 @@
                 "icon": "notification_important_outlined",
                 "checkQuestion": "Dans cette situation, quel est le risque le plus complet ?",
                 "checkOptions": [
-                  "Le téléphone risque seulement de devenir plus lent",
+                  "Seule la disponibilité du téléphone peut être affectée",
                   "L’identité, les données et d’autres comptes peuvent être menacés",
-                  "Seuls les anciens messages peuvent être supprimés"
+                  "Le risque concerne uniquement les messages déjà reçus"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Un compte compromis peut avoir des conséquences techniques, personnelles et financières, surtout lorsque plusieurs services sont liés."
@@ -47,9 +47,9 @@
                 "icon": "verified_user_outlined",
                 "checkQuestion": "Laquelle de ces actions appartient aussi à la cybersécurité ?",
                 "checkOptions": [
-                  "Restaurer des fichiers à partir d’une sauvegarde après un incident",
-                  "Changer régulièrement l’apparence d’une application",
-                  "Acheter automatiquement un ordinateur plus puissant"
+                  "Restaurer des fichiers depuis une sauvegarde après un incident",
+                  "Remplacer l’appareil sans rechercher la cause de l’incident",
+                  "Ignorer l’incident dès que le service recommence à fonctionner"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Oui. La restauration limite les conséquences d’un incident et permet de reprendre l’activité."
@@ -62,9 +62,9 @@
                 "icon": "inventory_2_outlined",
                 "checkQuestion": "Pourquoi commence-t-on par identifier ce qui est important ?",
                 "checkOptions": [
-                  "Pour utiliser exactement la même protection partout",
+                  "Pour appliquer exactement la même protection à toutes les ressources",
                   "Pour savoir quelles ressources protéger et quelles conséquences éviter",
-                  "Pour supprimer tous les services connectés à Internet"
+                  "Pour supprimer systématiquement tous les services exposés à Internet"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Correct. Une protection utile dépend de la valeur de la ressource, de son usage et des conséquences possibles."
@@ -77,9 +77,9 @@
                 "icon": "verified_user_outlined",
                 "checkQuestion": "Une personne modifie secrètement l’adresse de livraison d’une commande. Quel objectif est principalement touché ?",
                 "checkOptions": [
-                  "La confidentialité, car le site connaît une adresse",
-                  "L’intégrité, car une information a été modifiée sans autorisation",
-                  "La disponibilité, car la commande existe toujours"
+                  "La confidentialité, parce qu’une adresse est enregistrée par le service",
+                  "L’intégrité, parce qu’une information a été modifiée sans autorisation",
+                  "La disponibilité, parce que la commande reste accessible"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Le problème principal est l’altération non autorisée d’une information : l’intégrité est compromise."
@@ -93,8 +93,8 @@
                 "checkQuestion": "Pourquoi utilise-t-on plusieurs protections complémentaires ?",
                 "checkOptions": [
                   "Pour que la défaillance d’une protection ne suffise pas toujours à compromettre le compte",
-                  "Pour garantir qu’aucun incident ne sera jamais possible",
-                  "Pour remplacer complètement la vigilance de l’utilisateur"
+                  "Pour garantir qu’aucun incident ne pourra jamais se produire",
+                  "Pour remplacer complètement la vigilance et les bonnes pratiques de l’utilisateur"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Plusieurs barrières réduisent le risque qu’une erreur ou une faiblesse unique mène directement à une compromission."
@@ -107,9 +107,9 @@
                 "icon": "health_and_safety_outlined",
                 "checkQuestion": "Une alerte signale une connexion depuis un appareil inconnu. À quelle étape correspond principalement cette alerte ?",
                 "checkOptions": [
-                  "À la prévention, car elle empêche automatiquement toutes les connexions",
-                  "À la détection, car elle révèle une activité inhabituelle",
-                  "À la restauration, car elle récupère automatiquement le compte"
+                  "À la prévention, parce que l’alerte bloque nécessairement la connexion",
+                  "À la détection, parce qu’elle signale une activité inhabituelle",
+                  "À la restauration, parce qu’elle récupère automatiquement le compte"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Oui. L’alerte fournit un indice de détection. Il faut ensuite vérifier la situation et réagir."
@@ -122,8 +122,8 @@
                 "icon": "account_tree_outlined",
                 "checkQuestion": "Quelle formulation décrit le mieux un fait observable ?",
                 "checkOptions": [
-                  "L’attaquant est certainement un expert",
-                  "Le système est probablement mal conçu",
+                  "L’auteur de l’incident est certainement un expert",
+                  "Le système a probablement été mal conçu",
                   "L’adresse de récupération a été modifiée à 08 h 14"
                 ],
                 "correctIndex": 2,
@@ -138,8 +138,8 @@
                 "checkQuestion": "Quelle association est correcte ?",
                 "checkOptions": [
                   "Blue Team : surveiller et défendre les systèmes",
-                  "Red Team : tester n’importe quel système sans autorisation",
-                  "GRC : réparer uniquement le matériel endommagé"
+                  "Red Team : assurer uniquement les sauvegardes et la restauration",
+                  "GRC : exploiter les vulnérabilités techniques des applications"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. La Blue Team se concentre sur la surveillance, la défense et la réponse aux incidents. Les tests Red Team nécessitent une autorisation."
@@ -152,9 +152,9 @@
                 "icon": "gavel_rounded",
                 "checkQuestion": "Une entreprise autorise les tests sur app.exemple.fr, mais exclut api.exemple.fr. Que peux-tu tester ?",
                 "checkOptions": [
-                  "Les deux domaines, puisqu’ils appartiennent probablement à la même entreprise",
-                  "Uniquement app.exemple.fr, selon les autres règles du programme",
-                  "api.exemple.fr uniquement si aucun dommage n’est causé"
+                  "Les deux domaines, puisqu’ils semblent appartenir à la même organisation",
+                  "Uniquement app.exemple.fr, en respectant les autres règles du programme",
+                  "api.exemple.fr, à condition de ne provoquer aucun dommage"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Une autorisation est limitée par son périmètre. Un domaine exclu ne doit pas être testé."
@@ -302,9 +302,9 @@
                 "icon": "star_border_rounded",
                 "checkQuestion": "Lequel de ces éléments peut être un actif numérique ?",
                 "checkOptions": [
-                  "Uniquement un ordinateur très cher",
+                  "Uniquement le matériel coûteux appartenant à une organisation",
                   "Un dossier contenant des photos importantes",
-                  "Seulement un mot de passe oublié"
+                  "Une faiblesse technique sans ressource associée"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Un actif est quelque chose qui a de la valeur et que l’on souhaite protéger."
@@ -317,8 +317,8 @@
                 "icon": "warning_amber_rounded",
                 "checkQuestion": "Lequel de ces exemples représente une menace ?",
                 "checkOptions": [
-                  "Un mot de passe long et unique",
-                  "Une sauvegarde récente",
+                  "Un compte protégé par un mot de passe faible",
+                  "Une sauvegarde récente et correctement protégée",
                   "Un attaquant qui envoie un faux formulaire de connexion"
                 ],
                 "correctIndex": 2,
@@ -333,7 +333,7 @@
                 "checkQuestion": "Lequel de ces exemples représente une vulnérabilité ?",
                 "checkOptions": [
                   "Un compte protégé par le mot de passe 123456",
-                  "Une alerte de sécurité correctement traitée",
+                  "Une alerte de sécurité correctement analysée",
                   "Une sauvegarde testée et protégée"
                 ],
                 "correctIndex": 0,
@@ -347,9 +347,9 @@
                 "icon": "device_hub_rounded",
                 "checkQuestion": "Quelle phrase décrit le mieux un risque ?",
                 "checkOptions": [
-                  "Un logiciel existe",
+                  "Un logiciel n’a pas reçu son dernier correctif de sécurité",
                   "Un attaquant pourrait exploiter un mot de passe faible et voler les données",
-                  "Un utilisateur ferme son ordinateur"
+                  "Un attaquant envoie des tentatives de connexion à plusieurs comptes"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. La phrase relie une menace, une vulnérabilité et une conséquence possible."
@@ -362,9 +362,9 @@
                 "icon": "balance_rounded",
                 "checkQuestion": "Quel risque possède probablement le plus grand impact ?",
                 "checkOptions": [
-                  "Perdre la couleur personnalisée d’une application",
-                  "Déplacer une icône sur l’écran",
-                  "Rendre indisponible le système d’urgence d’un hôpital"
+                  "Une courte indisponibilité d’un service de loisir non essentiel",
+                  "La perte d’un réglage visuel facilement reconfigurable",
+                  "L’indisponibilité du système d’urgence d’un hôpital"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Oui. L’impact dépend des conséquences sur les personnes, les données et les services."
@@ -378,8 +378,8 @@
                 "checkQuestion": "Quelle mesure réduit le risque lié à un mot de passe volé ?",
                 "checkOptions": [
                   "Activer l’authentification multifacteur",
-                  "Partager le mot de passe",
-                  "Ignorer les alertes de connexion"
+                  "Réutiliser le même mot de passe sur les comptes importants",
+                  "Désactiver les alertes de connexion pour réduire les notifications"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. La MFA ajoute une vérification supplémentaire et réduit la probabilité de compromission."
@@ -392,9 +392,9 @@
                 "icon": "low_priority_rounded",
                 "checkQuestion": "Quel problème doit généralement être traité en priorité ?",
                 "checkOptions": [
-                  "Un détail esthétique sans conséquence",
+                  "Une faiblesse difficile à exploiter sur une machine isolée de test",
                   "Une faiblesse facilement exploitable sur un service critique exposé",
-                  "Une machine éteinte destinée au recyclage"
+                  "Une faiblesse déjà corrigée dont la correction a été vérifiée"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. La priorité vient du contexte, de la probabilité et des conséquences possibles."
@@ -407,9 +407,9 @@
                 "icon": "health_and_safety_outlined",
                 "checkQuestion": "Qu’est-ce qu’un risque résiduel ?",
                 "checkOptions": [
-                  "Le risque qui reste après la mise en place des protections",
-                  "Un risque supprimé et impossible à revoir",
-                  "Une menace qui ne concerne que les sauvegardes"
+                  "Le risque qui subsiste après la mise en place des protections",
+                  "Un risque définitivement supprimé qui ne nécessite plus aucun suivi",
+                  "Une menace qui concerne exclusivement les fichiers de sauvegarde"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. Une mesure réduit généralement le risque sans garantir sa disparition totale."
@@ -422,9 +422,9 @@
                 "icon": "account_tree_outlined",
                 "checkQuestion": "Quelle phrase décrit un risque complet ?",
                 "checkOptions": [
-                  "Un logiciel n’est pas à jour",
+                  "Un logiciel critique n’a pas encore reçu son correctif",
                   "Un attaquant pourrait exploiter le logiciel non corrigé et interrompre le service",
-                  "Une mise à jour est disponible"
+                  "Une mise à jour de sécurité est disponible pour le logiciel"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Correct. La phrase relie une menace, une faiblesse, un actif et une conséquence possible."
@@ -578,9 +578,9 @@
                 "icon": "badge_outlined",
                 "checkQuestion": "Quel élément est une donnée personnelle ?",
                 "checkOptions": [
-                  "La couleur bleue utilisée seule",
-                  "Un nombre choisi au hasard sans contexte",
-                  "Une adresse e-mail liée à une personne"
+                  "La version publique d’une application installée sur plusieurs appareils",
+                  "Une température météo sans lien avec une personne ou un domicile",
+                  "Une adresse e-mail associée à une personne"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Exact. Une adresse e-mail peut permettre d’identifier une personne ou de retrouver ses comptes."
@@ -593,9 +593,9 @@
                 "icon": "lock_person_outlined",
                 "checkQuestion": "Quelle information ne doit jamais être publiée ?",
                 "checkOptions": [
-                  "Un code de récupération de compte",
-                  "Le nom d’une couleur préférée",
-                  "La météo du jour"
+                  "Un code de récupération permettant d’accéder au compte",
+                  "Un pseudonyme public choisi pour participer à un forum",
+                  "Une photo de paysage ne montrant aucune personne ni information identifiable"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Un code de récupération peut permettre de contourner le mot de passe et de prendre le contrôle du compte."
@@ -608,9 +608,9 @@
                 "icon": "route_outlined",
                 "checkQuestion": "Une application demande une permission sans rapport avec son usage. Quel est le bon réflexe ?",
                 "checkOptions": [
-                  "Tout accepter automatiquement",
-                  "Refuser et vérifier pourquoi elle est demandée",
-                  "Publier la demande avec ses informations personnelles"
+                  "Accepter la permission parce que l’application provient d’une boutique officielle",
+                  "Refuser la permission et vérifier pourquoi elle est demandée",
+                  "Accorder la permission temporairement sans vérifier son utilité"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Oui. Une application ne devrait recevoir que les permissions nécessaires à son fonctionnement."
@@ -623,9 +623,9 @@
                 "icon": "visibility_outlined",
                 "checkQuestion": "Quel comportement limite l’exposition des données ?",
                 "checkOptions": [
-                  "Partager tous les documents pour gagner du temps",
-                  "Laisser le téléphone déverrouillé dans un lieu public",
-                  "Masquer les informations sensibles avant de publier une photo"
+                  "Publier le document complet si le compte utilisé est privé",
+                  "Conserver les informations sensibles visibles, mais réduire la qualité de la photo",
+                  "Masquer les informations sensibles avant de publier la photo"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Exact. Il faut vérifier tout ce qui apparaît dans une image ou un document avant de le partager."
@@ -638,9 +638,9 @@
                 "icon": "system_update_alt_rounded",
                 "checkQuestion": "Pourquoi installer les mises à jour de sécurité ?",
                 "checkOptions": [
-                  "Pour corriger des vulnérabilités connues",
-                  "Pour rendre inutile toute autre protection",
-                  "Pour publier automatiquement ses fichiers"
+                  "Pour corriger des vulnérabilités de sécurité connues",
+                  "Pour garantir qu’aucun incident ne pourra plus se produire",
+                  "Pour remplacer les sauvegardes et le verrouillage de l’appareil"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Les mises à jour réduisent l’exposition aux faiblesses déjà identifiées et corrigées."
@@ -653,9 +653,9 @@
                 "icon": "backup_outlined",
                 "checkQuestion": "Quel est le rôle principal d’une sauvegarde ?",
                 "checkOptions": [
-                  "Partager publiquement tous les fichiers",
-                  "Restaurer des données perdues ou endommagées",
-                  "Empêcher toutes les attaques possibles"
+                  "Empêcher toute personne de tenter une connexion au compte",
+                  "Restaurer des données perdues, supprimées ou endommagées",
+                  "Rendre automatiquement les données illisibles sans mot de passe"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Oui. Une sauvegarde limite l’impact d’une suppression, d’une panne ou de certains incidents."
@@ -668,8 +668,8 @@
                 "icon": "report_gmailerrorred_outlined",
                 "checkQuestion": "Tu reçois une alerte de connexion inconnue. Quelle action est la plus sûre ?",
                 "checkOptions": [
-                  "Cliquer immédiatement sur le lien du message",
-                  "Ignorer définitivement l’alerte",
+                  "Utiliser le lien du message si le logo du service paraît correct",
+                  "Attendre une seconde alerte avant de vérifier le compte",
                   "Ouvrir directement l’application officielle et vérifier les sessions"
                 ],
                 "correctIndex": 2,
@@ -683,9 +683,9 @@
                 "icon": "verified_user_outlined",
                 "checkQuestion": "Quel est le rôle principal du chiffrement ?",
                 "checkOptions": [
-                  "Empêcher toute suppression accidentelle",
+                  "Créer automatiquement une copie des données en cas de suppression",
                   "Rendre les données illisibles sans la clé appropriée",
-                  "Décider automatiquement qui mérite l’accès"
+                  "Déterminer quelles personnes sont autorisées à créer un compte"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Le chiffrement protège la lecture des données, mais les sauvegardes et les règles d’accès restent nécessaires."
@@ -698,9 +698,9 @@
                 "icon": "inventory_2_outlined",
                 "checkQuestion": "Pourquoi fermer un ancien compte inutilisé ?",
                 "checkOptions": [
-                  "Pour réduire les données et accès encore exposés",
-                  "Pour empêcher les mises à jour du téléphone",
-                  "Pour transformer ses données en sauvegarde"
+                  "Pour réduire les données et les accès encore exposés",
+                  "Pour conserver plus longtemps les permissions accordées aux anciens services",
+                  "Pour éviter de sécuriser les comptes encore utilisés"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Un compte abandonné peut encore contenir des données ou être compromis sans être remarqué."
@@ -849,9 +849,9 @@
                 "icon": "badge_outlined",
                 "checkQuestion": "Quel élément sert principalement à identifier un compte ?",
                 "checkOptions": [
-                  "L’adresse e-mail associée au compte",
-                  "La couleur de l’application",
-                  "Le niveau de batterie"
+                  "L’adresse e-mail ou le nom d’utilisateur associé au compte",
+                  "Le mot de passe utilisé pour prouver que l’utilisateur connaît le secret",
+                  "Le code MFA utilisé comme preuve supplémentaire d’authentification"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. L’adresse e-mail indique quel compte est concerné ; le secret permet ensuite de s’authentifier."
@@ -864,9 +864,9 @@
                 "icon": "warning_amber_rounded",
                 "checkQuestion": "Pourquoi faut-il un mot de passe différent pour chaque compte ?",
                 "checkOptions": [
-                  "Pour accélérer la connexion Internet",
-                  "Pour empêcher qu’une fuite compromette plusieurs comptes",
-                  "Pour éviter toutes les mises à jour"
+                  "Pour rendre inutile l’authentification multifacteur sur les comptes importants",
+                  "Pour éviter qu’une fuite sur un service compromette plusieurs comptes",
+                  "Pour permettre au même secret d’être récupéré plus facilement"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Correct. Un secret unique limite les conséquences d’une fuite à un seul compte."
@@ -879,8 +879,8 @@
                 "icon": "password_rounded",
                 "checkQuestion": "Quelle propriété améliore réellement un mot de passe ?",
                 "checkOptions": [
-                  "Le prénom suivi de l’année de naissance",
-                  "Le même mot de passe avec un chiffre différent",
+                  "Le prénom suivi de l’année de naissance et d’un symbole",
+                  "Le même mot de passe avec un chiffre différent pour chaque service",
                   "Une longueur importante avec des éléments imprévisibles"
                 ],
                 "correctIndex": 2,
@@ -895,8 +895,8 @@
                 "checkQuestion": "Quel est l’avantage principal d’un gestionnaire de mots de passe ?",
                 "checkOptions": [
                   "Créer et conserver des secrets uniques dans un coffre protégé",
-                  "Utiliser un même secret sur tous les sites",
-                  "Supprimer le besoin de protéger ses appareils"
+                  "Réutiliser automatiquement le même secret complexe sur tous les services",
+                  "Supprimer la nécessité de verrouiller et de mettre à jour ses appareils"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. Le gestionnaire permet d’utiliser des mots de passe uniques sans devoir tous les mémoriser."
@@ -909,9 +909,9 @@
                 "icon": "verified_user_outlined",
                 "checkQuestion": "Quel exemple utilise réellement deux facteurs différents ?",
                 "checkOptions": [
-                  "Deux mots de passe successifs",
+                  "Deux mots de passe différents saisis l’un après l’autre",
                   "Un mot de passe et un code généré sur un téléphone",
-                  "Le même mot de passe saisi deux fois"
+                  "Le même mot de passe saisi une seconde fois pour confirmation"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Correct. Le mot de passe est quelque chose que tu connais et le téléphone est quelque chose que tu possèdes."
@@ -924,8 +924,8 @@
                 "icon": "report_gmailerrorred_outlined",
                 "checkQuestion": "Tu reçois une demande MFA que tu n’as pas déclenchée. Que fais-tu ?",
                 "checkOptions": [
-                  "Je l’accepte pour faire disparaître la notification",
-                  "Je communique le code reçu par message",
+                  "Je l’accepte une fois pour faire disparaître la notification",
+                  "Je communique le code à la personne qui affirme représenter le support",
                   "Je la refuse et je vérifie le compte depuis le service officiel"
                 ],
                 "correctIndex": 2,
@@ -940,8 +940,8 @@
                 "checkQuestion": "Comment faut-il conserver les codes de récupération ?",
                 "checkOptions": [
                   "Dans un endroit protégé et accessible uniquement à toi",
-                  "Dans une publication publique",
-                  "Dans un message envoyé à plusieurs contacts"
+                  "Dans la même note non protégée que le mot de passe principal",
+                  "Dans un message envoyé à plusieurs contacts en cas de besoin"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Oui. Un code de récupération peut donner accès au compte et doit être protégé comme un mot de passe."
@@ -955,8 +955,8 @@
                 "checkQuestion": "Pourquoi une passkey résiste-t-elle mieux à de nombreuses fausses pages ?",
                 "checkOptions": [
                   "Elle est liée au vrai service et ne transmet pas un secret réutilisable",
-                  "Elle utilise toujours deux mots de passe",
-                  "Elle supprime le besoin de protéger la récupération"
+                  "Elle utilise deux mots de passe qui changent à chaque connexion",
+                  "Elle fonctionne sur tous les domaines en transmettant le même secret"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. La passkey vérifie le service et évite de saisir un secret que la fausse page pourrait voler."
@@ -970,8 +970,8 @@
                 "checkQuestion": "Quel compte protéger en priorité après une réutilisation de mot de passe ?",
                 "checkOptions": [
                   "La messagerie principale qui permet de réinitialiser d’autres comptes",
-                  "Le compte le moins utilisé uniquement",
-                  "Aucun compte si la MFA est active"
+                  "Uniquement le compte contenant le moins de données personnelles",
+                  "Aucun compte, puisque la présence de la MFA annule le risque de réutilisation"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. La messagerie principale peut donner accès aux procédures de récupération de nombreux autres services."
@@ -1120,9 +1120,9 @@
                 "icon": "groups_2_outlined",
                 "checkQuestion": "Que cherche principalement une tentative de phishing ?",
                 "checkOptions": [
-                  "À améliorer la qualité du réseau",
-                  "À manipuler la personne pour obtenir une action",
-                  "À mettre à jour automatiquement le téléphone"
+                  "À vérifier automatiquement l’identité de l’expéditeur du message",
+                  "À manipuler la personne pour lui faire réaliser une action",
+                  "À protéger l’utilisateur contre les liens et les pièces jointes malveillants"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Le message utilise la confiance ou l’émotion pour provoquer une action utile à l’attaquant."
@@ -1135,9 +1135,9 @@
                 "icon": "notification_important_outlined",
                 "checkQuestion": "Quel réflexe adopter face à une demande très urgente ?",
                 "checkOptions": [
-                  "Agir avant de lire",
-                  "Transférer immédiatement ses codes",
-                  "Ralentir et vérifier par un canal officiel"
+                  "Agir immédiatement, car l’urgence confirme que la demande est légitime",
+                  "Répondre au message pour demander si l’expéditeur est bien authentique",
+                  "Ralentir et vérifier la demande par un canal officiel"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Oui. L’urgence imposée est une raison de vérifier, pas une raison d’abandonner les précautions."
@@ -1150,9 +1150,9 @@
                 "icon": "badge_outlined",
                 "checkQuestion": "Que faut-il vérifier en plus du nom affiché ?",
                 "checkOptions": [
-                  "L’adresse complète et le contexte",
-                  "Uniquement la photo de profil",
-                  "La couleur du message"
+                  "L’adresse complète de l’expéditeur, le domaine et le contexte de la demande",
+                  "Le logo et la mise en page, car ils suffisent à confirmer l’expéditeur",
+                  "Le nom indiqué dans la signature, sans examiner l’adresse d’envoi"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Le nom affiché est facile à imiter ; l’adresse et la demande apportent davantage de contexte."
@@ -1165,9 +1165,9 @@
                 "icon": "route_outlined",
                 "checkQuestion": "Que prouve le cadenas HTTPS ?",
                 "checkOptions": [
-                  "Que le site est forcément honnête",
+                  "Que le site appartient nécessairement à l’organisation qu’il prétend représenter",
                   "Que la connexion est chiffrée, pas que le site est légitime",
-                  "Que le message vient de ta banque"
+                  "Que le contenu de la page a été vérifié et approuvé par le navigateur"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. HTTPS protège le transport des données, mais ne garantit pas l’intention du propriétaire du site."
@@ -1180,9 +1180,9 @@
                 "icon": "verified_user_outlined",
                 "checkQuestion": "Comment vérifier une demande de paiement inhabituelle ?",
                 "checkOptions": [
-                  "Avec le numéro fourni dans le message",
-                  "En envoyant d’abord ses identifiants",
-                  "Par un canal officiel déjà connu"
+                  "Avec le numéro ou le lien ajouté dans le message reçu",
+                  "En répondant au message avec une information connue uniquement du client",
+                  "Par un canal officiel déjà connu et indépendant du message"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Correct. Un canal indépendant empêche l’auteur du faux message de contrôler toute la vérification."
@@ -1195,9 +1195,9 @@
                 "icon": "visibility_outlined",
                 "checkQuestion": "Pourquoi un QR code inattendu mérite-t-il une vérification ?",
                 "checkOptions": [
-                  "Parce qu’il peut masquer l’adresse de destination",
-                  "Parce qu’il désactive toujours Internet",
-                  "Parce qu’il remplace la MFA"
+                  "Parce qu’il peut masquer l’adresse de destination avant son ouverture",
+                  "Parce qu’il suffit de vérifier que le QR code n’est pas endommagé",
+                  "Parce que la présence de HTTPS après le scan garantit l’identité du site"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Oui. Le format visuel ne permet pas de connaître immédiatement la destination ni son propriétaire."
@@ -1210,9 +1210,9 @@
                 "icon": "report_gmailerrorred_outlined",
                 "checkQuestion": "Tu as saisi ton mot de passe sur une page suspecte. Quelle action est prioritaire ?",
                 "checkOptions": [
-                  "Attendre plusieurs jours",
+                  "Fermer uniquement la page suspecte et continuer à utiliser le même mot de passe",
                   "Sécuriser le compte depuis le service officiel",
-                  "Répondre au fraudeur"
+                  "Scanner de nouveau la page afin de vérifier si elle accepte encore le mot de passe"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Une réaction rapide peut empêcher ou limiter l’utilisation du mot de passe compromis."
@@ -1227,7 +1227,7 @@
                 "checkOptions": [
                   "banque.example",
                   "securite-test.com",
-                  "Le fournisseur d’accès de la victime"
+                  "connexion.banque.example"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Le domaine enregistré se trouve à droite ; les mots placés avant peuvent servir de leurre."
@@ -1241,8 +1241,8 @@
                 "checkQuestion": "Pourquoi préciser que tu as saisi ton mot de passe ?",
                 "checkOptions": [
                   "Pour permettre une réponse adaptée au niveau réel d’exposition",
-                  "Pour publier le secret avec le signalement",
-                  "Pour éviter de changer le mot de passe"
+                  "Pour envoyer le mot de passe comme preuve avec le signalement",
+                  "Parce que la simple ouverture de la page prouve déjà que le mot de passe a été volé"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. L’équipe doit connaître les actions réalisées pour choisir les bonnes mesures de réponse."
@@ -1398,9 +1398,9 @@
                 "icon": "hub_outlined",
                 "checkQuestion": "Quel exemple forme un réseau informatique ?",
                 "checkOptions": [
-                  "Un ordinateur éteint sans connexion",
+                  "Deux appareils placés dans la même pièce, mais sans aucune connexion entre eux",
                   "Deux appareils connectés qui échangent des données",
-                  "Un fichier imprimé sur papier"
+                  "Deux fichiers enregistrés dans des dossiers différents du même appareil"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Un réseau permet à plusieurs équipements de communiquer et d’utiliser des ressources."
@@ -1413,9 +1413,9 @@
                 "icon": "route_outlined",
                 "checkQuestion": "Qu’est-ce qu’un LAN ?",
                 "checkOptions": [
-                  "Un mot de passe",
-                  "Un type de fichier",
-                  "Un réseau couvrant une zone locale"
+                  "Un réseau reliant principalement des sites situés sur plusieurs continents",
+                  "Un protocole chargé de traduire les noms de domaine",
+                  "Un réseau reliant des équipements dans une zone locale"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Correct. Le LAN relie des équipements proches dans un même environnement."
@@ -1429,8 +1429,8 @@
                 "checkQuestion": "Quel équipement relie principalement les appareils d’un même LAN câblé ?",
                 "checkOptions": [
                   "Le switch",
-                  "Le clavier",
-                  "Le navigateur"
+                  "Le routeur",
+                  "Le point d’accès Wi-Fi"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Oui. Le switch distribue les communications à l’intérieur du réseau local."
@@ -1443,9 +1443,9 @@
                 "icon": "account_tree_outlined",
                 "checkQuestion": "Quel équipement relie ton réseau local à d’autres réseaux ?",
                 "checkOptions": [
-                  "La souris",
-                  "Le routeur",
-                  "Le gestionnaire de mots de passe"
+                  "Le switch, qui relie principalement les appareils d’un même LAN",
+                  "Le routeur, qui transmet les données entre différents réseaux",
+                  "Le point d’accès, qui fournit principalement la connexion sans fil au LAN"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Le routeur fait circuler les données entre des réseaux différents."
@@ -1458,9 +1458,9 @@
                 "icon": "inventory_2_outlined",
                 "checkQuestion": "Pourquoi parle-t-on de paquets sur un réseau ?",
                 "checkOptions": [
-                  "Parce que chaque appareil reçoit un colis physique",
-                  "Parce que le Wi-Fi imprime les fichiers",
-                  "Parce que les données sont découpées pour être transportées"
+                  "Parce que les fichiers doivent rester dans un bloc unique pendant tout le trajet",
+                  "Parce que le réseau transporte uniquement des données provenant du Wi-Fi",
+                  "Parce que les données sont découpées en unités transportables puis réassemblées"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Correct. Le découpage permet de transporter et de gérer efficacement les données."
@@ -1473,9 +1473,9 @@
                 "icon": "visibility_outlined",
                 "checkQuestion": "Un téléphone connecté au Wi-Fi a-t-il forcément accès à Internet ?",
                 "checkOptions": [
-                  "Non, le réseau local peut fonctionner sans accès Internet",
-                  "Oui, toujours",
-                  "Seulement si le Bluetooth est actif"
+                  "Non, la connexion au réseau local peut fonctionner sans accès à Internet",
+                  "Oui, puisque toute connexion Wi-Fi inclut obligatoirement Internet",
+                  "Seulement si l’appareil reçoit directement une adresse IP publique"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. Le Wi-Fi donne accès au réseau local ; la connexion Internet dépend d’un autre lien."
@@ -1488,9 +1488,9 @@
                 "icon": "route_outlined",
                 "checkQuestion": "Quelle étape vient normalement après le téléphone sur un Wi-Fi domestique ?",
                 "checkOptions": [
-                  "Directement tous les serveurs du monde",
-                  "Le point d’accès ou la box",
-                  "Une imprimante obligatoire"
+                  "Un serveur web distant, avant tout équipement du réseau local",
+                  "Le point d’accès Wi-Fi ou la box du réseau local",
+                  "Le résolveur DNS, avant même la connexion au point d’accès"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Oui. L’appareil rejoint d’abord l’infrastructure de son réseau local."
@@ -1503,9 +1503,9 @@
                 "icon": "account_tree_outlined",
                 "checkQuestion": "Dans la consultation d’un site, quel rôle joue généralement le navigateur ?",
                 "checkOptions": [
-                  "Client, car il initie la demande",
-                  "Routeur, car il choisit tout le trajet",
-                  "Switch, car il relie tous les réseaux"
+                  "Client, parce qu’il initie la requête vers le serveur web",
+                  "Serveur, parce qu’il héberge le site consulté par les autres utilisateurs",
+                  "Routeur, parce qu’il choisit le trajet de tous les paquets sur Internet"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. Le navigateur initie la demande vers le service proposé par le serveur web."
@@ -1518,9 +1518,9 @@
                 "icon": "health_and_safety_outlined",
                 "checkQuestion": "Le Wi-Fi est connecté et l’imprimante locale fonctionne, mais aucun site ne répond. Que peut-on déjà conclure ?",
                 "checkOptions": [
-                  "Une partie du réseau local fonctionne",
-                  "Le switch est forcément détruit",
-                  "Le serveur de chaque site est compromis"
+                  "Une partie du réseau local fonctionne correctement",
+                  "L’accès à Internet fonctionne, mais tous les sites consultés sont indisponibles",
+                  "Le problème vient nécessairement du serveur DNS"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. La communication locale réussit ; il faut ensuite vérifier la passerelle, DNS et l’accès Internet."
@@ -1669,9 +1669,9 @@
                 "icon": "pin_drop_outlined",
                 "checkQuestion": "Que représente principalement une adresse IP ?",
                 "checkOptions": [
-                  "L’identité civile certaine d’une personne",
-                  "Le mot de passe du routeur",
-                  "Une interface dans un réseau"
+                  "L’identité civile certaine de la personne qui utilise l’appareil",
+                  "L’identifiant permanent du compte utilisateur sur Internet",
+                  "Une interface participant à un réseau"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Exact. L’adresse sert au routage réseau et ne suffit pas, seule, à identifier une personne."
@@ -1686,7 +1686,7 @@
                 "checkOptions": [
                   "192.168.1.24",
                   "192.168.1.999",
-                  "ordinateur.maison"
+                  "2001:db8::1"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Une IPv4 contient quatre valeurs de 0 à 255 séparées par des points."
@@ -1701,7 +1701,7 @@
                 "checkOptions": [
                   "8.8.8.8",
                   "192.168.1.20",
-                  "300.1.1.1"
+                  "1.1.1.1"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Oui. 192.168.0.0/16 est une plage réservée aux réseaux privés."
@@ -1714,9 +1714,9 @@
                 "icon": "system_update_alt_rounded",
                 "checkQuestion": "Quel service attribue souvent automatiquement une adresse IP dans le LAN ?",
                 "checkOptions": [
-                  "HTTPS",
-                  "Le gestionnaire de mots de passe",
-                  "DHCP"
+                  "DNS, qui traduit principalement les noms de domaine",
+                  "NAT, qui associe principalement les connexions privées à une adresse publique",
+                  "DHCP, qui fournit automatiquement les paramètres réseau"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Exact. DHCP automatise la configuration réseau des appareils clients."
@@ -1730,8 +1730,8 @@
                 "checkQuestion": "Où un appareil envoie-t-il normalement un paquet destiné à un autre réseau ?",
                 "checkOptions": [
                   "À la passerelle par défaut",
-                  "À son écran",
-                  "À tous les appareils au hasard"
+                  "Au serveur DNS, qui transmet ensuite tous les paquets vers Internet",
+                  "Au serveur DHCP, qui choisit le trajet de chaque connexion"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. La passerelle transmet les paquets vers les réseaux extérieurs."
@@ -1744,9 +1744,9 @@
                 "icon": "account_tree_outlined",
                 "checkQuestion": "Quel est un rôle courant de NAT à la maison ?",
                 "checkOptions": [
-                  "Créer des mots de passe",
+                  "Attribuer automatiquement les adresses privées et la passerelle aux appareils",
                   "Permettre à plusieurs appareils privés de partager une adresse publique",
-                  "Remplacer le Wi-Fi"
+                  "Traduire les noms de domaine en adresses IP"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. NAT traduit et suit les communications entre le LAN privé et l’extérieur."
@@ -1759,9 +1759,9 @@
                 "icon": "terminal_rounded",
                 "checkQuestion": "Que désigne 127.0.0.1 ?",
                 "checkOptions": [
-                  "Tous les appareils Internet",
-                  "Toujours le routeur domestique",
-                  "L’appareil lui-même"
+                  "Le routeur utilisé comme passerelle par défaut",
+                  "Un serveur DNS public accessible depuis tous les réseaux",
+                  "L’appareil lui-même grâce à l’interface de boucle locale"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Oui. 127.0.0.1 est l’adresse de boucle locale IPv4."
@@ -1774,9 +1774,9 @@
                 "icon": "account_tree_outlined",
                 "checkQuestion": "Quand la passerelle est-elle normalement utilisée ?",
                 "checkOptions": [
-                  "Lorsque la destination est située hors du réseau local",
-                  "Pour chaque échange entre deux voisins du même LAN",
-                  "Uniquement lorsque DHCP est désactivé"
+                  "Lorsque la destination se trouve hors du réseau local",
+                  "Pour chaque échange entre deux appareils appartenant au même LAN",
+                  "Uniquement lorsque le serveur DHCP est désactivé"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. La passerelle reçoit les paquets destinés à d’autres réseaux."
@@ -1789,9 +1789,9 @@
                 "icon": "inventory_2_outlined",
                 "checkQuestion": "Un appareil joint le LAN mais pas Internet et aucune passerelle n’est configurée. Quelle explication est la plus logique ?",
                 "checkOptions": [
-                  "Il manque le chemin vers les réseaux extérieurs",
-                  "L’adresse privée est forcément interdite",
-                  "Localhost remplace automatiquement la passerelle"
+                  "Il manque probablement le chemin vers les réseaux extérieurs",
+                  "Le serveur DNS est nécessairement absent de la configuration",
+                  "Le masque de réseau doit obligatoirement être remplacé par /24"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Sans passerelle, l’appareil ne sait généralement pas où envoyer les destinations extérieures."
@@ -1940,9 +1940,9 @@
                 "icon": "dns_outlined",
                 "checkQuestion": "Quel est le rôle principal de DNS ?",
                 "checkOptions": [
-                  "Associer un nom de domaine à des informations comme une adresse IP",
-                  "Créer les mots de passe",
-                  "Remplacer tous les routeurs"
+                  "Associer un nom de domaine à des informations telles qu’une adresse IP",
+                  "Attribuer automatiquement une configuration IP aux appareils du LAN",
+                  "Partager une adresse publique entre plusieurs appareils privés"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. DNS fournit notamment les adresses liées aux noms de domaine."
@@ -1955,9 +1955,9 @@
                 "icon": "account_tree_outlined",
                 "checkQuestion": "Pourquoi utilise-t-on un cache DNS ?",
                 "checkOptions": [
-                  "Pour supprimer Internet",
-                  "Pour réutiliser temporairement une réponse connue",
-                  "Pour remplacer l’adresse IP par un mot de passe"
+                  "Pour chiffrer automatiquement toutes les réponses DNS reçues",
+                  "Pour réutiliser temporairement une réponse déjà obtenue",
+                  "Pour garantir qu’une ancienne réponse reste correcte sans limite de temps"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Correct. Une réponse mise en cache accélère les recherches suivantes jusqu’à son expiration."
@@ -1970,9 +1970,9 @@
                 "icon": "device_hub_rounded",
                 "checkQuestion": "À quoi sert principalement un numéro de port ?",
                 "checkOptions": [
-                  "À identifier une personne",
-                  "À mesurer la vitesse du clavier",
-                  "À désigner un service sur une machine"
+                  "À identifier l’appareil de destination sur le réseau",
+                  "À choisir le chemin suivi par les paquets entre plusieurs réseaux",
+                  "À désigner un service ou une application sur une machine"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Oui. L’IP mène vers l’hôte et le port vers le service concerné."
@@ -1985,9 +1985,9 @@
                 "icon": "inventory_2_outlined",
                 "checkQuestion": "Qu’est-ce qu’un protocole réseau ?",
                 "checkOptions": [
-                  "Un ensemble de règles de communication",
-                  "Une marque de routeur",
-                  "Un fichier obligatoirement dangereux"
+                  "Un ensemble de règles utilisées pour communiquer",
+                  "Un équipement physique qui relie plusieurs réseaux",
+                  "Un numéro unique attribué à chaque service d’une machine"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. Les protocoles permettent aux systèmes d’échanger des messages interprétables."
@@ -2000,9 +2000,9 @@
                 "icon": "dns_outlined",
                 "checkQuestion": "Quel port est couramment associé à HTTPS ?",
                 "checkOptions": [
-                  "22",
-                  "443",
-                  "53"
+                  "80, généralement associé à HTTP sans chiffrement",
+                  "443, couramment associé à HTTPS",
+                  "53, couramment associé au service DNS"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Correct. HTTPS utilise couramment TCP 443, même si une autre configuration reste possible."
@@ -2015,9 +2015,9 @@
                 "icon": "verified_user_outlined",
                 "checkQuestion": "Que protège principalement HTTPS ?",
                 "checkOptions": [
-                  "La sincérité de tout contenu",
-                  "Tous les fichiers stockés sur l’appareil",
-                  "Le transport des données entre le client et le serveur"
+                  "La légitimité et l’honnêteté de tout contenu affiché par le site",
+                  "Tous les fichiers conservés localement sur l’appareil de l’utilisateur",
+                  "Le transport des données entre le client et le serveur présenté"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Oui. HTTPS sécurise la connexion, mais l’utilisateur doit encore vérifier le domaine et le contexte."
@@ -2030,9 +2030,9 @@
                 "icon": "route_outlined",
                 "checkQuestion": "Quel ordre décrit correctement l’accès à un site HTTPS ?",
                 "checkOptions": [
-                  "Résoudre le nom, contacter l’IP sur le port, utiliser HTTPS",
-                  "Choisir un mot de passe puis supprimer DNS",
-                  "Contacter un port sans destination"
+                  "Résoudre le nom, contacter l’adresse obtenue sur un port, puis établir HTTPS",
+                  "Contacter d’abord le port 443 sans connaître la destination, puis demander son nom à DNS",
+                  "Demander à DNS de transmettre directement le contenu complet de la page"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. Chaque couche apporte l’information nécessaire à l’étape suivante."
@@ -2046,8 +2046,8 @@
                 "checkQuestion": "Pourquoi plusieurs protocoles de transport existent-ils ?",
                 "checkOptions": [
                   "Parce que les applications ont des besoins différents en fiabilité et en délai",
-                  "Parce qu’un port ne peut utiliser qu’un seul paquet",
-                  "Parce que DNS remplace toujours le transport"
+                  "Parce que tous les protocoles de transport offrent exactement les mêmes garanties",
+                  "Parce que DNS choisit automatiquement le protocole de transport de chaque application"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. Le choix du transport dépend du comportement attendu par l’application."
@@ -2060,9 +2060,9 @@
                 "icon": "health_and_safety_outlined",
                 "checkQuestion": "L’adresse IP répond, mais le nom de domaine ne se résout pas. Quel service vérifier d’abord ?",
                 "checkOptions": [
-                  "DNS",
-                  "Le gestionnaire de mots de passe",
-                  "Le chiffrement du disque"
+                  "DNS, puisque la communication par adresse IP fonctionne déjà",
+                  "DHCP, même si l’appareil possède déjà une configuration IP fonctionnelle",
+                  "NAT, puisque la résolution des noms dépend toujours du partage de l’adresse publique"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Le symptôme pointe vers la résolution du nom plutôt que vers l’absence totale de connectivité."
@@ -2218,9 +2218,9 @@
                 "icon": "terminal_rounded",
                 "checkQuestion": "Quel est le rôle du shell ?",
                 "checkOptions": [
-                  "Remplacer le système d’exploitation",
-                  "Créer automatiquement Internet",
-                  "Interpréter les commandes saisies"
+                  "Afficher la fenêtre dans laquelle l’utilisateur saisit ses commandes",
+                  "Gérer directement le processeur, la mémoire et les périphériques",
+                  "Interpréter les commandes saisies et demander leur exécution au système"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Exact. Le shell analyse la commande et lance les programmes demandés."
@@ -2229,13 +2229,13 @@
                 "eyebrow": "Lire l’invite",
                 "title": "La commande s’exécute avec un utilisateur et un contexte",
                 "body": "L’invite peut afficher le nom de l’utilisateur, la machine et le dossier courant. La commande whoami indique l’utilisateur actif. Les droits de cet utilisateur déterminent les fichiers et actions accessibles. Travaille avec un compte normal et n’utilise pas sudo sans comprendre la commande. Les droits limitent les erreurs et les dégâts possibles. Une commande refusée n’est pas forcément un problème à contourner : demande-toi d’abord pourquoi l’accès est interdit et si l’action appartient réellement au laboratoire.",
-                "example": "whoami peut répondre alex. Cela signifie que la commande suivante utilise normalement les droits du compte alex.",
+                "example": "whoami peut répondre utilisateur. Cela signifie que la commande suivante utilise normalement les droits du compte utilisateur.",
                 "icon": "badge_outlined",
                 "checkQuestion": "Quelle commande affiche l’utilisateur courant ?",
                 "checkOptions": [
                   "whoami",
                   "pwd",
-                  "cat"
+                  "ls"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. whoami aide à vérifier avec quelle identité les commandes sont exécutées."
@@ -2263,9 +2263,9 @@
                 "icon": "visibility_outlined",
                 "checkQuestion": "Que fait ls -la ?",
                 "checkOptions": [
-                  "Supprime tous les fichiers",
-                  "Change de réseau",
-                  "Liste le contenu avec les éléments cachés et des détails"
+                  "Change le dossier courant vers un dossier caché nommé la",
+                  "Affiche uniquement le chemin absolu du dossier courant",
+                  "Liste le contenu, y compris les éléments cachés, avec des informations détaillées"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Exact. Les options -l et -a rendent l’observation plus complète."
@@ -2279,8 +2279,8 @@
                 "checkQuestion": "Quelle commande remonte d’un niveau ?",
                 "checkOptions": [
                   "cd ..",
-                  "pwd ..",
-                  "ls .. --delete"
+                  "cd /",
+                  "pwd .."
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Les deux points représentent le dossier parent."
@@ -2293,9 +2293,9 @@
                 "icon": "inventory_2_outlined",
                 "checkQuestion": "Quelle commande crée un dossier nommé cyber-lab ?",
                 "checkOptions": [
-                  "cat cyber-lab",
-                  "mkdir cyber-lab",
-                  "whoami cyber-lab"
+                  "touch cyber-lab, qui créerait normalement un fichier",
+                  "mkdir cyber-lab, qui crée le nouveau dossier",
+                  "cd cyber-lab, qui nécessite normalement que le dossier existe déjà"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Oui. mkdir signifie make directory."
@@ -2308,9 +2308,9 @@
                 "icon": "terminal_rounded",
                 "checkQuestion": "Quelle commande lit un petit fichier nommé indice.txt ?",
                 "checkOptions": [
-                  "mkdir indice.txt",
-                  "cd indice.txt --remove",
-                  "cat indice.txt"
+                  "touch indice.txt, qui crée ou actualise le fichier sans afficher son contenu",
+                  "cd indice.txt, qui sert à changer de dossier et non à lire un fichier",
+                  "cat indice.txt, qui affiche le contenu du fichier"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Exact. cat affiche le contenu texte du fichier."
@@ -2323,9 +2323,9 @@
                 "icon": "inventory_2_outlined",
                 "checkQuestion": "Dans ls -la preuves, quel élément est la cible ?",
                 "checkOptions": [
-                  "preuves",
-                  "-la",
-                  "ls"
+                  "preuves, l’argument indiquant la cible de la commande",
+                  "-la, l’ensemble d’options qui modifie l’affichage",
+                  "ls, la commande chargée de lister le contenu"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. preuves est l’argument sur lequel la commande ls doit agir."
@@ -2338,9 +2338,9 @@
                 "icon": "gavel_rounded",
                 "checkQuestion": "Une commande inconnue demande sudo. Quel est le premier réflexe ?",
                 "checkOptions": [
-                  "Comprendre son effet, sa cible et la nécessité des privilèges",
-                  "Ajouter une deuxième fois sudo",
-                  "Désactiver les permissions Linux"
+                  "Comprendre son effet, sa cible et la nécessité des privilèges avant de l’exécuter",
+                  "L’exécuter une première fois, car sudo empêche automatiquement les erreurs dangereuses",
+                  "Retirer sudo et l’exécuter, car une commande sans privilèges est toujours sans risque"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Les privilèges augmentent l’impact potentiel ; il faut comprendre la commande avant toute exécution."
@@ -2489,9 +2489,9 @@
                 "icon": "gavel_rounded",
                 "checkQuestion": "Quelle action respecte le périmètre ?",
                 "checkOptions": [
-                  "Lire les fichiers simulés fournis",
-                  "Scanner un site public ressemblant au scénario",
-                  "Tester le compte réel d’une autre personne"
+                  "Analyser uniquement les fichiers fournis dans le laboratoire",
+                  "Consulter le domaine cité sans effectuer de modification",
+                  "Tester le compte réel associé au scénario"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. Un exercice autorise seulement les actions explicitement prévues dans son périmètre."
@@ -2504,9 +2504,9 @@
                 "icon": "notification_important_outlined",
                 "checkQuestion": "Quel est ton premier objectif ?",
                 "checkOptions": [
-                  "Effacer immédiatement tous les fichiers",
-                  "Comprendre les preuves fournies",
-                  "Chercher une cible sur Internet"
+                  "Trouver le flag avant d’analyser la chronologie",
+                  "Reconstruire la chronologie à partir des preuves",
+                  "Tester les fichiers avec toutes les commandes disponibles"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Correct. Une analyse commence par préserver, lire et comprendre les éléments disponibles."
@@ -2519,8 +2519,8 @@
                 "icon": "terminal_rounded",
                 "checkQuestion": "Quelle commande utiliser pour vérifier le chemin courant ?",
                 "checkOptions": [
-                  "mkdir",
-                  "sudo",
+                  "ls",
+                  "whoami",
                   "pwd"
                 ],
                 "correctIndex": 2,
@@ -2532,11 +2532,11 @@
                 "body": "cat message.txt révèle un message demandant de confirmer le compte en cinq minutes. Le texte du lien annonce connexion.cyberparcours.example, mais la destination simulée est cyberparcours-login.example. L’urgence, la différence de domaine et la demande de mot de passe indiquent un phishing probable. Le message seul soutient l’hypothèse de phishing, mais ne prouve pas encore que le compte a été utilisé. Il faut relier le contenu trompeur aux traces réseau et aux sessions pour reconstruire la chronologie.",
                 "example": "Le domaine .example est réservé à cette simulation et ne doit pas être visité pour résoudre l’exercice.",
                 "icon": "phishing_rounded",
-                "checkQuestion": "Quel indice est le plus important ?",
+                "checkQuestion": "Quel indice technique soutient le plus fortement l’hypothèse de phishing ?",
                 "checkOptions": [
-                  "La destination ne correspond pas au domaine annoncé",
-                  "Le message contient une formule de politesse",
-                  "Le texte utilise une couleur"
+                  "Le domaine réel diffère du domaine affiché",
+                  "La destination utilise le port 443",
+                  "Le poste possède une adresse IP privée"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Correct. Le décalage entre l’apparence et la destination révèle la tentative de redirection."
@@ -2549,9 +2549,9 @@
                 "icon": "route_outlined",
                 "checkQuestion": "Que signifie :443 dans la destination ?",
                 "checkOptions": [
-                  "L’adresse est forcément sûre",
-                  "Le service utilise couramment le port HTTPS",
-                  "Le poste possède 443 utilisateurs"
+                  "Une destination nécessairement légitime",
+                  "Un service probablement associé à HTTPS",
+                  "Une connexion dont le chiffrement est garanti"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Exact. Le port indique le service visé, pas la fiabilité de son propriétaire."
@@ -2564,9 +2564,9 @@
                 "icon": "report_gmailerrorred_outlined",
                 "checkQuestion": "Que suggèrent les demandes MFA non déclenchées ?",
                 "checkOptions": [
-                  "Le Wi-Fi est nécessairement coupé",
-                  "Le mot de passe est devenu plus fort",
-                  "Quelqu’un tente probablement d’utiliser le compte"
+                  "Une vérification périodique du service sans tentative de connexion",
+                  "La reprise automatique d’une ancienne session déjà autorisée",
+                  "Une tentative d’accès avec un premier facteur possiblement compromis"
                 ],
                 "correctIndex": 2,
                 "successExplanation": "Oui. Une demande MFA inattendue peut indiquer que la première étape d’authentification a déjà été franchie."
@@ -2579,9 +2579,9 @@
                 "icon": "flag_outlined",
                 "checkQuestion": "Que représente le flag dans cet exercice ?",
                 "checkOptions": [
-                  "La validation d’un raisonnement complet",
-                  "Une autorisation pour attaquer Internet",
-                  "Le seul objectif de la cybersécurité"
+                  "La validation du raisonnement attendu",
+                  "Une autorisation de dépasser le périmètre",
+                  "Une preuve suffisante sans explication"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. Le flag confirme l’analyse ; la compréhension et la réponse restent l’objectif principal."
@@ -2594,9 +2594,9 @@
                 "icon": "verified_user_outlined",
                 "checkQuestion": "Quelle mesure doit figurer dans le rapport ?",
                 "checkOptions": [
-                  "Désactiver définitivement la MFA",
-                  "Changer le mot de passe compromis et fermer les sessions inconnues",
-                  "Publier les identifiants pour prévenir les autres"
+                  "Révoquer le second facteur sans modifier le mot de passe",
+                  "Changer le mot de passe et fermer les sessions inconnues",
+                  "Surveiller le compte sans modifier les identifiants"
                 ],
                 "correctIndex": 1,
                 "successExplanation": "Correct. La réponse doit limiter l’accès et empêcher une nouvelle utilisation du secret compromis."
@@ -2610,8 +2610,8 @@
                 "checkQuestion": "Quelle proposition est une preuve observable ?",
                 "checkOptions": [
                   "Une session inconnue apparaît à 10 h 04",
-                  "L’attaquant est probablement très expérimenté",
-                  "Le compte a forcément été vendu"
+                  "Le mot de passe a probablement été revendu",
+                  "L’auteur maîtrise certainement l’ingénierie sociale"
                 ],
                 "correctIndex": 0,
                 "successExplanation": "Exact. La session et son heure sont observables ; les autres affirmations ne sont pas démontrées par les fichiers."
@@ -2624,9 +2624,9 @@
                 {
                   "statement": "README.txt limite l’exercice aux quatre fichiers locaux et interdit toute connexion externe.",
                   "options": [
-                    "Le domaine mentionné peut être testé s’il semble lié aux fichiers du laboratoire",
-                    "Les connexions externes sont permises tant qu’aucune donnée n’est modifiée",
-                    "Seuls les quatre fichiers locaux appartiennent au périmètre autorisé"
+                    "Le domaine cité entre dans le périmètre",
+                    "Une connexion externe en lecture seule reste autorisée",
+                    "L’analyse doit rester limitée aux quatre fichiers"
                   ],
                   "correctIndex": 2,
                   "explanation": "Le briefing définit les actions autorisées et les limites du laboratoire."
@@ -2634,9 +2634,9 @@
                 {
                   "statement": "Le texte du lien annonce un domaine, mais la destination simulée en utilise un autre.",
                   "options": [
-                    "C’est probablement une redirection normale puisque le texte du lien est correct",
-                    "La différence entre le domaine annoncé et la destination constitue un indice de phishing",
-                    "Cela prouve à lui seul que le compte de la victime a déjà été compromis"
+                    "Une redirection légitime vers un domaine technique du service",
+                    "Un indice de phishing à corréler avec les autres preuves",
+                    "Une preuve suffisante d’une compromission réussie"
                   ],
                   "correctIndex": 1,
                   "explanation": "La différence entre le domaine annoncé et la destination soutient l’hypothèse de tromperie."
@@ -2644,9 +2644,9 @@
                 {
                   "statement": "Une session inconnue apparaît après la saisie du mot de passe, suivie de demandes MFA refusées.",
                   "options": [
-                    "La chronologie renforce l’hypothèse d’un accès utilisant le mot de passe exposé",
-                    "Le refus des demandes MFA suffit à exclure toute compromission du premier facteur",
-                    "La session inconnue est probablement légitime puisque la MFA n’a pas été acceptée"
+                    "Une chronologie compatible avec l’utilisation du mot de passe exposé",
+                    "L’échec complet des tentatives d’accès grâce au refus de la MFA",
+                    "Le renouvellement normal d’une session précédemment autorisée"
                   ],
                   "correctIndex": 0,
                   "explanation": "L’ordre des événements relie l’exposition du secret à la tentative d’accès."
@@ -2654,9 +2654,9 @@
                 {
                   "statement": "Le fichier indique une destination sur le port 443.",
                   "options": [
-                    "Le port 443 confirme que la destination appartient au véritable service",
-                    "Le port 443 permet d’identifier l’auteur de la connexion",
-                    "Le port 443 suggère HTTPS, sans prouver que la destination est légitime"
+                    "Une preuve de l’identité du service",
+                    "Une preuve de l’origine de l’attaque",
+                    "Un indice d’un service probablement HTTPS"
                   ],
                   "correctIndex": 2,
                   "explanation": "Le port fournit un indice technique, pas une preuve d’identité ou d’honnêteté."
@@ -2664,9 +2664,9 @@
                 {
                   "statement": "Tu rédiges la conclusion de la mission.",
                   "options": [
-                    "Présenter uniquement le flag, puisqu’il résume toutes les preuves analysées",
-                    "Présenter les preuves, leur interprétation, l’impact possible et les actions prioritaires",
-                    "Ajouter des hypothèses sur des systèmes extérieurs afin de compléter le scénario"
+                    "Le flag, les commandes exécutées et le temps nécessaire à la mission",
+                    "Les preuves, leur interprétation, l’impact et les actions prioritaires",
+                    "Les hypothèses techniques possibles, même lorsqu’elles ne sont pas vérifiées"
                   ],
                   "correctIndex": 1,
                   "explanation": "Une analyse utile explique le raisonnement et aide à protéger le compte."
@@ -2687,9 +2687,9 @@
               {
                 "question": "Pourquoi lire le périmètre avant d’ouvrir les preuves ?",
                 "options": [
-                  "Pour connaître les actions, les ressources et les limites autorisées pendant l’exercice",
-                  "Pour obtenir l’autorisation implicite de tester les systèmes liés au scénario",
-                  "Pour déterminer quelles commandes peuvent être exécutées avec sudo"
+                  "Identifier les ressources et les actions autorisées",
+                  "Connaître à l’avance les indices qui conduisent au flag",
+                  "Vérifier si les commandes disposent des droits administrateur"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le périmètre définit ce que l’exercice permet et les conditions à respecter."
@@ -2697,9 +2697,9 @@
               {
                 "question": "Quel ensemble soutient le mieux l’hypothèse de compromission par phishing ?",
                 "options": [
-                  "L’utilisation de Linux, la présence de fichiers texte et une connexion au réseau local",
-                  "Une connexion chiffrée sur le port 443 et une adresse privée sur le poste",
-                  "Un domaine trompeur, la saisie du mot de passe puis l’apparition d’une session inconnue"
+                  "Domaine trompeur, page fermée avant la saisie et aucune session inconnue",
+                  "Connexion HTTPS, adresse privée locale et MFA activée",
+                  "Domaine trompeur, mot de passe saisi et session inconnue"
                 ],
                 "correctIndex": 2,
                 "explanation": "Ces trois éléments forment une chronologie cohérente reliant le message à l’accès au compte."
@@ -2707,9 +2707,9 @@
               {
                 "question": "Que peut-on conclure de destination=203.0.113.42:443 dans ce laboratoire ?",
                 "options": [
-                  "La destination était légitime puisqu’elle utilisait le port habituel de HTTPS",
-                  "Une connexion simulée visait une adresse de documentation sur un port généralement associé à HTTPS",
-                  "L’adresse et le port permettent d’identifier précisément la personne qui a créé le message"
+                  "Une adresse publique réelle appartenant probablement au service imité",
+                  "Une adresse de documentation associée à un port couramment utilisé par HTTPS",
+                  "Une adresse privée du poste utilisateur exposée directement sur le port 443"
                 ],
                 "correctIndex": 1,
                 "explanation": "L’adresse et le port décrivent une destination technique, sans garantir sa légitimité ni identifier l’auteur."
@@ -2717,9 +2717,9 @@
               {
                 "question": "Pourquoi changer le mot de passe alors que les demandes MFA ont été refusées ?",
                 "options": [
-                  "Le mot de passe a peut-être déjà été compromis et pourrait être réutilisé",
-                  "Le refus des demandes MFA invalide automatiquement le mot de passe actuel",
-                  "La MFA protège la session inconnue, mais pas les autres comptes utilisant le même appareil"
+                  "Le premier facteur peut déjà être compromis",
+                  "Le refus des demandes invalide automatiquement le mot de passe",
+                  "Le changement n’est utile que si une demande MFA a été acceptée"
                 ],
                 "correctIndex": 0,
                 "explanation": "Le refus de la MFA a aidé, mais le mot de passe compromis doit être remplacé."
@@ -2727,9 +2727,9 @@
               {
                 "question": "Quel résultat démontre le mieux la réussite pédagogique de la mission ?",
                 "options": [
-                  "Trouver le flag sans pouvoir expliquer comment les indices conduisent à la conclusion",
-                  "Identifier de nouvelles cibles extérieures qui pourraient être testées après la mission",
-                  "Formuler une conclusion fondée sur les preuves et proposer des actions de protection adaptées"
+                  "Obtenir le flag rapidement et fournir uniquement la liste des commandes",
+                  "Reproduire le scénario complet sans justifier la valeur des indices",
+                  "Justifier la conclusion et proposer des protections adaptées"
                 ],
                 "correctIndex": 2,
                 "explanation": "Le but est de comprendre le raisonnement et de proposer une réponse utile, pas seulement de trouver une chaîne de validation."
