@@ -110,7 +110,7 @@ Le catalogue initial comprend **3 modules et 10 leçons complètes**, depuis les
 
 ## Droits d’auteur
 
-© 2026 **CyberParcours**. Tous droits réservés.
+© 2026 **Alexandru Stancu - CyberParcours**. Tous droits réservés.
 
 Ce dépôt est public afin que l’application puisse télécharger gratuitement les mises à jour du catalogue. Sa visibilité publique ne signifie pas que son contenu est placé sous une licence open source.
 
