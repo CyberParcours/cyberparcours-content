@@ -1,4 +1,10 @@
 # CyberParcours — Contenu pédagogique
+CyberParcours est un projet pédagogique créé et développé par
+**Alexandru Stancu**, spécialiste indépendant en cybersécurité au Havre
+et créateur de [HireAHacker](https://hireahacker.fr/).
+
+[Découvrir mon parcours](https://hireahacker.fr/a-propos/) ·
+[LinkedIn](https://www.linkedin.com/in/alexandru-stancu-53b021380/)
 
 Ce dépôt contient le catalogue pédagogique en français utilisé par l’application mobile **CyberParcours**.
 
